@@ -9,7 +9,6 @@ import json
 import logging
 import random
 from dataclasses import dataclass
-from enum import Enum
 from typing import Any, Dict, List, Optional, Tuple
 
 try:
@@ -22,32 +21,12 @@ except ImportError:
 from ..models.question import Question, Answer, QuestionType, DifficultyLevel
 from ..models.knowledge_graph import KnowledgeGraph, KnowledgeNode, KnowledgeEdge
 from .config import get_config
-from .scenario_generator import AdvancedScenarioGenerator
+from .types import QueryComplexity, QuestionScenario
 
 logger = logging.getLogger(__name__)
 
 
-class QueryComplexity(Enum):
-    """Types of query complexity based on Ragas methodology."""
-    SINGLE_HOP_SPECIFIC = "single_hop_specific"
-    SINGLE_HOP_ABSTRACT = "single_hop_abstract"
-    MULTI_HOP_SPECIFIC = "multi_hop_specific"
-    MULTI_HOP_ABSTRACT = "multi_hop_abstract"
-
-
-@dataclass
-class QuestionScenario:
-    """
-    Represents a scenario for question generation.
-    Based on Ragas scenario generation but adapted for human learning.
-    """
-    nodes: List[KnowledgeNode]
-    relationships: List[KnowledgeEdge]
-    complexity: QueryComplexity
-    difficulty: DifficultyLevel
-    topic: str
-    learning_objective: Optional[str] = None
-    persona: Optional[str] = None
+class PersonaProfile:
     query_style: str = "academic"
     
     def get_context_text(self) -> str:
@@ -184,6 +163,8 @@ class HumanLearningQuestionGenerator:
         self.prompts = QuestionGenerationPrompt()
         
         # Initialize advanced scenario generator
+        # Initialize scenario generator (import here to avoid circular imports)
+        from .scenario_generator import AdvancedScenarioGenerator
         self.scenario_generator = AdvancedScenarioGenerator(personas)
         
     def _setup_llm_client(self):
@@ -196,7 +177,8 @@ class HumanLearningQuestionGenerator:
             self.llm_client = AsyncOpenAI(
                 api_key=self.config.llm.openai_api_key,
                 base_url=self.config.llm.openai_base_url,
-                organization=self.config.llm.openai_org_id
+                organization=self.config.llm.openai_org_id,
+                timeout=self.config.system.request_timeout_seconds
             )
             logger.info("LLM client initialized successfully")
         else:
@@ -465,12 +447,27 @@ class HumanLearningQuestionGenerator:
                 logger.error("Empty response from LLM")
                 return None
             
+            # Log the raw content for debugging
+            logger.debug(f"Raw LLM response content: {content[:200]}...")
+            
+            # Try to clean the content if it has extra formatting
+            content = content.strip()
+            if content.startswith('```json'):
+                content = content[7:]
+            if content.endswith('```'):
+                content = content[:-3]
+            content = content.strip()
+            
             question_data = json.loads(content)
             
             # Create Question object
             question = self._create_question_from_data(question_data, scenario)
             return question
             
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse JSON response: {e}")
+            logger.error(f"Raw content was: {content if 'content' in locals() else 'No content available'}")
+            return None
         except Exception as e:
             logger.error(f"Failed to generate question: {e}")
             return None

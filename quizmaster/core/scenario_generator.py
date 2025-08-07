@@ -12,7 +12,7 @@ from typing import Dict, List, Optional, Set, Tuple
 
 from ..models.knowledge_graph import KnowledgeGraph, KnowledgeNode, KnowledgeEdge
 from ..models.question import DifficultyLevel
-from .question_generator import QueryComplexity, QuestionScenario
+from .types import QueryComplexity, QuestionScenario
 
 
 class ScenarioType(Enum):
