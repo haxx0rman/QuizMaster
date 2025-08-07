@@ -1,8 +1,10 @@
-# QuizMaster: Ragas-Inspired Question Generation System
+# QuizMaster: Ragas-Inspired Question Generation System with LightRAG Integration
 
 ## 🎓 Overview
 
 QuizMaster is a sophisticated question generation system inspired by the **Ragas** methodology, specifically designed for human learning and educational applications. Unlike traditional RAG testing frameworks, QuizMaster adapts Ragas' knowledge graph-based approach to create personalized, educational questions optimized for spaced repetition and progressive learning.
+
+**🚀 NEW: LightRAG Integration** - QuizMaster now seamlessly integrates with [LightRAG](https://github.com/HKUDS/LightRAG) for enhanced knowledge extraction and graph-based reasoning, providing superior performance and scalability for large knowledge bases.
 
 ## 🔬 Deep Dive into Ragas Methodology
 
@@ -113,10 +115,52 @@ Our comprehensive analysis of the [Ragas codebase](https://github.com/explodingg
 
 ### ✅ Advanced Features
 
+- [x] **LightRAG Integration**: Enhanced knowledge extraction and graph-based reasoning
+- [x] **Existing Knowledge Base Support**: Seamlessly work with pre-built LightRAG databases
 - [x] **Indirect Cluster Detection**: Multi-hop reasoning across knowledge domains
 - [x] **Comprehensive Configuration**: 100+ configurable parameters
 - [x] **LLM Provider Flexibility**: OpenAI, Anthropic, local model support
 - [x] **Async Processing**: Scalable concurrent question generation
+
+## 🚀 LightRAG Integration
+
+QuizMaster now includes full integration with [LightRAG](https://github.com/HKUDS/LightRAG), providing:
+
+### Key Benefits
+
+- **🎯 Enhanced Knowledge Extraction**: Superior entity and relationship identification
+- **⚡ High Performance**: Optimized for large-scale knowledge bases
+- **🔄 Existing Knowledge Base Support**: Work with pre-built LightRAG databases
+- **🧠 Advanced Reasoning**: Multi-hop reasoning with graph traversal algorithms
+- **📊 Flexible Storage**: Support for various backends (Neo4j, PostgreSQL, etc.)
+
+### Supported Query Modes
+
+- **Local Mode**: Context-dependent information retrieval
+- **Global Mode**: Global knowledge utilization
+- **Hybrid Mode**: Combined local and global retrieval (recommended)
+- **Mix Mode**: Integrated knowledge graph and vector retrieval
+
+### Example Usage
+
+```python
+from quizmaster.core.knowledge_extractor import KnowledgeExtractor
+
+# Initialize with existing LightRAG knowledge base
+extractor = KnowledgeExtractor(
+    working_dir="./data/lightrag",
+    use_existing_lightrag=True
+)
+
+# Query existing knowledge
+result = await extractor.query_knowledge(
+    "What are the main concepts in machine learning?",
+    mode="hybrid"
+)
+
+# Generate questions from the knowledge base
+knowledge_graph = await extractor.extract_knowledge_from_documents(texts)
+```
 
 ## 🎪 Personas System
 
