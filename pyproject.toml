@@ -1,0 +1,23 @@
+[project]
+name = "quizmaster"
+version = "0.1.0"
+description = "A standalone module that integrates Ragas question generation with LightRAG knowledge graphs and qBank for human-friendly question banks"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ragas>=0.2.0",
+    "lightrag",
+    "langchain>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "openai>=1.0.0",
+    "tiktoken>=0.5.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "networkx>=3.0",
+    "aiofiles>=23.0.0",
+    "tqdm>=4.65.0",
+    "dataclasses-json>=0.6.0",
+    "qbank @ git+https://github.com/haxx0rman/qBank.git",
+]
