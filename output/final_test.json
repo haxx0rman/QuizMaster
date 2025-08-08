@@ -1,0 +1,83 @@
+{
+  "queries": [
+    {
+      "query": "What is Kaplan North America, LLC?",
+      "type": "definition",
+      "concept": "Kaplan North America, LLC",
+      "priority": "high",
+      "generated_by": "llm"
+    },
+    {
+      "query": "How does Kaplan North America, LLC work?",
+      "type": "mechanism",
+      "concept": "Kaplan North America, LLC",
+      "priority": "high",
+      "generated_by": "llm"
+    },
+    {
+      "query": "Why is Kaplan North America, LLC important?",
+      "type": "significance",
+      "concept": "Kaplan North America, LLC",
+      "priority": "high",
+      "generated_by": "llm"
+    },
+    {
+      "query": "What is Series 7 License Exam Manual?",
+      "type": "definition",
+      "concept": "Series 7 License Exam Manual",
+      "priority": "high",
+      "generated_by": "llm"
+    },
+    {
+      "query": "How does Series 7 License Exam Manual work?",
+      "type": "mechanism",
+      "concept": "Series 7 License Exam Manual",
+      "priority": "high",
+      "generated_by": "llm"
+    },
+    {
+      "query": "Why is Series 7 License Exam Manual important?",
+      "type": "significance",
+      "concept": "Series 7 License Exam Manual",
+      "priority": "high",
+      "generated_by": "llm"
+    },
+    {
+      "query": "What is SEC?",
+      "type": "definition",
+      "concept": "SEC",
+      "priority": "high",
+      "generated_by": "llm"
+    },
+    {
+      "query": "How does SEC work?",
+      "type": "mechanism",
+      "concept": "SEC",
+      "priority": "high",
+      "generated_by": "llm"
+    },
+    {
+      "query": "Why is SEC important?",
+      "type": "significance",
+      "concept": "SEC",
+      "priority": "high",
+      "generated_by": "llm"
+    },
+    {
+      "query": "What is FINRA?",
+      "type": "definition",
+      "concept": "FINRA",
+      "priority": "high",
+      "generated_by": "llm"
+    }
+  ],
+  "metadata": {
+    "total_queries": 10,
+    "strategy": "mindmap",
+    "comprehensive": false,
+    "concepts_found": 20,
+    "themes_found": 10,
+    "domain": "unknown",
+    "generated_at": "268215.146609243"
+  }
+}

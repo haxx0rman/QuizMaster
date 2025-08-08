@@ -620,6 +620,16 @@ wheels = [
 ]
 
 [[package]]
+name = "graphwalker"
+version = "1.0.0"
+source = { git = "https://github.com/haxx0rman/GraphWalker.git#611e17e4412e3b730d1505babb7eef5a000fa9fa" }
+dependencies = [
+    { name = "lightrag-hku" },
+    { name = "networkx" },
+    { name = "numpy" },
+]
+
+[[package]]
 name = "greenlet"
 version = "3.2.3"
 source = { registry = "https://pypi.org/simple" }
@@ -1792,6 +1802,7 @@ dependencies = [
     { name = "aiofiles" },
     { name = "dataclasses-json" },
     { name = "faiss-cpu" },
+    { name = "graphwalker" },
     { name = "langchain" },
     { name = "langchain-openai" },
     { name = "lightrag-hku" },
@@ -1826,6 +1837,7 @@ requires-dist = [
     { name = "black", marker = "extra == 'dev'", specifier = ">=23.0.0" },
     { name = "dataclasses-json", specifier = ">=0.6.0" },
     { name = "faiss-cpu", specifier = ">=1.11.0.post1" },
+    { name = "graphwalker", git = "https://github.com/haxx0rman/GraphWalker.git" },
     { name = "isort", marker = "extra == 'dev'", specifier = ">=5.0.0" },
     { name = "langchain", specifier = ">=0.3.0" },
     { name = "langchain-openai", specifier = ">=0.2.0" },

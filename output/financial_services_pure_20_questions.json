@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "financial_services_pure_001",
+    "question_text": "What is Mutual Fund Sh?",
+    "objective": "Understanding the definition of Mutual Fund Sh",
+    "answers": [
+      {
+        "id": "e2ee3dd9-5129-45b1-9db1-092262a70005",
+        "text": "An advanced methodology in Financial Services for professional implementation",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "857bd81e-6ff3-4a72-97af-f7ca9e939297",
+        "text": "A technical procedure used in Securities and Investment for specialized applications",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "cdb34660-f653-480c-b587-9fb2c87c463d",
+        "text": "A fundamental concept in financial services industry that supports primary operations",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "ac861e98-2cc7-4a7e-916f-5f8efbe2ba72",
+        "text": "3: Mutual Fund Share Classes 159   \nLesson 7",
+        "is_correct": true,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "factual",
+      "definition",
+      "mutual fund sh"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.364888",
+    "last_studied": null,
+    "difficulty_level": "beginner",
+    "question_type": "multiple_choice",
+    "topic": "Mutual Fund Sh",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_002",
+    "question_text": "What is Or Account Analys?",
+    "objective": "Understanding the definition of Or Account Analys",
+    "answers": [
+      {
+        "id": "fd21511c-c843-44d1-b8f0-a3300dfa7c7b",
+        "text": "A technical procedure used in Securities and Investment for specialized applications",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "01e84277-b363-4408-8ed3-d3122cbd456f",
+        "text": "A regulatory requirement established by FINRA Rule",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b0466735-3e2d-4a62-ade2-26e157c1fc19",
+        "text": "A fundamental concept in financial services industry that supports primary operations",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "eae957e9-a32d-4634-90f8-c1ac45f792e4",
+        "text": "3: Compliance With the Exploitation Rules 399   \nKnowledge Check Answers 401   \nUNIT 15   \nPortfolio or Account Analysis and Its Application to Security Selection 403   \nLearning Objectives 403   \nIntroduction 403   \nLesson 15",
+        "is_correct": true,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "factual",
+      "definition",
+      "or account analys"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.364942",
+    "last_studied": null,
+    "difficulty_level": "beginner",
+    "question_type": "multiple_choice",
+    "topic": "Or Account Analys",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_003",
+    "question_text": "What is Understand That You?",
+    "objective": "Understanding the definition of Understand That You",
+    "answers": [
+      {
+        "id": "05243bba-f201-4641-950d-470191c982a3",
+        "text": "A regulatory requirement established by FINRA Rule",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "13f187ae-bad3-4ff3-b3d3-d89e839f33fd",
+        "text": "A fundamental concept in financial services industry that supports primary operations",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "79d38d12-2874-459f-8654-1a62ff2c46e1",
+        "text": "We understand that you are trusting us to help you advance in your securities industry career",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "346f8e0b-b541-4110-8667-b8cab727dfb4",
+        "text": "An advanced methodology in Financial Services for professional implementation",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "factual",
+      "definition",
+      "understand that you"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.364977",
+    "last_studied": null,
+    "difficulty_level": "beginner",
+    "question_type": "multiple_choice",
+    "topic": "Understand That You",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_004",
+    "question_text": "What is There?",
+    "objective": "Understanding the definition of There",
+    "answers": [
+      {
+        "id": "c547dd80-6a31-44f3-b18e-78bb49174fb1",
+        "text": "A technical procedure used in Securities and Investment for specialized applications",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "251346ae-0b41-4437-95d3-2c746af89316",
+        "text": "There are no prerequisite exams",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "bc33910c-c564-45af-966d-45e777942ae5",
+        "text": "A regulatory requirement established by FINRA Rule",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "cd2267a6-52c3-45e4-8815-6809b8261350",
+        "text": "An advanced methodology in Financial Services for professional implementation",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "factual",
+      "definition",
+      "there"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365006",
+    "last_studied": null,
+    "difficulty_level": "beginner",
+    "question_type": "multiple_choice",
+    "topic": "There",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_005",
+    "question_text": "What is There?",
+    "objective": "Understanding the definition of There",
+    "answers": [
+      {
+        "id": "f04710c0-6260-4796-afe1-a662ea483afe",
+        "text": "A fundamental concept in financial services industry that supports primary operations",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "ba9c0a61-0a9b-4dba-91d6-5961e91439d0",
+        "text": "A technical procedure used in Securities and Investment for specialized applications",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b1f0d1d8-df46-4fca-90e2-3c046071d6d8",
+        "text": "There are no prerequisite exams",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "c0efa109-8dfe-4253-8983-3d4c0baf8e48",
+        "text": "A regulatory requirement established by FINRA Rule",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "factual",
+      "definition",
+      "there"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365038",
+    "last_studied": null,
+    "difficulty_level": "beginner",
+    "question_type": "multiple_choice",
+    "topic": "There",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_006",
+    "question_text": "What is The Series ?",
+    "objective": "Understanding the definition of The Series ",
+    "answers": [
+      {
+        "id": "9887dae2-8a4b-4ca2-9c5f-6e954249a1d8",
+        "text": "A fundamental concept in financial services industry that supports primary operations",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "15275e8f-7d20-4402-a37a-f553b34cc2fb",
+        "text": "An advanced methodology in Financial Services for professional implementation",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "bae719b0-b0e6-4bd9-8f2a-6a7ab058fd8f",
+        "text": "A technical procedure used in Securities and Investment for specialized applications",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "8ddb70c7-c17c-41d2-9265-c3f8bb5d4464",
+        "text": "The Series 7 is a 3-hour and 45-minute, 125-question exam (plus 10 unscored questions)",
+        "is_correct": true,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "factual",
+      "definition",
+      "the series "
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365065",
+    "last_studied": null,
+    "difficulty_level": "beginner",
+    "question_type": "multiple_choice",
+    "topic": "The Series ",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_007",
+    "question_text": "What is The Unscored Questions?",
+    "objective": "Understanding the definition of The Unscored Questions",
+    "answers": [
+      {
+        "id": "5f882cac-0d2d-4bc9-99c5-ab9066753742",
+        "text": "An advanced methodology in Financial Services for professional implementation",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "4b015fbe-d5c5-4019-bcc7-5d2deac66454",
+        "text": "The unscored questions are not differentiated from the other questions and are randomly distributed throughout the exam",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "87642b49-0a19-4859-ac2c-5474c1e214b0",
+        "text": "A fundamental concept in financial services industry that supports primary operations",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b227e0f2-d8d9-4fa1-a87b-86149f80e17e",
+        "text": "A technical procedure used in Securities and Investment for specialized applications",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "factual",
+      "definition",
+      "the unscored questions"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365094",
+    "last_studied": null,
+    "difficulty_level": "beginner",
+    "question_type": "multiple_choice",
+    "topic": "The Unscored Questions",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_008",
+    "question_text": "What is Should Be Aw?",
+    "objective": "Understanding the definition of Should Be Aw",
+    "answers": [
+      {
+        "id": "802493ca-fd8e-49e6-93c4-c212496014b4",
+        "text": "An advanced methodology in Financial Services for professional implementation",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "a0a879e9-9f08-4e12-97ee-19cec3a99835",
+        "text": "A technical procedure used in Securities and Investment for specialized applications",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "3c3e917f-2a27-48de-83b3-740c8e2e7338",
+        "text": "A fundamental concept in financial services industry that supports primary operations",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "e8e3e299-1547-4548-9325-44fb2e0353da",
+        "text": "</td><td>% of Exam</td></tr><tr><td>1</td><td>Seeks business for the broker-dealer from customers and potential customers</td><td>9</td><td>7%</td></tr><tr><td>2</td><td>Opens accounts after obtaining and evaluating customers&#x27; financial profile and investment objectives</td><td>11</td><td>9%</td></tr><tr><td>3</td><td>Provides customers with information about investments, makes recommendations, transfers assets, and maintains appropriate records</td><td>91</td><td>73%</td></tr><tr><td>4</td><td>Obtains and verifies customers&#x27; purchase and sales instructions and agreements, and processes, completes, and confirms transactions</td><td>14</td><td>11%</td></tr></table></body></html>\n\nTest candidates should be aware that within each major job function, FINRA has identified tasks and knowledge statements that test questions are based on",
+        "is_correct": true,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "factual",
+      "definition",
+      "should be aw"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365130",
+    "last_studied": null,
+    "difficulty_level": "beginner",
+    "question_type": "multiple_choice",
+    "topic": "Should Be Aw",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_009",
+    "question_text": "What is That?",
+    "objective": "Understanding the definition of That",
+    "answers": [
+      {
+        "id": "125446f1-3d3c-4d0d-a00f-018720ed31dc",
+        "text": "An advanced methodology in Financial Services for professional implementation",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "59295e3a-f4ca-48c7-af08-caa5ba42c6e3",
+        "text": "A regulatory requirement established by FINRA Rule",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "ccadd03b-9a9b-497e-97eb-eef711ca95a1",
+        "text": "A technical procedure used in Securities and Investment for specialized applications",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "ebd9a85d-bc33-404a-89a0-73633625ed35",
+        "text": "That means the program will diverge from the order listed in the previous table",
+        "is_correct": true,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "factual",
+      "definition",
+      "that"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365158",
+    "last_studied": null,
+    "difficulty_level": "beginner",
+    "question_type": "multiple_choice",
+    "topic": "That",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_010",
+    "question_text": "What is These Lessons?",
+    "objective": "Understanding the definition of These Lessons",
+    "answers": [
+      {
+        "id": "60082762-ebd3-4cc0-ab9d-8bcde98ec3db",
+        "text": "These lessons are further divided into learning objectives (LOs) that help you focus on and retain a manageable portion of material",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "43586c19-cf29-4a70-a281-2d59e611744e",
+        "text": "A fundamental concept in financial services industry that supports primary operations",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "5b6d401c-1c77-44b6-8b24-38cb6e70479d",
+        "text": "A regulatory requirement established by FINRA Rule",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "c2249069-4611-414a-8532-ca44ab3df3f7",
+        "text": "An advanced methodology in Financial Services for professional implementation",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "factual",
+      "definition",
+      "these lessons"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365183",
+    "last_studied": null,
+    "difficulty_level": "beginner",
+    "question_type": "multiple_choice",
+    "topic": "These Lessons",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_011",
+    "question_text": "What is required regarding SEC?",
+    "objective": "Knowledge of SEC facts",
+    "answers": [
+      {
+        "id": "239214d6-594e-4cff-a772-2e266bd9edd7",
+        "text": "This is a common misconception in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "e76a8b25-cffd-46b1-b6c1-67003881ef32",
+        "text": "This is recommended but not mandatory in Financial Services",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "fbec16f0-01d7-4db8-b419-1e277974090e",
+        "text": "This requirement varies by jurisdiction in Securities and Investment",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "d00af023-a968-4c5c-aee3-04985642bdb0",
+        "text": "7: The Employee Retirement Income Security Act 383   \nKnowledge Check Answers 386   \nUNIT 14   \nTypes of Risk and Required Disclosures 389   \nLearning Objectives 389   \nIntroduction 389   \nLesson 14",
+        "is_correct": true,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "knowledge",
+      "factual",
+      "sec"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365220",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "SEC",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_012",
+    "question_text": "What is required regarding SEC?",
+    "objective": "Knowledge of SEC facts",
+    "answers": [
+      {
+        "id": "eb5a16f6-24e8-4e50-8f1f-f34fc0a02255",
+        "text": "You must pass the Series 7 exam to be qualified to sell all types of securities",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "985d2877-c4cb-407f-b04e-8ae23b15bf60",
+        "text": "This is recommended but not mandatory in Financial Services",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "938a452a-6ecb-4852-add8-75e8b8d4bfc5",
+        "text": "This is a common misconception in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "346df436-2f74-41d2-88dc-93667d2c4d3f",
+        "text": "This requirement varies by jurisdiction in Securities and Investment",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "knowledge",
+      "factual",
+      "sec"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365251",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "SEC",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_013",
+    "question_text": "What is required regarding SEC?",
+    "objective": "Knowledge of SEC facts",
+    "answers": [
+      {
+        "id": "4ce6ef91-afb3-4912-b11f-25e34e73d394",
+        "text": "This is recommended but not mandatory in Financial Services",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "4cb18021-ee75-426d-9b2d-e76a2596e976",
+        "text": "You must pass the Series 7 exam to be qualified to sell all types of securities",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "523d4ea0-434f-47e9-8cf3-cecaa3850072",
+        "text": "This is a common misconception in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "ae72b3f4-b105-4204-b2a3-bac278ef652d",
+        "text": "This requirement varies by jurisdiction in Securities and Investment",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "knowledge",
+      "factual",
+      "sec"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365280",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "SEC",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_014",
+    "question_text": "What is required regarding SEC?",
+    "objective": "Knowledge of SEC facts",
+    "answers": [
+      {
+        "id": "0889e306-5fe2-4641-9ed9-30913d3abcb4",
+        "text": "This applies only to specific cases in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "f40c90dd-ebec-46d6-8c23-257117823107",
+        "text": "This is recommended but not mandatory in Financial Services",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "f5c1dbf9-b83f-4aaf-925b-6e22887f1cc9",
+        "text": "This requirement varies by jurisdiction in Securities and Investment",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "63663d50-b0d3-46cf-9885-10c4f8cbc7e8",
+        "text": "However, in order for a Series 7 registration to become effective, an individual must pass both the Series 7 qualification exam and the Securities Industry Essentials (SIE) exam",
+        "is_correct": true,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "knowledge",
+      "factual",
+      "sec"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365316",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "SEC",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_015",
+    "question_text": "What is required regarding registration?",
+    "objective": "Knowledge of registration facts",
+    "answers": [
+      {
+        "id": "117000d9-8771-4f4f-86a0-7b231e6b9814",
+        "text": "This applies only to specific cases in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "da4c0859-e799-427b-8817-48032ad873b3",
+        "text": "You must display considerable understanding and knowledge of the topics presented in this course to pass the exam and qualify for registration",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "aa335c9e-3721-45dd-a3ee-801eb8db1e1b",
+        "text": "This requirement varies by jurisdiction in Securities and Investment",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "df40bbf1-225d-4326-a959-fda305f3bcb7",
+        "text": "This is a common misconception in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "knowledge",
+      "factual",
+      "registration"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365349",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "registration",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_016",
+    "question_text": "What is required regarding FINRA?",
+    "objective": "Knowledge of FINRA facts",
+    "answers": [
+      {
+        "id": "e58e1152-5985-4294-9ed0-d4347bdf513a",
+        "text": "This requirement varies by jurisdiction in Securities and Investment",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "0e5b2103-2ca1-4be8-aba1-342fd5e7bcf3",
+        "text": "This applies only to specific cases in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "1e1b6b81-e548-459e-af93-8718064182ca",
+        "text": "To obtain admission to a FINRA-administered exam, your firm must electronically apply and pay a fee to FINRA through its Central Registration Depository (CRD), better known as the Web CRD\u00ae",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "57ed741c-ea99-4f4c-a7b0-dddc4f1a5a25",
+        "text": "This is a common misconception in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "knowledge",
+      "factual",
+      "finra"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365382",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "FINRA",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_017",
+    "question_text": "What is required regarding SEC?",
+    "objective": "Knowledge of SEC facts",
+    "answers": [
+      {
+        "id": "cd9a559c-08e8-4057-bd15-a640a4fafe9e",
+        "text": "# The Issuer\n\nUnless the issue is exempt from registration, the issuer (the entity) selling the securities to raise money must file a registration statement with the Securities and Exchange Commission (SEC)",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "99862a33-25be-4d31-abed-2e78e8dc8af5",
+        "text": "This is a common misconception in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "64473446-48d5-47db-b298-e18863a6d943",
+        "text": "This is recommended but not mandatory in Financial Services",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "c2216ba8-f503-4d3b-83be-1d9d1ef23153",
+        "text": "This applies only to specific cases in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "knowledge",
+      "factual",
+      "sec"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365410",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "SEC",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_018",
+    "question_text": "What is required regarding investment?",
+    "objective": "Knowledge of investment facts",
+    "answers": [
+      {
+        "id": "998d23d4-5971-48ce-9bc1-1b2e29326a07",
+        "text": "This is a common misconception in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "03de622d-a7f0-40bc-8d8d-a48389650a88",
+        "text": "As part of the due diligence process, investment bankers must examine the use of the proceeds, perform financial analysis and feasibility studies, determine the company\u2019s stability, and determine whether the risk is reasonable",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "c5b42752-6d79-4090-a358-9de884f8aa09",
+        "text": "This requirement varies by jurisdiction in Securities and Investment",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "5c866c4a-616b-4f41-8c1b-18fffd17a7bc",
+        "text": "This applies only to specific cases in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "knowledge",
+      "factual",
+      "investment"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365463",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "investment",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_019",
+    "question_text": "What is required regarding FINRA?",
+    "objective": "Knowledge of FINRA facts",
+    "answers": [
+      {
+        "id": "b83d08ab-1a28-4dd2-9f66-ba53cc860c3f",
+        "text": "This is a common misconception in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "a6a55e46-0e9b-41f1-ba3f-e374be49c203",
+        "text": "All underwriters of corporate securities must be FINRA member firms",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "5e2c6ea0-7dac-40eb-aa5d-8b097a868c41",
+        "text": "This is recommended but not mandatory in Financial Services",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "dc39142e-2d88-4009-8eb5-bf5af1c13650",
+        "text": "This applies only to specific cases in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "knowledge",
+      "factual",
+      "finra"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365489",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "FINRA",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_pure_020",
+    "question_text": "What is required regarding SEC?",
+    "objective": "Knowledge of SEC facts",
+    "answers": [
+      {
+        "id": "3f330c20-bb68-41c8-82d5-f86dbbbd41a2",
+        "text": "Underwriters of municipal securities must be members of the MSRB",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "d11d027f-4529-4501-b6c8-2c3612887c85",
+        "text": "This requirement varies by jurisdiction in Securities and Investment",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "27261203-227f-4c09-bb35-b3a5f71b2d3b",
+        "text": "This is recommended but not mandatory in Financial Services",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "1da3d7e4-2e07-4b71-b97b-337da83e8d10",
+        "text": "This is a common misconception in financial services industry",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "knowledge",
+      "factual",
+      "sec"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:50:58.365516",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "SEC",
+    "subtopic": null,
+    "accuracy": 0.0
+  }
+]

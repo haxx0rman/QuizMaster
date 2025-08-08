@@ -1,0 +1,532 @@
+[
+  {
+    "id": "financial_services_ragas_001",
+    "question_text": "Under the Securities Exchange Act of 1934, which of the following entities is primarily responsible for enforcing federal securities laws and regulating securities markets?",
+    "objective": "Understanding of securities",
+    "answers": [
+      {
+        "id": "fcff5c8b-e714-4470-8c0d-952da4a991e3",
+        "text": "Securities and Exchange Commission (SEC)",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "bff7571a-10cd-4d94-ba62-0efcc8c58c10",
+        "text": "Securities Investor Protection Corporation (SIPC)",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "83754e28-3340-4119-a2c1-9aec6a55a636",
+        "text": "Financial Industry Regulatory Authority (FINRA)",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "a4b46622-74b1-4417-8867-b50a2a0ab2a8",
+        "text": "Municipal Securities Rulemaking Board (MSRB)",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "financial services",
+      "securities",
+      "beginner",
+      "regulatory",
+      "multi_hop",
+      "securities"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:51:18.334472",
+    "last_studied": null,
+    "difficulty_level": "beginner",
+    "question_type": "multiple_choice",
+    "topic": "Securities",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_ragas_002",
+    "question_text": "A trader maintains a delta-neutral options position and observes that the market experiences a significant gap move. Which of the following statements best describes the impact on the trader's position and the implications for using traditional pricing models?",
+    "objective": "Understanding of option",
+    "answers": [
+      {
+        "id": "f80682c6-590d-4602-baae-48e3ae31202b",
+        "text": "The trader with a negative gamma position will experience losses due to the inability to adjust hedges during the gap, while the traditional Black-Scholes model underestimates option values in real markets because it does not account for price gaps",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "cc84a3b0-7071-4cde-9b88-8285b051b26f",
+        "text": "The impact of gaps is minimal on options with low gamma, so traditional models remain accurate and no adjustments are necessary for delta-neutral positions",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "d3fec54f-47e4-4883-8225-8d75eae2a2ba",
+        "text": "The trader with a positive gamma position will experience losses during the gap, and the jump-diffusion model is always superior to the Black-Scholes model for all market conditions",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "739d06de-0824-4a9c-a2ab-fe1706b3e1e4",
+        "text": "Traders should avoid all options near expiration regardless of gamma exposure, as gap risk cannot be effectively managed with any hedging strategy",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "option",
+      "financial services",
+      "factual",
+      "advanced",
+      "multi_hop",
+      "options and trading"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:51:30.435659",
+    "last_studied": null,
+    "difficulty_level": "advanced",
+    "question_type": "multiple_choice",
+    "topic": "Options and Trading",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_ragas_003",
+    "question_text": "A broker-dealer is required to register which of the following individuals as a general securities representative?",
+    "objective": "Understanding of dealer",
+    "answers": [
+      {
+        "id": "f2f7581c-8c8d-40ea-a17f-fde626cbed4f",
+        "text": "A compliance officer who reviews trade reports for regulatory violations",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "f9f15c99-a73b-4b32-abe2-337d6f1a4736",
+        "text": "A customer service representative who only processes account openings",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "529e3108-49a4-4ab6-a667-977128b9d9cc",
+        "text": "An investment banker who advises on mergers and acquisitions",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "8aa32d20-4250-42be-bc1e-09f00bfd662b",
+        "text": "An employee who sells securities to customers and provides investment advice",
+        "is_correct": true,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "dealer",
+      "financial services",
+      "procedural",
+      "beginner",
+      "single_hop",
+      "securities and investment"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:51:36.638213",
+    "last_studied": null,
+    "difficulty_level": "beginner",
+    "question_type": "multiple_choice",
+    "topic": "Securities and Investment",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_ragas_004",
+    "question_text": "In the context of executing a 45/50/55 butterfly strategy, why would an experienced financial services professional prefer selling an iron butterfly at a price of 3.70 over buying either a call or put butterfly?",
+    "objective": "Understanding of option",
+    "answers": [
+      {
+        "id": "b8f1965c-8bf4-4290-afa5-d1a3d888bd3d",
+        "text": "Because the iron butterfly provides the most cost-effective entry point for establishing the butterfly strategy while maintaining synthetic equivalence to the other strategies",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "185336eb-7fa8-4441-9bd0-8d819afb9ba0",
+        "text": "Because the iron butterfly provides superior tax advantages over direct butterfly purchases",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "cd0907df-a857-4a28-b35e-05a7b4c9ad22",
+        "text": "Because the iron butterfly offers higher potential profits compared to the direct butterfly purchases",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "38a0289a-3af0-4951-9fe0-b76d60f9e189",
+        "text": "Because selling the iron butterfly eliminates all transaction costs associated with the strategy",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "option",
+      "financial services",
+      "analytical",
+      "advanced",
+      "single_hop",
+      "options trading strategies"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:51:44.557102",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "options trading strategies",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_ragas_005",
+    "question_text": "An investor purchases 100 shares of ABC stock at $50 per share and simultaneously sells a call option on ABC stock with a strike price of $55 and a premium of $2.50. At expiration, the stock price is $57. What is the net profit or loss for the investor?",
+    "objective": "Understanding of option",
+    "answers": [
+      {
+        "id": "8277bc3c-ef3b-478a-9eb6-a71dce6bed8b",
+        "text": "$150 loss",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "aaeabfbe-d83e-4549-a5e3-ae5d80d2e287",
+        "text": "$250 loss",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "f675c30d-779d-493e-ae9f-d063e10045d6",
+        "text": "$250 profit",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "5f7460a0-1acd-4063-91ac-146e34c138fb",
+        "text": "$150 profit",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "intermediate",
+      "option",
+      "financial services",
+      "procedural",
+      "multi_hop",
+      "options"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:52:10.625745",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "Options",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_ragas_006",
+    "question_text": "A broker-dealer is required to make specific disclosures to customers when there is a control relationship between the broker-dealer and an issuer of securities. Which of the following best describes a control relationship that would trigger such a disclosure requirement?",
+    "objective": "Understanding of dealer",
+    "answers": [
+      {
+        "id": "c584d2b4-c64f-4bd2-84e7-3fdec31464a2",
+        "text": "When a broker-dealer recommends securities of a company in which it has a significant loan outstanding",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "a57e5143-5e7b-406c-8bc1-235be7cd322a",
+        "text": "When a broker-dealer is registered with the SEC and has more than 500 customers",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "61c415c9-3cc8-45a0-9192-08be8d7ec549",
+        "text": "When a broker-dealer is owned by, is under common ownership with, or owns an entity that issues securities",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "d496b485-9777-429a-88fc-f34806ff3810",
+        "text": "When a broker-dealer has a written agreement to purchase securities from the issuer at a fixed price",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "dealer",
+      "financial services",
+      "factual",
+      "beginner",
+      "multi_hop",
+      "dealer, disclosure, stock"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:52:20.874826",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "Dealer, Disclosure, Stock",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_ragas_007",
+    "question_text": "Under the Securities Exchange Act of 1934, which of the following statements best describes the settlement requirements for options transactions and the role of the SEC in overseeing these processes?",
+    "objective": "Understanding of settlement",
+    "answers": [
+      {
+        "id": "a640d82b-e33c-4d91-9b5f-038a5c194adb",
+        "text": "Only exchange-listed options must comply with T+2 settlement requirements, while over-the-counter options are exempt from SEC oversight of settlement processes",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "657950ba-85bd-4ee7-92fb-da5fb6a92795",
+        "text": "All options settlements are automatically processed by the SEC through its centralized settlement system and require no broker-dealer involvement",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "ff98b9e5-225e-4fb7-995f-1911ae6a1a96",
+        "text": "Options transactions settle on a futures-type basis with no fixed settlement date, and the SEC has no regulatory authority over option settlement procedures",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "937b4407-37fd-48e1-8264-252ac5a0cdf1",
+        "text": "Options transactions must settle within a specified timeframe, typically T+2, and the SEC has authority to enforce compliance with settlement procedures and regulate the activities of broker-dealers involved in option settlements",
+        "is_correct": true,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "intermediate",
+      "financial services",
+      "settlement",
+      "factual",
+      "multi_hop",
+      "settlement"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:52:31.316164",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "Settlement",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_ragas_008",
+    "question_text": "A portfolio manager wants to protect a $100 million portfolio against a decline below $90 million. Instead of purchasing a put option, the manager uses dynamic hedging to replicate the characteristics of a $90 million call option. Which of the following best describes how the manager would implement this strategy?",
+    "objective": "Understanding of option",
+    "answers": [
+      {
+        "id": "442cfe71-981f-4bdc-8656-58de8290be1b",
+        "text": "The manager would sell a $90 million call option and buy a $100 million put option to create a covered call position",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "e44842b6-b257-446f-83bc-b2317e080dad",
+        "text": "The manager would purchase index futures contracts to create a synthetic put option with the same payoff as the desired protective put",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "88f1360b-907e-4016-b92a-183d50c9c002",
+        "text": "The manager would continuously adjust the portfolio by buying or selling portions of the underlying securities to maintain a delta-neutral position that replicates the call option's behavior",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "761707dd-27d4-4d7d-a573-2741cba3a852",
+        "text": "The manager would establish a fixed ratio of stocks to bonds that matches the expected return of the portfolio",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "option",
+      "financial services",
+      "procedural",
+      "beginner",
+      "single_hop",
+      "options and portfolio insurance"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:52:39.880906",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "Options and Portfolio Insurance",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_ragas_009",
+    "question_text": "A customer buys $90,000 worth of stock on margin and meets the initial Regulation T requirement by depositing $45,000. The debit balance is $45,000. What is the maximum market value that the securities can decline to before the account reaches minimum maintenance level?",
+    "objective": "Understanding of dealer",
+    "answers": [
+      {
+        "id": "1501b53f-6c61-4d8f-ad31-d10d6164e9ae",
+        "text": "$54,000",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "20116f38-4c98-496e-8f7e-01f749fce354",
+        "text": "$72,000",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "bfeed25e-dad6-4a29-8ca7-f2d8015cc944",
+        "text": "$48,000",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "ff3a1444-5314-4a7b-b24f-f1bc372e9c5b",
+        "text": "$60,000",
+        "is_correct": true,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "intermediate",
+      "dealer",
+      "financial services",
+      "regulatory",
+      "single_hop",
+      "margin account maintenance requirements"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:52:47.524480",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "Margin Account Maintenance Requirements",
+    "subtopic": null,
+    "accuracy": 0.0
+  },
+  {
+    "id": "financial_services_ragas_010",
+    "question_text": "Under FINRA Rule 4513, how long must a dealer firm retain records of written customer complaints?",
+    "objective": "Understanding of dealer",
+    "answers": [
+      {
+        "id": "7a794cb9-7020-435b-a19e-f4a9738208ea",
+        "text": "Six years",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "c56de56c-f8e8-41f3-91d7-71f88487b143",
+        "text": "Four years",
+        "is_correct": true,
+        "explanation": null
+      },
+      {
+        "id": "db617fcd-d983-463b-87fb-fbd10927e967",
+        "text": "Lifetime",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "15ef9077-e5e3-4e23-aa6a-639569ce72e2",
+        "text": "One year",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "tags": [
+      "intermediate",
+      "dealer",
+      "financial services",
+      "procedural",
+      "single_hop",
+      "customer complaint procedures and record retention"
+    ],
+    "elo_rating": 1200,
+    "times_answered": 0,
+    "times_correct": 0,
+    "next_review": null,
+    "interval_days": 1.0,
+    "ease_factor": 2.5,
+    "repetition_count": 0,
+    "created_at": "2025-08-07T14:52:52.600424",
+    "last_studied": null,
+    "difficulty_level": "intermediate",
+    "question_type": "multiple_choice",
+    "topic": "Customer Complaint Procedures and Record Retention",
+    "subtopic": null,
+    "accuracy": 0.0
+  }
+]

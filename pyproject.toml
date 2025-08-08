@@ -31,6 +31,7 @@ dependencies = [
     "faiss-cpu>=1.11.0.post1",
     "pytest>=8.4.1",
     "pytest-asyncio>=1.1.0",
+    "graphwalker",
 ]
 
 [project.optional-dependencies]
@@ -60,3 +61,6 @@ target-version = ['py311']
 [tool.isort]
 profile = "black"
 line_length = 100
+
+[tool.uv.sources]
+graphwalker = { git = "https://github.com/haxx0rman/GraphWalker.git" }
