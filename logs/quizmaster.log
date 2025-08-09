@@ -306,3 +306,1417 @@
 2025-08-08 22:18:28,315 - quizmaster.core - INFO - Question answered: acdd6922-f05e-4394-b4cb-3de4593325b8 - Correct
 2025-08-08 22:18:28,315 - quizmaster.core - INFO - Study session ended. Accuracy: 100.0%
 2025-08-08 22:18:28,317 - quizmaster.core - INFO - Question bank exported to complete_pipeline_question_bank.json
+2025-08-09 02:07:13,637 - quizmaster.core - INFO - QuizMaster initialized for user 'pipeline_demo' with bank 'Complete Pipeline Bank'
+2025-08-09 02:07:13,638 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 02:07:13,638 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 02:07:13,638 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 02:07:13,638 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 02:07:13,638 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 02:07:13,638 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 02:07:13,638 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 02:07:13,638 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 02:07:13,638 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 02:07:13,638 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 02:07:13,638 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 02:07:13,638 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 02:07:13,638 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 02:07:13,639 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 02:07:13,639 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 02:07:13,639 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 02:07:13,639 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 02:21:09,457 - quizmaster.core - INFO - QuizMaster initialized for user 'pipeline_demo' with bank 'Complete Pipeline Bank'
+2025-08-09 02:21:09,457 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 02:21:09,458 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 02:21:09,458 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 02:21:09,458 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 02:21:09,458 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 02:21:09,458 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 02:21:09,458 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 02:21:09,458 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 02:21:09,458 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 02:21:09,458 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 02:21:09,458 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 02:21:09,458 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 02:21:09,458 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 02:21:09,458 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 02:21:09,458 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 02:21:09,458 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 02:21:09,458 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 02:21:24,205 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:21:24,210 - quizmaster.core - INFO - Querying knowledge graph: 'How do the foundational concepts of machine learning interact with and build upon each other to form a coherent framework for understanding AI systems?
+
+2. What are the key distinctions between traditional machine learning approaches and deep learning architectures, and how do these differences impact their respective applications in real-world scenarios?
+
+3. In what ways does the data science methodology approach influence the design and implementation of machine learning models, and why is this integration crucial for successful outcomes?
+
+4. How might understanding the relationship between data science methodology and machine learning fundamentals help practitioners avoid common pitfalls in model development?
+
+5. What practical implications arise from the differences in complexity and requirements between basic machine learning concepts and advanced deep learning techniques?
+
+6. How can the principles outlined in these three interconnected mindmaps be applied to create a comprehensive strategy for tackling complex data science projects?
+
+7. What role does each component of the data science methodology play in ensuring that machine learning models are both effective and reliable when deployed in real-world environments?
+
+8. In what scenarios would the foundational knowledge from machine learning fundamentals be insufficient, requiring the advanced techniques described in deep learning concepts?
+
+9. How do the core concepts within each mindmap relate to one another to create a logical progression from basic understanding to advanced implementation?
+
+10. What are some concrete examples of how combining data science methodology with machine learning fundamentals can lead to more robust and accurate predictive models?
+
+11. How might the integration of deep learning advanced techniques enhance traditional machine learning approaches when applied within a structured data science methodology framework?
+
+12. What real-world challenges or limitations exist in implementing the machine learning fundamentals described, and how do the advanced concepts help address these issues?
+
+13. How do the conceptual frameworks presented in each document complement or contrast with one another to provide a complete picture of modern AI and data science practices?
+
+14. What specific decision-making processes should practitioners follow when determining whether to apply basic machine learning techniques or advance deep learning methods in different project contexts?
+
+15. Considering all three mindmaps together, how would you design an end-to-end data science workflow that incorporates each element effectively while maintaining scalability and efficiency?' (mode: hybrid)
+2025-08-09 02:21:24,211 - quizmaster.core - INFO - Querying knowledge graph: 'How do the foundational concepts of machine learning interact with and build upon each other to form a coherent framework for understanding AI systems?
+
+2. What are the key distinctions between traditional machine learning approaches and deep learning architectures, and how do these differences impact their respective applications in real-world scenarios?
+
+3. In what ways does the data science methodology approach influence the design and implementation of machine learning models, and why is this integration crucial for successful outcomes?
+
+4. How might understanding the relationship between data science methodology and machine learning fundamentals help practitioners avoid common pitfalls in model development?
+
+5. What practical implications arise from the differences in complexity and requirements between basic machine learning concepts and advanced deep learning techniques?
+
+6. How can the principles outlined in these three interconnected mindmaps be applied to create a comprehensive strategy for tackling complex data science projects?
+
+7. What role does each component of the data science methodology play in ensuring that machine learning models are both effective and reliable when deployed in real-world environments?
+
+8. In what scenarios would the foundational knowledge from machine learning fundamentals be insufficient, requiring the advanced techniques described in deep learning concepts?
+
+9. How do the core concepts within each mindmap relate to one another to create a logical progression from basic understanding to advanced implementation?
+
+10. What are some concrete examples of how combining data science methodology with machine learning fundamentals can lead to more robust and accurate predictive models?
+
+11. How might the integration of deep learning advanced techniques enhance traditional machine learning approaches when applied within a structured data science methodology framework?
+
+12. What real-world challenges or limitations exist in implementing the machine learning fundamentals described, and how do the advanced concepts help address these issues?
+
+13. How do the conceptual frameworks presented in each document complement or contrast with one another to provide a complete picture of modern AI and data science practices?
+
+14. What specific decision-making processes should practitioners follow when determining whether to apply basic machine learning techniques or advance deep learning methods in different project contexts?
+
+15. Considering all three mindmaps together, how would you design an end-to-end data science workflow that incorporates each element effectively while maintaining scalability and efficiency?' (mode: hybrid)
+2025-08-09 02:21:24,211 - quizmaster.generator - INFO - Generating 3 questions from context: How do the foundational concepts of machine learning interact with and build upon each other to form a coherent framework for understanding AI systems?
+
+2. What are the key distinctions between traditional machine learning approaches and deep learning architectures, and how do these differences impact their respective applications in real-world scenarios?
+
+3. In what ways does the data science methodology approach influence the design and implementation of machine learning models, and why is this integration crucial for successful outcomes?
+
+4. How might understanding the relationship between data science methodology and machine learning fundamentals help practitioners avoid common pitfalls in model development?
+
+5. What practical implications arise from the differences in complexity and requirements between basic machine learning concepts and advanced deep learning techniques?
+
+6. How can the principles outlined in these three interconnected mindmaps be applied to create a comprehensive strategy for tackling complex data science projects?
+
+7. What role does each component of the data science methodology play in ensuring that machine learning models are both effective and reliable when deployed in real-world environments?
+
+8. In what scenarios would the foundational knowledge from machine learning fundamentals be insufficient, requiring the advanced techniques described in deep learning concepts?
+
+9. How do the core concepts within each mindmap relate to one another to create a logical progression from basic understanding to advanced implementation?
+
+10. What are some concrete examples of how combining data science methodology with machine learning fundamentals can lead to more robust and accurate predictive models?
+
+11. How might the integration of deep learning advanced techniques enhance traditional machine learning approaches when applied within a structured data science methodology framework?
+
+12. What real-world challenges or limitations exist in implementing the machine learning fundamentals described, and how do the advanced concepts help address these issues?
+
+13. How do the conceptual frameworks presented in each document complement or contrast with one another to provide a complete picture of modern AI and data science practices?
+
+14. What specific decision-making processes should practitioners follow when determining whether to apply basic machine learning techniques or advance deep learning methods in different project contexts?
+
+15. Considering all three mindmaps together, how would you design an end-to-end data science workflow that incorporates each element effectively while maintaining scalability and efficiency?
+2025-08-09 02:21:41,101 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:21:41,102 - quizmaster.generator - INFO - Generated 3 questions using OPENAI
+2025-08-09 02:21:41,103 - quizmaster.generator - INFO - Successfully generated 3 questions from context
+2025-08-09 02:21:41,103 - quizmaster.core - INFO - Generated 3 questions from query: 'How do the foundational concepts of machine learning interact with and build upon each other to form a coherent framework for understanding AI systems?
+
+2. What are the key distinctions between traditional machine learning approaches and deep learning architectures, and how do these differences impact their respective applications in real-world scenarios?
+
+3. In what ways does the data science methodology approach influence the design and implementation of machine learning models, and why is this integration crucial for successful outcomes?
+
+4. How might understanding the relationship between data science methodology and machine learning fundamentals help practitioners avoid common pitfalls in model development?
+
+5. What practical implications arise from the differences in complexity and requirements between basic machine learning concepts and advanced deep learning techniques?
+
+6. How can the principles outlined in these three interconnected mindmaps be applied to create a comprehensive strategy for tackling complex data science projects?
+
+7. What role does each component of the data science methodology play in ensuring that machine learning models are both effective and reliable when deployed in real-world environments?
+
+8. In what scenarios would the foundational knowledge from machine learning fundamentals be insufficient, requiring the advanced techniques described in deep learning concepts?
+
+9. How do the core concepts within each mindmap relate to one another to create a logical progression from basic understanding to advanced implementation?
+
+10. What are some concrete examples of how combining data science methodology with machine learning fundamentals can lead to more robust and accurate predictive models?
+
+11. How might the integration of deep learning advanced techniques enhance traditional machine learning approaches when applied within a structured data science methodology framework?
+
+12. What real-world challenges or limitations exist in implementing the machine learning fundamentals described, and how do the advanced concepts help address these issues?
+
+13. How do the conceptual frameworks presented in each document complement or contrast with one another to provide a complete picture of modern AI and data science practices?
+
+14. What specific decision-making processes should practitioners follow when determining whether to apply basic machine learning techniques or advance deep learning methods in different project contexts?
+
+15. Considering all three mindmaps together, how would you design an end-to-end data science workflow that incorporates each element effectively while maintaining scalability and efficiency?'
+2025-08-09 02:21:41,103 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 02:21:41,103 - quizmaster.core - INFO - Study session started with 3 questions
+2025-08-09 02:21:41,103 - quizmaster.core - INFO - Question answered: 16ecc558-8628-4f77-a386-f42466935158 - Correct
+2025-08-09 02:21:41,103 - quizmaster.core - INFO - Question answered: e4b88342-f117-487a-b03a-b038c20a17be - Correct
+2025-08-09 02:21:41,103 - quizmaster.core - INFO - Question answered: 7f831f41-c0f1-49a2-a1be-745fb78e1aa1 - Correct
+2025-08-09 02:21:41,103 - quizmaster.core - INFO - Study session ended. Accuracy: 100.0%
+2025-08-09 02:21:41,104 - quizmaster.core - INFO - Question bank exported to complete_pipeline_question_bank.json
+2025-08-09 02:29:01,861 - quizmaster.core - INFO - QuizMaster initialized for user 'pipeline_demo' with bank 'Complete Pipeline Bank'
+2025-08-09 02:29:01,861 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 02:29:01,862 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 02:29:01,862 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 02:29:01,862 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 02:29:01,862 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 02:29:01,862 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 02:29:01,862 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 02:29:01,862 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 02:29:01,863 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 02:29:01,863 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 02:29:01,863 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 02:29:01,863 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 02:29:01,863 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 02:29:01,863 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 02:29:01,863 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 02:29:01,863 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 02:29:01,863 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 02:29:15,150 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:29:15,155 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses the following question:
+
+How do the foundational concepts of machine learning interconnect to form the basis for more advanced deep learning techniques?
+2. What are the key distinctions between supervised and unsupervised learning, and how do these approaches influence the data science methodology?
+3. In what ways does the data science methodology framework guide the implementation of machine learning models in practical applications?
+4. How might the principles of deep learning be integrated into existing data science workflows to enhance predictive capabilities?
+5. What are the fundamental components of a machine learning system that must be considered when applying advanced deep learning architectures?
+6. How do different types of machine learning algorithms relate to specific data science methodology steps, and what are their respective strengths?
+7. Can you explain how the progression from basic machine learning fundamentals to advanced deep learning concepts reflects the evolution of computational intelligence?
+8. What role does data preprocessing play within the data science methodology when implementing machine learning models, and how does it affect model performance?
+9. How do foundational machine learning concepts inform the design and training of neural networks in deep learning applications?
+10. What practical challenges arise when transitioning from traditional machine learning approaches to advanced deep learning methods, and how can they be addressed?
+11. In what scenarios would a data scientist choose to apply fundamental machine learning techniques over more complex deep learning architectures?
+12. How do the conceptual frameworks of machine learning fundamentals influence the decision-making process in developing data science projects?
+13. What are the implications of combining advanced deep learning techniques with established machine learning methodologies for real-world problem-solving?
+14. How does understanding the interconnections between machine learning fundamentals, deep learning, and data science methodology contribute to effective model development?
+15. What insights can be gained about the future direction of artificial intelligence by examining how these three domains build upon each other?
+
+Instructions for your report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand the topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions. Include:
+- Key definitions and terminology
+- Step-by-step processes or methodologies
+- Examples and case studies
+- Best practices and common pitfalls
+- Relationships between different concepts
+- Practical applications and use cases
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of the subject matter.' (mode: hybrid)
+2025-08-09 02:29:15,170 - __main__ - ERROR - Error generating questions from report: Invalid format specifier ' "Your first question here?",
+    "answer": "Comprehensive answer explaining the concept in detail."
+  ' for object of type 'str'
+2025-08-09 02:29:15,170 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 02:29:15,170 - quizmaster.core - INFO - Study session started with 0 questions
+2025-08-09 02:29:15,171 - quizmaster.core - INFO - Question bank exported to complete_pipeline_question_bank.json
+2025-08-09 02:30:27,698 - quizmaster.core - INFO - QuizMaster initialized for user 'pipeline_demo' with bank 'Complete Pipeline Bank'
+2025-08-09 02:30:27,698 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 02:30:27,698 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 02:30:27,698 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 02:30:27,698 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 02:30:27,698 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 02:30:27,699 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 02:30:27,699 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 02:30:27,699 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 02:30:27,699 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 02:30:27,699 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 02:30:27,699 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 02:30:27,699 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 02:30:27,699 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 02:30:27,699 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 02:30:27,699 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 02:30:27,699 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 02:30:27,699 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 02:30:38,094 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:30:38,099 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses the following question:
+
+How do the foundational concepts of machine learning interconnect to form the basis for more advanced deep learning techniques?
+2. What are the key distinctions between supervised, unsupervised, and reinforcement learning, and how do these categories influence the choice of algorithms in data science projects?
+3. In what ways does the methodology of data science integrate with machine learning fundamentals to ensure effective model development and deployment?
+4. How might the principles of deep learning advance beyond traditional machine learning approaches in solving complex real-world problems?
+5. What role does data preprocessing play within the broader data science methodology, and how does it impact the performance of machine learning models?
+6. How do different types of neural networks build upon each other to create increasingly sophisticated deep learning architectures?
+7. Can you explain how feedback loops in reinforcement learning interact with the broader framework of machine learning algorithms?
+8. What practical considerations must be taken into account when implementing a machine learning pipeline from data collection through model evaluation?
+9. How do the core components of deep learning, such as layers and activation functions, contribute to the ability to learn complex patterns in data?
+10. In what scenarios would a traditional machine learning approach be more suitable than a deep learning method, and vice versa?
+11. How does the concept of overfitting in machine learning relate to model validation techniques described in data science methodology?
+12. What are some real-world applications where the integration of advanced deep learning with robust data science practices has led to breakthrough results?
+13. How might emerging trends in artificial intelligence influence the evolution of both machine learning fundamentals and deep learning architectures?
+14. What are the implications of choosing different loss functions in deep learning models, and how does this choice reflect broader design decisions in data science?
+15. How do the methodological steps outlined in data science methodology align with the iterative process of developing and refining machine learning models?
+
+Instructions for your report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand the topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions. Include:
+- Key definitions and terminology
+- Step-by-step processes or methodologies
+- Examples and case studies
+- Best practices and common pitfalls
+- Relationships between different concepts
+- Practical applications and use cases
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of the subject matter.' (mode: hybrid)
+2025-08-09 02:30:54,376 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:31:02,668 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:31:12,192 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:31:19,063 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:31:19,064 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 02:31:19,064 - quizmaster.core - INFO - Study session started with 0 questions
+2025-08-09 02:31:19,064 - root - ERROR - Complete pipeline demo error: 'answers'
+2025-08-09 02:32:35,956 - quizmaster.core - INFO - QuizMaster initialized for user 'pipeline_demo' with bank 'Complete Pipeline Bank'
+2025-08-09 02:32:35,957 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 02:32:35,957 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 02:32:35,957 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 02:32:35,957 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 02:32:35,957 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 02:32:35,957 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 02:32:35,957 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 02:32:35,957 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 02:32:35,957 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 02:32:35,958 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 02:32:35,958 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 02:32:35,958 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 02:32:35,958 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 02:32:35,958 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 02:32:35,958 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 02:32:35,958 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 02:32:35,958 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 02:32:48,962 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:32:48,967 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses the following question:
+
+How do the foundational concepts of machine learning laid out in the mindmap connect to the more advanced deep learning techniques described in the subsequent document?
+2. What practical steps or methodologies from the data science methodology guide can be applied to implement the machine learning algorithms discussed in the fundamentals document?
+3. In what ways might the limitations of traditional machine learning approaches influence the choice between applying basic ML models versus deep learning architectures?
+4. How does the structured approach outlined in the data science methodology align with the core principles of supervised and unsupervised learning described in the fundamentals mindmap?
+5. What real-world applications could emerge from combining the data science methodology with advanced deep learning techniques, and how might these be implemented step-by-step?
+6. How do the different types of machine learning algorithms (e.g., classification vs regression) mentioned in the fundamentals connect conceptually to the layered architectures used in deep learning?
+7. What are the potential trade-offs between using simpler machine learning models versus complex deep learning networks, based on the principles and methodologies outlined in these documents?
+8. How might the iterative process of data science methodology be adapted when working with deep learning models that require extensive training and tuning?
+9. Considering the overlap between machine learning fundamentals and deep learning concepts, how do the core theoretical underpinnings support practical implementation strategies across both domains?
+10. What role do data preprocessing and feature engineering steps play in bridging the gap between the basic ML concepts and the sophisticated methods used in advanced deep learning?
+11. How can the structured problem-solving framework from the data science methodology document help in diagnosing issues that commonly arise in both foundational machine learning and advanced deep learning projects?
+12. In what scenarios would a practitioner choose to apply traditional machine learning techniques over deep learning approaches, and how do these decisions reflect the content discussed in the respective documents?
+13. How might the evaluation metrics and validation strategies described in the data science methodology be adapted for assessing performance in deep learning models compared to traditional ML methods?
+14. What insights from the machine learning fundamentals can help explain why certain architectures work better than others in deep learning, particularly when considering computational complexity and data requirements?
+15. How do the practical implementation challenges highlighted in one document relate to the theoretical concepts presented in another, and what does this tell us about the progression from basic understanding to advanced application?
+
+Instructions for your report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand the topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions. Include:
+- Key definitions and terminology
+- Step-by-step processes or methodologies
+- Examples and case studies
+- Best practices and common pitfalls
+- Relationships between different concepts
+- Practical applications and use cases
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of the subject matter.' (mode: hybrid)
+2025-08-09 02:33:03,707 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:33:12,922 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:33:20,909 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:33:28,285 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:33:28,286 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 02:33:28,286 - quizmaster.core - INFO - Study session started with 0 questions
+2025-08-09 02:33:28,287 - quizmaster.core - INFO - Question bank exported to complete_pipeline_question_bank.json
+2025-08-09 02:37:15,356 - quizmaster.core - INFO - QuizMaster initialized for user 'pipeline_demo' with bank 'Complete Pipeline Bank'
+2025-08-09 02:37:15,356 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 02:37:15,357 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 02:37:15,357 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 02:37:15,357 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 02:37:15,357 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 02:37:15,357 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 02:37:15,357 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 02:37:15,357 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 02:37:15,357 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 02:37:15,357 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 02:37:15,357 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 02:37:15,357 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 02:37:15,357 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 02:37:15,357 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 02:37:15,357 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 02:37:15,357 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 02:37:15,357 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 02:37:26,775 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:37:26,781 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses the following question:
+
+How do the foundational principles of machine learning connect to the structured approach outlined in data science methodology?
+2. In what ways does deep learning build upon and extend the core concepts introduced in basic machine learning frameworks?
+3. What practical challenges arise when implementing machine learning models within a formal data science methodology, and how might these be addressed?
+4. How do the theoretical underpinnings of deep learning differ from traditional machine learning approaches, and what implications does this have for real-world applications?
+5. Can you trace the logical progression from basic machine learning fundamentals to advanced deep learning techniques using the documented content as a roadmap?
+6. What are some concrete examples of how data science methodology influences the design and evaluation of machine learning models?
+7. How might the integration of deep learning methods within a comprehensive data science framework enhance predictive modeling capabilities?
+8. What role do foundational machine learning concepts play in determining the success or failure of advanced deep learning implementations?
+9. How can understanding the relationships between these three documented areas—machine learning fundamentals, deep learning, and data science methodology—improve one's ability to tackle complex data problems?
+10. Considering the specific content described in each document, what interdisciplinary connections emerge when examining machine learning from both theoretical and methodological perspectives?
+11. What are some practical scenarios where knowledge of all three documented domains would be essential for effective problem-solving in data science?
+12. How do the constraints and assumptions inherent in basic machine learning models influence the choice of deep learning architectures in modern applications?
+13. In what ways does the structured methodology of data science complement or conflict with the iterative nature of developing advanced machine learning systems?
+14. How might the principles found in these documents guide a practitioner when selecting between different types of machine learning algorithms for specific business problems?
+15. What deeper insights into data-driven decision-making can be gained by examining how machine learning fundamentals, deep learning capabilities, and data science methodology interrelate?
+
+Instructions for your report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand the topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions. Include:
+- Key definitions and terminology
+- Step-by-step processes or methodologies
+- Examples and case studies
+- Best practices and common pitfalls
+- Relationships between different concepts
+- Practical applications and use cases
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of the subject matter.' (mode: hybrid)
+2025-08-09 02:37:39,349 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:37:47,256 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:37:55,244 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:38:02,411 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:38:02,411 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 02:38:02,411 - quizmaster.core - INFO - Study session started with 2 questions
+2025-08-09 02:38:02,411 - quizmaster.core - INFO - Question answered: aee04bfb-70dc-4d3a-90e2-93370f46934c - Correct
+2025-08-09 02:38:02,411 - quizmaster.core - INFO - Question answered: 42030a0b-5874-4f27-a336-c5de5129b0ec - Correct
+2025-08-09 02:38:02,412 - quizmaster.core - INFO - Study session ended. Accuracy: 100.0%
+2025-08-09 02:38:02,412 - quizmaster.core - INFO - Question bank exported to complete_pipeline_question_bank.json
+2025-08-09 02:45:43,729 - quizmaster.core - INFO - QuizMaster initialized for user 'pipeline_demo' with bank 'Complete Pipeline Bank'
+2025-08-09 02:45:43,729 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 02:45:43,729 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 02:45:43,729 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 02:45:43,729 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 02:45:43,729 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 02:45:43,730 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 02:45:43,730 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 02:45:43,730 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 02:45:43,730 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 02:45:43,730 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 02:45:43,730 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 02:45:43,730 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 02:45:43,730 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 02:45:43,730 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 02:45:43,730 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 02:45:43,730 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 02:45:43,730 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 02:45:56,631 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:45:56,636 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses the following question:
+
+How do the foundational principles of machine learning intersect with the methodological approaches outlined in data science methodology?
+
+2. What are the key distinctions between traditional machine learning algorithms and advanced deep learning techniques, and how does this evolution impact practical implementation?
+
+3. In what ways does the data science methodology framework influence the design and evaluation of machine learning models?
+
+4. How might the conceptual foundations of machine learning be applied to create more robust and scalable deep learning architectures?
+
+5. What role do fundamental machine learning concepts play in shaping the iterative process described within data science methodology?
+
+6. How can understanding the relationship between different types of machine learning algorithms inform the selection of appropriate methodologies for specific data science projects?
+
+7. What practical challenges arise when transitioning from basic machine learning principles to implementing advanced deep learning systems?
+
+8. How do the methodological steps in data science align with or diverge from traditional machine learning workflows?
+
+9. In what scenarios would a data scientist prioritize fundamental machine learning approaches over more complex deep learning techniques?
+
+10. How does the evolution of machine learning concepts inform current best practices in data science methodology?
+
+11. What are the implications of combining foundational machine learning principles with advanced deep learning methods in real-world applications?
+
+12. How might the systematic approach of data science methodology enhance the effectiveness of machine learning model development?
+
+13. What connections can be drawn between different levels of complexity in machine learning and corresponding methodological requirements?
+
+14. How do the core concepts of machine learning influence the way we approach data preprocessing, feature engineering, and model validation within data science projects?
+
+15. What insights can be gained by examining how fundamental machine learning principles interact with advanced deep learning architectures in practical applications?
+
+Instructions for your report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand the topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions. Include:
+- Key definitions and terminology
+- Step-by-step processes or methodologies
+- Examples and case studies
+- Best practices and common pitfalls
+- Relationships between different concepts
+- Practical applications and use cases
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of the subject matter.' (mode: hybrid)
+2025-08-09 02:46:09,840 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:46:17,828 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:46:25,816 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:46:32,854 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:46:32,855 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 02:46:32,855 - quizmaster.core - INFO - Study session started with 2 questions
+2025-08-09 02:46:32,855 - quizmaster.core - INFO - Question answered: bebe5379-9e2b-4bc9-8818-2dcc0c3ef61c - Correct
+2025-08-09 02:46:32,855 - quizmaster.core - INFO - Question answered: b6ea6fe9-efa6-468d-85f5-a1e57008072f - Correct
+2025-08-09 02:46:32,855 - quizmaster.core - INFO - Study session ended. Accuracy: 100.0%
+2025-08-09 02:46:32,856 - quizmaster.core - INFO - Question bank exported to complete_pipeline_question_bank.json
+2025-08-09 02:51:27,557 - quizmaster.core - INFO - QuizMaster initialized for user 'pipeline_demo' with bank 'Complete Pipeline Bank'
+2025-08-09 02:51:27,557 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 02:51:27,557 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 02:51:27,557 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 02:51:27,557 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 02:51:27,558 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 02:51:27,558 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 02:51:27,558 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 02:51:27,558 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 02:51:27,558 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 02:51:27,558 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 02:51:27,558 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 02:51:27,558 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 02:51:27,558 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 02:51:27,558 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 02:51:27,558 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 02:51:27,558 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 02:51:27,558 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 02:51:38,857 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:51:38,862 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: How do the foundational principles of machine learning interconnect with the methodological approaches outlined in data science methodology?
+2. What are the key differences between traditional machine learning algorithms and deep learning models, and how do these differences impact their application in real-world scenarios?
+3. In what ways does the data science methodology framework influence the design and implementation of machine learning systems?
+4. How might the concepts described in "deep_learning_advanced" be integrated into a comprehensive data science workflow as defined in "data_science_methodology"?
+5. What practical challenges arise when transitioning from basic machine learning fundamentals to advanced deep learning techniques, and how can these be mitigated?
+6. How do the core components of machine learning fundamentals serve as building blocks for more sophisticated models discussed in deep learning advanced topics?
+7. Can you identify specific examples where data science methodology principles would guide the selection of appropriate machine learning algorithms?
+8. What are the implications of choosing different learning paradigms (supervised, unsupervised, reinforcement) within the context of a complete data science project lifecycle?
+9. How does understanding the theoretical underpinnings of machine learning fundamentals enhance one's ability to apply deep learning techniques effectively?
+10. In what scenarios would a practitioner benefit most from applying advanced deep learning methods versus sticking to traditional machine learning approaches?
+11. What role do methodological considerations play in determining the success or failure of machine learning implementations?
+12. How might the integration of deep learning advanced concepts improve upon traditional machine learning fundamental approaches in practical applications?
+13. What are the potential consequences of overlooking data science methodology when implementing machine learning solutions, particularly in complex real-world problems?
+14. How do foundational machine learning concepts provide a necessary foundation for understanding and developing advanced deep learning architectures?
+15. Considering all three documents' content, how would you design a comprehensive approach that sequentially builds from basic ML fundamentals through to advanced deep learning applications using proper data science methodology?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 02:51:52,884 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:52:00,361 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:52:09,985 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:52:16,949 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:52:16,950 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 02:52:16,950 - quizmaster.core - INFO - Study session started with 1 questions
+2025-08-09 02:52:16,950 - quizmaster.core - INFO - Question answered: 9d50ff0c-8d0f-45f7-934d-0b6aa3334813 - Correct
+2025-08-09 02:52:16,950 - quizmaster.core - INFO - Study session ended. Accuracy: 100.0%
+2025-08-09 02:52:16,951 - quizmaster.core - INFO - Question bank exported to complete_pipeline_question_bank.json
+2025-08-09 02:54:26,150 - quizmaster.core - INFO - QuizMaster initialized for user 'pipeline_demo' with bank 'Complete Pipeline Bank'
+2025-08-09 02:54:26,151 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 02:54:26,151 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 02:54:26,151 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 02:54:26,151 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 02:54:26,151 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 02:54:26,151 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 02:54:26,151 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 02:54:26,151 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 02:54:26,152 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 02:54:26,152 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 02:54:26,152 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 02:54:26,152 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 02:54:26,152 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 02:54:26,152 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 02:54:26,152 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 02:54:26,152 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 02:54:26,152 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 02:54:33,040 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:54:33,045 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: How do the foundational concepts of machine learning interconnect with the methodological approaches outlined in data science methodology, and what practical implications arise when these layers are integrated in real-world problem-solving scenarios?
+
+2. In what ways does deep learning advance beyond traditional machine learning frameworks, and how might the architectural choices in deep learning models influence the data science methodology applied at each stage of a typical project lifecycle?
+
+3. What are the key distinctions between supervised and unsupervised learning approaches as described in the fundamentals mindmap, and how do these differences impact the selection of appropriate data science methodologies for different types of business problems?
+
+4. How can the principles of data science methodology be adapted to optimize performance when implementing advanced deep learning architectures, particularly considering the trade-offs between model complexity and interpretability?
+
+5. If you were tasked with designing a machine learning solution for a new domain, how would you strategically sequence the application of fundamental ML concepts, advanced deep learning techniques, and established data science methodologies to ensure both technical effectiveness and practical utility?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 02:54:46,251 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:54:55,670 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:55:04,069 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:55:11,748 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:55:11,750 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 02:55:11,750 - quizmaster.core - INFO - Study session started with 3 questions
+2025-08-09 02:55:11,750 - quizmaster.core - INFO - Question answered: d03dc909-7f41-460f-8af5-f915cf5d2bea - Correct
+2025-08-09 02:55:11,750 - quizmaster.core - INFO - Question answered: 8bcb3aba-1d30-4586-818f-e4add8976555 - Correct
+2025-08-09 02:55:11,750 - quizmaster.core - INFO - Question answered: 2a9ec62d-f52b-43a0-801a-1e4628a18d1e - Correct
+2025-08-09 02:55:11,750 - quizmaster.core - INFO - Study session ended. Accuracy: 100.0%
+2025-08-09 02:55:11,751 - quizmaster.core - INFO - Question bank exported to complete_pipeline_question_bank.json
+2025-08-09 02:55:47,636 - quizmaster.core - INFO - QuizMaster initialized for user 'pipeline_demo' with bank 'Complete Pipeline Bank'
+2025-08-09 02:55:47,636 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 02:55:47,636 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 02:55:47,636 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 02:55:47,636 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 02:55:47,636 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 02:55:47,636 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 02:55:47,636 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 02:55:47,637 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 02:55:47,637 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 02:55:47,637 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 02:55:47,637 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 02:55:47,637 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 02:55:47,637 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 02:55:47,637 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 02:55:47,637 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 02:55:47,637 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 02:55:47,637 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 02:55:53,836 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:55:53,841 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: How do the foundational concepts of machine learning intersect with the methodological approaches outlined in data science methodology, and what implications does this have for practical model development?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 02:55:53,842 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: In what ways does deep learning advance beyond traditional machine learning methods, and how might the systematic approach described in data science methodology influence the implementation of advanced deep learning techniques?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 02:55:53,842 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: What are the key differences between the theoretical frameworks presented in machine learning fundamentals and their practical applications within the structured data science methodology, and how do these differences shape real-world problem-solving approaches?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 02:55:53,843 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: How can the methodological steps in data science methodology be adapted to accommodate the unique challenges and opportunities presented by deep learning architectures, particularly in terms of data preparation and model evaluation?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 02:55:53,843 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: Considering the progression from basic machine learning concepts to advanced deep learning techniques, what critical thinking skills or analytical frameworks are essential for bridging these knowledge domains effectively?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 02:56:05,508 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:56:14,622 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:56:22,099 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:56:30,393 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:56:43,295 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:56:51,691 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:56:58,963 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:57:06,949 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:57:18,316 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:57:29,069 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:57:37,046 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:57:44,735 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:57:56,079 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:58:02,348 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:58:10,235 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:58:17,914 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:58:30,713 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:58:37,534 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:58:45,357 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:58:52,088 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 02:58:52,089 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 02:58:52,089 - quizmaster.core - INFO - Study session started with 3 questions
+2025-08-09 02:58:52,090 - quizmaster.core - INFO - Question answered: 35c3cce1-264f-449b-8ec7-15b925377711 - Correct
+2025-08-09 02:58:52,090 - quizmaster.core - INFO - Question answered: 3fc32583-0182-4071-a342-77fe8f7cb279 - Correct
+2025-08-09 02:58:52,090 - quizmaster.core - INFO - Question answered: d93aeb47-8d7f-46d1-b271-360c03151535 - Correct
+2025-08-09 02:58:52,090 - quizmaster.core - INFO - Study session ended. Accuracy: 100.0%
+2025-08-09 02:58:52,092 - quizmaster.core - INFO - Question bank exported to complete_pipeline_question_bank.json
+2025-08-09 03:01:37,747 - quizmaster.core - INFO - QuizMaster initialized for user 'pipeline_demo' with bank 'Complete Pipeline Bank'
+2025-08-09 03:01:37,747 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 03:01:37,747 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 03:01:37,747 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 03:01:37,748 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 03:01:37,748 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 03:01:37,748 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 03:01:37,748 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 03:01:37,748 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 03:01:37,748 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 03:01:37,748 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 03:01:37,748 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 03:01:37,748 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 03:01:37,748 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 03:01:37,748 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 03:01:37,748 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 03:01:37,748 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 03:01:37,748 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 03:01:44,355 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:01:44,363 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: How do the foundational principles of machine learning intersect with the methodological approaches outlined in data science methodology, and what practical implications arise when applying these intersections to real-world problem-solving?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 03:01:44,364 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: In what ways does deep learning advance beyond traditional machine learning frameworks, and how might the methodological rigor described in data science methodology influence the development and deployment of advanced deep learning systems?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 03:01:44,364 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: What are the key differences between supervised and unsupervised learning approaches as they relate to both machine learning fundamentals and data science methodology, and how do these differences impact model selection and validation strategies?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 03:01:44,364 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: How can the conceptual frameworks presented in these three interconnected mindmaps be applied to design a comprehensive data science project that integrates fundamental ML concepts, advanced deep learning techniques, and methodological best practices?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 03:01:44,365 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: What role does the iterative nature of data science methodology play in the evolution of machine learning models, and how might this dynamic relationship be leveraged to improve model performance across different domains and applications?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 03:01:54,800 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:02:00,943 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:02:09,032 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:02:16,663 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:02:26,134 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:02:33,815 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:02:40,879 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:02:48,342 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:02:58,902 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:03:06,991 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:03:13,750 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:03:20,191 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:03:29,727 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:03:35,869 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:03:43,243 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:03:50,717 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:04:01,367 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:04:08,023 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:04:15,382 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:04:23,792 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:04:23,794 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 03:04:23,794 - quizmaster.core - INFO - Study session started with 3 questions
+2025-08-09 03:04:23,794 - quizmaster.core - INFO - Question answered: e44419a1-6606-4edc-978f-2312d4269209 - Correct
+2025-08-09 03:04:23,794 - quizmaster.core - INFO - Question answered: 286eda15-4875-43bd-b229-9e66fb102d80 - Correct
+2025-08-09 03:04:23,794 - quizmaster.core - INFO - Question answered: f175b3f8-2c1e-4ccf-a2e8-16d2de6621dc - Correct
+2025-08-09 03:04:23,794 - quizmaster.core - INFO - Study session ended. Accuracy: 100.0%
+2025-08-09 03:04:23,796 - quizmaster.core - INFO - Question bank exported to complete_pipeline_question_bank.json
+2025-08-09 03:11:34,956 - quizmaster.core - INFO - QuizMaster initialized for user 'pipeline_demo' with bank 'Complete Pipeline Bank'
+2025-08-09 03:11:34,956 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 03:11:34,957 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 03:11:34,957 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 03:11:34,957 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 03:11:34,957 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 03:11:34,957 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 03:11:34,957 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 03:11:34,957 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 03:11:34,957 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 03:11:34,957 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 03:11:34,957 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 03:11:34,957 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 03:11:34,957 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 03:11:34,957 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 03:11:34,958 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 03:11:34,958 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 03:11:34,958 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 03:11:44,019 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:11:44,024 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: How do the foundational concepts of machine learning intersect with the methodological approaches outlined in data science methodology, and what practical implications arise when combining these frameworks for real-world problem-solving?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 03:11:44,024 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: In what ways does deep learning advance beyond traditional machine learning methods, and how might the architectural choices in deep learning models influence the overall data science workflow described in the methodology document?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 03:11:44,025 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: What are the key decision points a data scientist must consider when transitioning from fundamental machine learning techniques to advanced deep learning approaches, and how do these decisions impact model selection and performance optimization?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 03:11:44,025 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: How can the principles of data science methodology be applied to evaluate and improve the effectiveness of both basic machine learning models and complex deep learning architectures in practical applications?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 03:11:44,025 - quizmaster.core - INFO - Querying knowledge graph: 'Please provide a comprehensive, knowledgeable report that thoroughly addresses this specific question:
+
+QUERY: What are the emerging trends in machine learning that bridge the gap between fundamental algorithms and advanced deep learning methods, and how might these developments reshape current data science practices?
+
+Instructions for your focused report:
+1. COMPREHENSIVE COVERAGE: Provide detailed explanations of all relevant concepts, theories, and practical aspects related to this specific question
+2. STRUCTURED CONTENT: Organize your response with clear sections and subsections that directly address the query
+3. TECHNICAL DEPTH: Include specific technical details, methodologies, and examples relevant to this question
+4. PRACTICAL INSIGHTS: Explain real-world applications and implementation considerations specific to this topic
+5. COMPARATIVE ANALYSIS: When applicable, compare different approaches, methods, or solutions related to this query
+6. CURRENT CONTEXT: Include modern perspectives and recent developments in the field relevant to this question
+7. EDUCATIONAL VALUE: Write in a way that would help someone deeply understand this specific topic
+
+Your report should be substantial enough to serve as educational material for generating quiz questions about this specific topic. Include:
+- Key definitions and terminology relevant to this query
+- Step-by-step processes or methodologies that address this question
+- Examples and case studies that illustrate concepts in this query
+- Best practices and common pitfalls related to this topic
+- Relationships between different concepts mentioned in this query
+- Practical applications and use cases that demonstrate this topic
+
+Write your response as a comprehensive educational report that demonstrates deep knowledge of this specific subject matter.' (mode: hybrid)
+2025-08-09 03:11:54,769 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:12:03,987 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:16:58,029 - quizmaster.core - INFO - QuizMaster initialized for user 'demo_user' with bank 'Simple Demo Bank'
+2025-08-09 03:16:58,029 - quizmaster.core - INFO - Processing 1 documents
+2025-08-09 03:16:58,029 - quizmaster.processor - INFO - Processing document: ml_basics_demo.md
+2025-08-09 03:16:58,030 - quizmaster.processor - INFO - Document processed successfully: ml_basics_demo.md (94 words)
+2025-08-09 03:16:58,030 - quizmaster.core - INFO - Document ml_basics_demo processed and ready for knowledge graph
+2025-08-09 03:16:58,030 - quizmaster.generator - INFO - Generating 10 questions from document: ml_basics_demo
+2025-08-09 03:17:29,930 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:17:29,935 - quizmaster.generator - INFO - Generated 10 questions using OPENAI
+2025-08-09 03:17:29,936 - quizmaster.generator - INFO - Successfully generated and added 10 questions
+2025-08-09 03:17:29,936 - quizmaster.core - INFO - Processing complete. Generated 10 questions
+2025-08-09 03:17:29,936 - quizmaster.core - INFO - Querying knowledge graph: 'What are the benefits of machine learning?' (mode: hybrid)
+2025-08-09 03:17:29,937 - quizmaster.core - INFO - Question bank exported to simple_demo_questions.json
+2025-08-09 03:30:42,274 - quizmaster.core - INFO - QuizMaster initialized for user 'clean_demo' with bank 'Clean Pipeline Demo Bank'
+2025-08-09 03:30:42,274 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 03:30:42,274 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 03:30:42,274 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 03:30:42,275 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 03:30:42,275 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 03:30:42,275 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 03:30:42,275 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 03:30:42,275 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 03:30:42,275 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 03:30:42,275 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 03:30:42,275 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 03:30:42,275 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 03:30:42,275 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 03:30:42,275 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 03:30:42,275 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 03:30:42,275 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 03:30:42,275 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 03:30:42,275 - quizmaster.core - INFO - Querying knowledge graph: 'What are the key differences between supervised and unsupervised learning?' (mode: hybrid)
+2025-08-09 03:30:42,275 - quizmaster.core - INFO - Querying knowledge graph: 'How do convolutional neural networks process images?' (mode: hybrid)
+2025-08-09 03:30:42,275 - quizmaster.core - INFO - Querying knowledge graph: 'What are the main steps in the data science methodology?' (mode: hybrid)
+2025-08-09 03:30:42,275 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 03:30:42,276 - quizmaster.core - INFO - Study session started with 3 questions
+2025-08-09 03:30:42,276 - quizmaster.core - INFO - Question answered: bc9c8aee-9b22-4158-b1f2-4fd463270455 - Correct
+2025-08-09 03:30:42,276 - quizmaster.core - INFO - Question answered: eb00dc32-1d63-4a51-b2fe-d74b413aa15b - Correct
+2025-08-09 03:30:42,276 - quizmaster.core - INFO - Question answered: 48d940cd-2b64-4464-a821-a2e1dead4dfa - Correct
+2025-08-09 03:30:42,276 - quizmaster.core - INFO - Study session ended. Accuracy: 100.0%
+2025-08-09 03:34:05,637 - quizmaster.core - INFO - QuizMaster initialized for user 'clean_demo' with bank 'Clean Pipeline Demo Bank'
+2025-08-09 03:34:05,637 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 03:34:05,637 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 03:34:05,637 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 03:34:05,637 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 03:34:05,638 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 03:34:05,638 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 03:34:05,638 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 03:34:05,638 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 03:34:05,638 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 03:34:05,638 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 03:34:05,638 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 03:34:05,638 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 03:34:05,638 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 03:34:05,638 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 03:34:05,638 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 03:34:05,638 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 03:34:05,638 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 03:34:05,638 - quizmaster.core - INFO - Querying knowledge graph: 'What are the key differences between supervised and unsupervised learning?' (mode: hybrid)
+2025-08-09 03:34:05,639 - quizmaster.core - INFO - Querying knowledge graph: 'How do convolutional neural networks process images?' (mode: hybrid)
+2025-08-09 03:34:05,639 - quizmaster.core - INFO - Querying knowledge graph: 'What are the main steps in the data science methodology?' (mode: hybrid)
+2025-08-09 03:34:05,639 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 03:34:05,639 - quizmaster.core - INFO - Study session started with 3 questions
+2025-08-09 03:34:05,639 - quizmaster.core - INFO - Question answered: 6484f2b5-4951-4231-a58d-8704625cf085 - Correct
+2025-08-09 03:34:05,639 - quizmaster.core - INFO - Question answered: 31a384c2-34ea-4fea-87f5-821fec312380 - Correct
+2025-08-09 03:34:05,639 - quizmaster.core - INFO - Question answered: daebf44d-ceea-4e3b-8d32-591f1d42d990 - Correct
+2025-08-09 03:34:05,639 - quizmaster.core - INFO - Study session ended. Accuracy: 100.0%
+2025-08-09 03:36:05,756 - quizmaster.core - INFO - QuizMaster initialized for user 'clean_demo' with bank 'Clean Pipeline Demo Bank'
+2025-08-09 03:36:05,756 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 03:36:05,756 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 03:36:05,757 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 03:36:05,757 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 03:36:05,757 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 03:36:05,757 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 03:36:05,757 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 03:36:05,757 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 03:36:05,757 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 03:36:05,757 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 03:36:05,757 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 03:36:05,758 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 03:36:05,758 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 03:36:05,758 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 03:36:05,758 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 03:36:05,758 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 03:36:05,758 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 03:36:05,758 - quizmaster.core - INFO - Querying knowledge graph: 'What are the key differences between supervised and unsupervised learning?' (mode: hybrid)
+2025-08-09 03:36:05,758 - quizmaster.core - INFO - Querying knowledge graph: 'How do convolutional neural networks process images?' (mode: hybrid)
+2025-08-09 03:36:05,758 - quizmaster.core - INFO - Querying knowledge graph: 'What are the main steps in the data science methodology?' (mode: hybrid)
+2025-08-09 03:39:33,835 - quizmaster.core - INFO - QuizMaster initialized for user 'example_user' with bank 'Example Question Bank'
+2025-08-09 03:39:33,835 - quizmaster.core - INFO - Processing 3 documents
+2025-08-09 03:39:33,835 - quizmaster.processor - INFO - Processing document: machine_learning_fundamentals.md
+2025-08-09 03:39:33,835 - quizmaster.processor - INFO - Document processed successfully: machine_learning_fundamentals.md (278 words)
+2025-08-09 03:39:33,835 - quizmaster.core - INFO - Document machine_learning_fundamentals processed and ready for knowledge graph
+2025-08-09 03:39:33,835 - quizmaster.processor - INFO - Processing document: deep_learning_advanced.md
+2025-08-09 03:39:33,835 - quizmaster.processor - INFO - Document processed successfully: deep_learning_advanced.md (289 words)
+2025-08-09 03:39:33,835 - quizmaster.core - INFO - Document deep_learning_advanced processed and ready for knowledge graph
+2025-08-09 03:39:33,836 - quizmaster.processor - INFO - Processing document: data_science_methodology.md
+2025-08-09 03:39:33,836 - quizmaster.processor - INFO - Document processed successfully: data_science_methodology.md (382 words)
+2025-08-09 03:39:33,836 - quizmaster.core - INFO - Document data_science_methodology processed and ready for knowledge graph
+2025-08-09 03:39:33,836 - quizmaster.processor - INFO - Generating mindmap for: machine_learning_fundamentals
+2025-08-09 03:39:33,836 - quizmaster.processor - INFO - Mindmap generated successfully for: machine_learning_fundamentals
+2025-08-09 03:39:33,836 - quizmaster.processor - INFO - Generating mindmap for: deep_learning_advanced
+2025-08-09 03:39:33,836 - quizmaster.processor - INFO - Mindmap generated successfully for: deep_learning_advanced
+2025-08-09 03:39:33,836 - quizmaster.processor - INFO - Generating mindmap for: data_science_methodology
+2025-08-09 03:39:33,836 - quizmaster.processor - INFO - Mindmap generated successfully for: data_science_methodology
+2025-08-09 03:39:33,836 - quizmaster.core - INFO - Processing complete. Generated 0 questions
+2025-08-09 03:39:33,836 - quizmaster.core - INFO - Querying knowledge graph: 'What are the fundamental concepts of machine learning?' (mode: hybrid)
+2025-08-09 03:39:33,836 - quizmaster.core - INFO - Querying knowledge graph: 'How do neural networks learn through backpropagation?' (mode: hybrid)
+2025-08-09 03:39:33,836 - quizmaster.core - INFO - Querying knowledge graph: 'What are the key steps in data science methodology?' (mode: hybrid)
+2025-08-09 03:39:33,836 - quizmaster.generator - INFO - Generating 2 questions from context: What are the fundamental concepts of machine learning?
+2025-08-09 03:39:48,421 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:39:48,425 - quizmaster.generator - ERROR - Failed to parse LLM response as JSON
+2025-08-09 03:39:48,425 - quizmaster.generator - INFO - Generated 0 questions using OPENAI
+2025-08-09 03:39:48,425 - quizmaster.generator - INFO - Successfully generated 0 questions from context
+2025-08-09 03:39:48,426 - quizmaster.generator - INFO - Generating 2 questions from context: How do neural networks learn through backpropagation?
+2025-08-09 03:39:57,205 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:39:57,206 - quizmaster.generator - INFO - Generated 2 questions using OPENAI
+2025-08-09 03:39:57,206 - quizmaster.generator - INFO - Successfully generated 2 questions from context
+2025-08-09 03:39:57,206 - quizmaster.generator - INFO - Generating 2 questions from context: What are the key steps in data science methodology?
+2025-08-09 03:40:06,806 - httpx - INFO - HTTP Request: POST http://brainmachine:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 03:40:06,807 - quizmaster.generator - INFO - Generated 2 questions using OPENAI
+2025-08-09 03:40:06,808 - quizmaster.generator - INFO - Successfully generated 2 questions from context
+2025-08-09 03:40:06,808 - quizmaster.core - INFO - Starting study session with 3 questions
+2025-08-09 03:40:06,808 - quizmaster.core - INFO - Study session started with 3 questions
+2025-08-09 03:40:06,808 - quizmaster.core - INFO - Question answered: 6adc34e5-7384-43a8-a088-ff1c7de5f536 - Correct
+2025-08-09 03:40:06,808 - quizmaster.core - INFO - Question answered: 4cde883b-d7cc-47ee-97b3-6f99446e5fbb - Correct
+2025-08-09 03:40:06,808 - quizmaster.core - INFO - Question answered: 61228975-17a0-4c05-ab3d-5fd096dafdf4 - Correct
+2025-08-09 03:40:06,808 - quizmaster.core - INFO - Study session ended. Accuracy: 100.0%
+2025-08-09 04:03:43,440 - quizmaster.config - INFO - QuizMaster configuration initialized
+2025-08-09 04:03:43,440 - quizmaster.config - INFO - API Provider: OPENAI
+2025-08-09 04:03:43,440 - quizmaster.config - INFO - LLM Model: qwen3-coder:30b
+2025-08-09 04:03:43,440 - quizmaster.config - INFO - BookWorm Working Dir: bookworm_workspace
+2025-08-09 04:03:43,440 - quizmaster.config - INFO - qBank Data Dir: data/qbank
+2025-08-09 04:03:43,443 - quizmaster.bookworm_integration - ERROR - Failed to initialize BookWorm components: DocumentProcessor.__init__() got an unexpected keyword argument 'working_dir'
+2025-08-09 04:20:42,990 - quizmaster.config - INFO - QuizMaster configuration initialized
+2025-08-09 04:20:42,990 - quizmaster.config - INFO - API Provider: OPENAI
+2025-08-09 04:20:42,990 - quizmaster.config - INFO - LLM Model: qwen3-coder:30b
+2025-08-09 04:20:42,990 - quizmaster.config - INFO - BookWorm Working Dir: bookworm_workspace
+2025-08-09 04:20:42,990 - quizmaster.config - INFO - qBank Data Dir: data/qbank
+2025-08-09 04:20:42,993 - quizmaster.bookworm_integration - WARNING - BookWorm not available. Install with: uv add 'bookworm @ git+https://github.com/haxx0rman/BookWorm.git'
+2025-08-09 04:20:42,993 - quizmaster.qbank_integration - INFO - qBank components initialized successfully
+2025-08-09 04:20:43,031 - quizmaster.question_generator - INFO - LLM client initialized for OPENAI
+2025-08-09 04:20:43,031 - quizmaster.pipeline - INFO - QuizMaster pipeline initialized
+2025-08-09 04:20:43,032 - quizmaster.pipeline - INFO - Dependency check: {'config_valid': True, 'bookworm_available': False, 'qbank_available': True, 'llm_available': True}
+2025-08-09 05:13:45,413 - quizmaster.config - INFO - QuizMaster configuration initialized
+2025-08-09 05:13:45,413 - quizmaster.config - INFO - API Provider: OPENAI
+2025-08-09 05:13:45,413 - quizmaster.config - INFO - LLM Model: qwen3-coder:30b
+2025-08-09 05:13:45,413 - quizmaster.config - INFO - BookWorm Working Dir: bookworm_workspace
+2025-08-09 05:13:45,413 - quizmaster.config - INFO - qBank Data Dir: data/qbank
+2025-08-09 05:13:45,433 - bookworm.library - INFO - 📚 Library initialized with 6 documents and 6 mindmaps
+2025-08-09 05:13:45,481 - quizmaster.bookworm_integration - INFO - BookWorm components initialized successfully
+2025-08-09 05:14:03,711 - quizmaster.config - INFO - QuizMaster configuration initialized
+2025-08-09 05:14:03,711 - quizmaster.config - INFO - API Provider: OPENAI
+2025-08-09 05:14:03,711 - quizmaster.config - INFO - LLM Model: qwen3-coder:30b
+2025-08-09 05:14:03,711 - quizmaster.config - INFO - BookWorm Working Dir: bookworm_workspace
+2025-08-09 05:14:03,711 - quizmaster.config - INFO - qBank Data Dir: data/qbank
+2025-08-09 05:14:03,732 - bookworm.library - INFO - 📚 Library initialized with 6 documents and 6 mindmaps
+2025-08-09 05:14:03,783 - quizmaster.bookworm_integration - INFO - BookWorm components initialized successfully
+2025-08-09 05:14:03,785 - quizmaster.bookworm_integration - INFO - Starting batch processing of 1 documents
+2025-08-09 05:14:03,786 - quizmaster.bookworm_integration - INFO - Processing 1 valid files (total size: 0.0MB)
+2025-08-09 05:14:03,786 - quizmaster.bookworm_integration - INFO - Processing documents with max 4 concurrent operations
+2025-08-09 05:14:03,787 - bookworm.library - INFO - 📄 Added document to library: test_document.txt (ID: f512fd03-a0b8-4420-9d06-c4e7d4e2d6a2)
+2025-08-09 05:14:03,787 - quizmaster.bookworm_integration - INFO - Added document to BookWorm library: f512fd03-a0b8-4420-9d06-c4e7d4e2d6a2
+2025-08-09 05:14:03,787 - bookworm.core - INFO - Processing document: test_document.txt
+2025-08-09 05:14:03,788 - bookworm.core - INFO - ✅ Successfully processed: test_document.txt
+2025-08-09 05:14:03,788 - bookworm.core - INFO - 🚀 Generating advanced mindmap for document 921f2034-e8d6-4b8d-9900-5a81c61b8ecd
+2025-08-09 05:14:03,788 - bookworm.mindmap_generator - INFO - 🚀 Starting advanced mindmap generation for document 921f2034-e8d6-4b8d-9900-5a81c61b8ecd
+2025-08-09 05:14:03,788 - bookworm.mindmap_generator - INFO - 📋 Detected document type: technical
+2025-08-09 05:14:03,789 - bookworm.mindmap_generator - INFO - 📊 Document size: 152 words, 1060 chars. Thresholds: 2000 words, 10000 chars
+2025-08-09 05:14:03,789 - bookworm.mindmap_generator - INFO - 📄 Document size manageable, using standard processing
+2025-08-09 05:14:03,789 - bookworm.mindmap_generator - INFO - 📄 Document size manageable, using standard processing
+2025-08-09 05:14:03,789 - bookworm.mindmap_generator - INFO - 📊 Document size: 152 words. Generation limit: 136.8 words
+2025-08-09 05:14:05,877 - bookworm.mindmap_generator - INFO - 🎯 Extracted 5 unique topics
+2025-08-09 05:14:05,877 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 1/5: 'Python Syntax'
+2025-08-09 05:14:09,994 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 2/5: 'Data Types'
+2025-08-09 05:14:13,553 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 3/5: 'Control Structures'
+2025-08-09 05:14:18,160 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 4/5: 'Object-Oriented Programming'
+2025-08-09 05:14:21,877 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 5/5: 'Libraries and Frameworks'
+2025-08-09 05:14:26,148 - bookworm.mindmap_generator - INFO - 🔍 Performing reality check against source document...
+2025-08-09 05:14:26,150 - bookworm.mindmap_generator - INFO - 📊 Token Usage Report:
+2025-08-09 05:14:26,150 - bookworm.mindmap_generator - INFO - Provider: OLLAMA
+2025-08-09 05:14:26,150 - bookworm.mindmap_generator - INFO - Total tokens: 7,654
+2025-08-09 05:14:26,150 - bookworm.mindmap_generator - INFO -   topics: 314 tokens
+2025-08-09 05:14:26,150 - bookworm.mindmap_generator - INFO -   subtopics: 1,520 tokens
+2025-08-09 05:14:26,150 - bookworm.mindmap_generator - INFO -   details: 5,820 tokens
+2025-08-09 05:14:26,150 - bookworm.mindmap_generator - INFO - ✅ Advanced mindmap generation completed in 22.36 seconds
+2025-08-09 05:14:26,151 - bookworm.core - INFO - Found document by filename: 1a9b527f-5ec7-43a9-9d0c-2d627f17fb85
+2025-08-09 05:14:26,152 - bookworm.library - INFO - 🗺️ Added mindmap to library: mindmap_test_document.txt (ID: 8b027001-d7ff-48c0-a2c5-b9c8884e81cc)
+2025-08-09 05:14:26,152 - bookworm.core - INFO - 📚 Mindmap 8b027001-d7ff-48c0-a2c5-b9c8884e81cc added to library
+2025-08-09 05:14:26,152 - bookworm.core - INFO - 💾 Saved Mermaid: bookworm_workspace/mindmaps/8b027001-d7ff-48c0-a2c5-b9c8884e81cc/test_document_mindmap.mmd
+2025-08-09 05:14:26,152 - bookworm.core - INFO - � Saved HTML: bookworm_workspace/mindmaps/8b027001-d7ff-48c0-a2c5-b9c8884e81cc/test_document_mindmap.html
+2025-08-09 05:14:26,152 - bookworm.core - INFO - 💾 Saved Markdown: bookworm_workspace/mindmaps/8b027001-d7ff-48c0-a2c5-b9c8884e81cc/test_document_outline.md
+2025-08-09 05:14:26,174 - bookworm.library - INFO - 📄 Updated document 1a9b527f-5ec7-43a9-9d0c-2d627f17fb85 metadata
+2025-08-09 05:14:26,174 - bookworm.core - INFO - 📚 Document 1a9b527f-5ec7-43a9-9d0c-2d627f17fb85 updated with mindmap ID: 8b027001-d7ff-48c0-a2c5-b9c8884e81cc
+2025-08-09 05:14:26,175 - bookworm.core - INFO - ✅ Advanced mindmap generated successfully for document 921f2034-e8d6-4b8d-9900-5a81c61b8ecd
+2025-08-09 05:14:26,175 - bookworm.core - INFO - 📊 Token usage: 7,654 total tokens
+2025-08-09 05:14:26,175 - quizmaster.bookworm_integration - INFO - Successfully processed 1 out of 1 documents
+2025-08-09 05:29:56,724 - quizmaster.config - INFO - QuizMaster configuration initialized
+2025-08-09 05:29:56,724 - quizmaster.config - INFO - API Provider: OPENAI
+2025-08-09 05:29:56,724 - quizmaster.config - INFO - LLM Model: qwen3-coder:30b
+2025-08-09 05:29:56,724 - quizmaster.config - INFO - BookWorm Working Dir: bookworm_workspace
+2025-08-09 05:29:56,725 - quizmaster.config - INFO - qBank Data Dir: data/qbank
+2025-08-09 05:29:56,725 - quizmaster.config - INFO - QuizMaster configuration initialized
+2025-08-09 05:29:56,725 - quizmaster.config - INFO - API Provider: OPENAI
+2025-08-09 05:29:56,725 - quizmaster.config - INFO - LLM Model: qwen3-coder:30b
+2025-08-09 05:29:56,725 - quizmaster.config - INFO - BookWorm Working Dir: bookworm_workspace
+2025-08-09 05:29:56,725 - quizmaster.config - INFO - qBank Data Dir: data/qbank
+2025-08-09 05:29:56,742 - bookworm.library - INFO - 📚 Library initialized with 11 documents and 10 mindmaps
+2025-08-09 05:29:56,790 - quizmaster.bookworm_integration - INFO - BookWorm components initialized successfully
+2025-08-09 05:29:56,790 - quizmaster.qbank_integration - INFO - qBank components initialized successfully
+2025-08-09 05:29:56,819 - quizmaster.question_generator - INFO - LLM client initialized for OPENAI
+2025-08-09 05:29:56,820 - quizmaster.pipeline - INFO - QuizMaster pipeline initialized
+2025-08-09 05:29:56,827 - quizmaster.pipeline - INFO - Starting document processing for 1 files
+2025-08-09 05:29:56,827 - quizmaster.bookworm_integration - INFO - Starting batch processing of 1 documents
+2025-08-09 05:29:56,827 - quizmaster.bookworm_integration - INFO - Processing 1 valid files (total size: 0.0MB)
+2025-08-09 05:29:56,828 - quizmaster.bookworm_integration - INFO - Processing documents with max 4 concurrent operations
+2025-08-09 05:29:56,829 - bookworm.library - INFO - 📄 Added document to library: test_document.txt (ID: b739e3c2-8b9e-450b-89f3-5e2a620aa5fb)
+2025-08-09 05:29:56,830 - quizmaster.bookworm_integration - INFO - Added document to BookWorm library: b739e3c2-8b9e-450b-89f3-5e2a620aa5fb
+2025-08-09 05:29:56,830 - bookworm.core - INFO - Processing document: test_document.txt
+2025-08-09 05:29:56,830 - bookworm.core - INFO - ✅ Successfully processed: test_document.txt
+2025-08-09 05:29:56,830 - bookworm.core - INFO - 🚀 Generating advanced mindmap for document b4aa8532-573d-4130-806c-52cf6f6b3133
+2025-08-09 05:29:56,830 - bookworm.mindmap_generator - INFO - 🚀 Starting advanced mindmap generation for document b4aa8532-573d-4130-806c-52cf6f6b3133
+2025-08-09 05:29:56,830 - bookworm.mindmap_generator - INFO - 📋 Detected document type: technical
+2025-08-09 05:29:56,830 - bookworm.mindmap_generator - INFO - 📊 Document size: 152 words, 1060 chars. Thresholds: 2000 words, 10000 chars
+2025-08-09 05:29:56,830 - bookworm.mindmap_generator - INFO - 📄 Document size manageable, using standard processing
+2025-08-09 05:29:56,830 - bookworm.mindmap_generator - INFO - 📄 Document size manageable, using standard processing
+2025-08-09 05:29:56,830 - bookworm.mindmap_generator - INFO - 📊 Document size: 152 words. Generation limit: 136.8 words
+2025-08-09 05:29:58,826 - bookworm.mindmap_generator - INFO - 🎯 Extracted 5 unique topics
+2025-08-09 05:29:58,826 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 1/5: 'Python Syntax'
+2025-08-09 05:30:02,815 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 2/5: 'Data Types'
+2025-08-09 05:30:06,399 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 3/5: 'Control Structures'
+2025-08-09 05:30:10,290 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 4/5: 'Functions'
+2025-08-09 05:30:14,491 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 5/5: 'Object-Oriented Programming'
+2025-08-09 05:30:18,797 - bookworm.mindmap_generator - INFO - 🔍 Performing reality check against source document...
+2025-08-09 05:30:18,798 - bookworm.mindmap_generator - INFO - 📊 Token Usage Report:
+2025-08-09 05:30:18,798 - bookworm.mindmap_generator - INFO - Provider: OLLAMA
+2025-08-09 05:30:18,798 - bookworm.mindmap_generator - INFO - Total tokens: 7,632
+2025-08-09 05:30:18,798 - bookworm.mindmap_generator - INFO -   topics: 310 tokens
+2025-08-09 05:30:18,798 - bookworm.mindmap_generator - INFO -   subtopics: 1,515 tokens
+2025-08-09 05:30:18,798 - bookworm.mindmap_generator - INFO -   details: 5,807 tokens
+2025-08-09 05:30:18,798 - bookworm.mindmap_generator - INFO - ✅ Advanced mindmap generation completed in 21.97 seconds
+2025-08-09 05:30:18,799 - bookworm.core - INFO - Found document by filename: 1a9b527f-5ec7-43a9-9d0c-2d627f17fb85
+2025-08-09 05:30:18,800 - bookworm.library - INFO - 🗺️ Added mindmap to library: mindmap_test_document.txt (ID: 7738fd70-ee17-443e-98ba-4b2705582a1a)
+2025-08-09 05:30:18,801 - bookworm.core - INFO - 📚 Mindmap 7738fd70-ee17-443e-98ba-4b2705582a1a added to library
+2025-08-09 05:30:18,801 - bookworm.core - INFO - 💾 Saved Mermaid: bookworm_workspace/mindmaps/7738fd70-ee17-443e-98ba-4b2705582a1a/test_document_mindmap.mmd
+2025-08-09 05:30:18,801 - bookworm.core - INFO - � Saved HTML: bookworm_workspace/mindmaps/7738fd70-ee17-443e-98ba-4b2705582a1a/test_document_mindmap.html
+2025-08-09 05:30:18,801 - bookworm.core - INFO - 💾 Saved Markdown: bookworm_workspace/mindmaps/7738fd70-ee17-443e-98ba-4b2705582a1a/test_document_outline.md
+2025-08-09 05:30:18,802 - bookworm.library - INFO - 📄 Updated document 1a9b527f-5ec7-43a9-9d0c-2d627f17fb85 metadata
+2025-08-09 05:30:18,802 - bookworm.core - INFO - 📚 Document 1a9b527f-5ec7-43a9-9d0c-2d627f17fb85 updated with mindmap ID: 7738fd70-ee17-443e-98ba-4b2705582a1a
+2025-08-09 05:30:18,802 - bookworm.core - INFO - ✅ Advanced mindmap generated successfully for document b4aa8532-573d-4130-806c-52cf6f6b3133
+2025-08-09 05:30:18,802 - bookworm.core - INFO - 📊 Token usage: 7,632 total tokens
+2025-08-09 05:30:18,803 - quizmaster.bookworm_integration - INFO - Successfully processed 1 out of 1 documents
+2025-08-09 05:30:18,803 - quizmaster.pipeline - INFO - Successfully processed 1 documents
+2025-08-09 05:30:18,804 - quizmaster.pipeline - INFO - Generating multiple choice questions for all processed documents
+2025-08-09 05:30:30,058 - quizmaster.question_generator - INFO - Token usage - Total: 1453, Prompt: 997, Completion: 456
+2025-08-09 05:30:30,058 - quizmaster.question_generator - INFO - Generated 3 quiz questions
+2025-08-09 05:30:31,698 - quizmaster.question_generator - INFO - Token usage - Total: 247, Prompt: 174, Completion: 73
+2025-08-09 05:30:31,698 - quizmaster.question_generator - INFO - Generated distractors response
+2025-08-09 05:30:31,698 - quizmaster.question_generator - INFO - Generated 3 distractors
+2025-08-09 05:30:32,203 - quizmaster.question_generator - INFO - Token usage - Total: 190, Prompt: 177, Completion: 13
+2025-08-09 05:30:32,204 - quizmaster.question_generator - INFO - Generated distractors response
+2025-08-09 05:30:32,204 - quizmaster.question_generator - INFO - Generated 3 distractors
+2025-08-09 05:30:32,204 - quizmaster.question_generator - INFO - Generated 2 multiple choice questions
+2025-08-09 05:30:32,204 - quizmaster.pipeline - INFO - Generated 2 multiple choice questions for test_document.txt
+2025-08-09 05:30:32,205 - quizmaster.pipeline - INFO - Generated 2 total multiple choice questions
+2025-08-09 05:40:53,216 - quizmaster.config - INFO - QuizMaster configuration initialized
+2025-08-09 05:40:53,216 - quizmaster.config - INFO - API Provider: OPENAI
+2025-08-09 05:40:53,216 - quizmaster.config - INFO - LLM Model: qwen3-coder:30b
+2025-08-09 05:40:53,216 - quizmaster.config - INFO - BookWorm Working Dir: bookworm_workspace
+2025-08-09 05:40:53,216 - quizmaster.config - INFO - qBank Data Dir: data/qbank
+2025-08-09 05:40:59,156 - quizmaster.config - INFO - QuizMaster configuration initialized
+2025-08-09 05:40:59,157 - quizmaster.config - INFO - API Provider: OPENAI
+2025-08-09 05:40:59,157 - quizmaster.config - INFO - LLM Model: qwen3-coder:30b
+2025-08-09 05:40:59,157 - quizmaster.config - INFO - BookWorm Working Dir: bookworm_workspace
+2025-08-09 05:40:59,157 - quizmaster.config - INFO - qBank Data Dir: data/qbank
+2025-08-09 05:41:04,995 - quizmaster.config - INFO - QuizMaster configuration initialized
+2025-08-09 05:41:04,995 - quizmaster.config - INFO - API Provider: OPENAI
+2025-08-09 05:41:04,995 - quizmaster.config - INFO - LLM Model: qwen3-coder:30b
+2025-08-09 05:41:04,995 - quizmaster.config - INFO - BookWorm Working Dir: bookworm_workspace
+2025-08-09 05:41:04,995 - quizmaster.config - INFO - qBank Data Dir: data/qbank
+2025-08-09 05:41:04,996 - quizmaster.config - INFO - QuizMaster configuration initialized
+2025-08-09 05:41:04,996 - quizmaster.config - INFO - API Provider: OPENAI
+2025-08-09 05:41:04,996 - quizmaster.config - INFO - LLM Model: qwen3-coder:30b
+2025-08-09 05:41:04,996 - quizmaster.config - INFO - BookWorm Working Dir: bookworm_workspace
+2025-08-09 05:41:04,996 - quizmaster.config - INFO - qBank Data Dir: data/qbank
+2025-08-09 05:41:05,015 - bookworm.library - INFO - 📚 Library initialized with 14 documents and 13 mindmaps
+2025-08-09 05:41:05,072 - quizmaster.bookworm_integration - INFO - BookWorm components initialized successfully
+2025-08-09 05:41:05,073 - quizmaster.qbank_integration - INFO - qBank components initialized successfully
+2025-08-09 05:41:05,106 - quizmaster.question_generator - INFO - LLM client initialized for OPENAI
+2025-08-09 05:41:05,106 - quizmaster.pipeline - INFO - QuizMaster pipeline initialized
+2025-08-09 05:41:05,111 - quizmaster.pipeline - INFO - Starting document processing for 1 files
+2025-08-09 05:41:05,111 - quizmaster.bookworm_integration - INFO - Starting batch processing of 1 documents
+2025-08-09 05:41:05,111 - quizmaster.bookworm_integration - INFO - Processing 1 valid files (total size: 0.0MB)
+2025-08-09 05:41:05,111 - quizmaster.bookworm_integration - INFO - Processing documents with max 4 concurrent operations
+2025-08-09 05:41:05,113 - bookworm.library - INFO - 📄 Added document to library: test_document.txt (ID: cbf05b50-f5e0-485f-bd3b-a6f5ea923bb2)
+2025-08-09 05:41:05,113 - quizmaster.bookworm_integration - INFO - Added document to BookWorm library: cbf05b50-f5e0-485f-bd3b-a6f5ea923bb2
+2025-08-09 05:41:05,113 - bookworm.core - INFO - Processing document: test_document.txt
+2025-08-09 05:41:05,113 - bookworm.core - INFO - ✅ Successfully processed: test_document.txt
+2025-08-09 05:41:05,113 - bookworm.core - INFO - 🚀 Generating advanced mindmap for document 95d5197e-af55-48cd-ae47-769a7f0868e2
+2025-08-09 05:41:05,113 - bookworm.mindmap_generator - INFO - 🚀 Starting advanced mindmap generation for document 95d5197e-af55-48cd-ae47-769a7f0868e2
+2025-08-09 05:41:05,114 - bookworm.mindmap_generator - INFO - 📋 Detected document type: technical
+2025-08-09 05:41:05,114 - bookworm.mindmap_generator - INFO - 📊 Document size: 152 words, 1060 chars. Thresholds: 2000 words, 10000 chars
+2025-08-09 05:41:05,114 - bookworm.mindmap_generator - INFO - 📄 Document size manageable, using standard processing
+2025-08-09 05:41:05,114 - bookworm.mindmap_generator - INFO - 📄 Document size manageable, using standard processing
+2025-08-09 05:41:05,114 - bookworm.mindmap_generator - INFO - 📊 Document size: 152 words. Generation limit: 136.8 words
+2025-08-09 05:41:07,307 - bookworm.mindmap_generator - INFO - 🎯 Extracted 5 unique topics
+2025-08-09 05:41:07,307 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 1/5: 'Python Syntax'
+2025-08-09 05:41:11,295 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 2/5: 'Data Types'
+2025-08-09 05:41:14,191 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 3/5: 'Control Structures'
+2025-08-09 05:41:17,747 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 4/5: 'Object-Oriented Programming'
+2025-08-09 05:41:21,855 - bookworm.mindmap_generator - INFO - 🔄 Processing topic 5/5: 'Libraries and Frameworks'
+2025-08-09 05:41:26,244 - bookworm.mindmap_generator - INFO - 🔍 Performing reality check against source document...
+2025-08-09 05:41:26,245 - bookworm.mindmap_generator - INFO - 📊 Token Usage Report:
+2025-08-09 05:41:26,245 - bookworm.mindmap_generator - INFO - Provider: OLLAMA
+2025-08-09 05:41:26,245 - bookworm.mindmap_generator - INFO - Total tokens: 7,650
+2025-08-09 05:41:26,246 - bookworm.mindmap_generator - INFO -   topics: 314 tokens
+2025-08-09 05:41:26,246 - bookworm.mindmap_generator - INFO -   subtopics: 1,520 tokens
+2025-08-09 05:41:26,246 - bookworm.mindmap_generator - INFO -   details: 5,816 tokens
+2025-08-09 05:41:26,246 - bookworm.mindmap_generator - INFO - ✅ Advanced mindmap generation completed in 21.13 seconds
+2025-08-09 05:41:26,246 - bookworm.core - INFO - Found document by filename: 1a9b527f-5ec7-43a9-9d0c-2d627f17fb85
+2025-08-09 05:41:26,247 - bookworm.library - INFO - 🗺️ Added mindmap to library: mindmap_test_document.txt (ID: 32221237-396c-4361-b23a-b0cb44707c5f)
+2025-08-09 05:41:26,247 - bookworm.core - INFO - 📚 Mindmap 32221237-396c-4361-b23a-b0cb44707c5f added to library
+2025-08-09 05:41:26,247 - bookworm.core - INFO - 💾 Saved Mermaid: bookworm_workspace/mindmaps/32221237-396c-4361-b23a-b0cb44707c5f/test_document_mindmap.mmd
+2025-08-09 05:41:26,248 - bookworm.core - INFO - � Saved HTML: bookworm_workspace/mindmaps/32221237-396c-4361-b23a-b0cb44707c5f/test_document_mindmap.html
+2025-08-09 05:41:26,248 - bookworm.core - INFO - 💾 Saved Markdown: bookworm_workspace/mindmaps/32221237-396c-4361-b23a-b0cb44707c5f/test_document_outline.md
+2025-08-09 05:41:26,268 - bookworm.library - INFO - 📄 Updated document 1a9b527f-5ec7-43a9-9d0c-2d627f17fb85 metadata
+2025-08-09 05:41:26,268 - bookworm.core - INFO - 📚 Document 1a9b527f-5ec7-43a9-9d0c-2d627f17fb85 updated with mindmap ID: 32221237-396c-4361-b23a-b0cb44707c5f
+2025-08-09 05:41:26,268 - bookworm.core - INFO - ✅ Advanced mindmap generated successfully for document 95d5197e-af55-48cd-ae47-769a7f0868e2
+2025-08-09 05:41:26,268 - bookworm.core - INFO - 📊 Token usage: 7,650 total tokens
+2025-08-09 05:41:26,268 - quizmaster.bookworm_integration - INFO - Successfully processed 1 out of 1 documents
+2025-08-09 05:41:26,268 - quizmaster.pipeline - INFO - Successfully processed 1 documents
+2025-08-09 05:41:26,270 - quizmaster.pipeline - INFO - Generating multiple choice questions for all processed documents
+2025-08-09 05:41:37,098 - quizmaster.question_generator - INFO - Token usage - Total: 1435, Prompt: 1018, Completion: 417
+2025-08-09 05:41:37,099 - quizmaster.question_generator - INFO - Generated 3 quiz questions
+2025-08-09 05:41:38,634 - quizmaster.question_generator - INFO - Token usage - Total: 241, Prompt: 180, Completion: 61
+2025-08-09 05:41:38,634 - quizmaster.question_generator - INFO - Generated distractors response
+2025-08-09 05:41:38,634 - quizmaster.question_generator - INFO - Generated 3 distractors
+2025-08-09 05:41:39,224 - quizmaster.question_generator - INFO - Token usage - Total: 185, Prompt: 170, Completion: 15
+2025-08-09 05:41:39,224 - quizmaster.question_generator - INFO - Generated distractors response
+2025-08-09 05:41:39,224 - quizmaster.question_generator - INFO - Generated 3 distractors
+2025-08-09 05:41:39,224 - quizmaster.question_generator - INFO - Generated 2 multiple choice questions
+2025-08-09 05:41:39,224 - quizmaster.pipeline - INFO - Generated 2 multiple choice questions for test_document.txt
+2025-08-09 05:41:39,225 - quizmaster.pipeline - INFO - Generated 2 total multiple choice questions
+2025-08-09 05:42:21,736 - quizmaster.config - INFO - QuizMaster configuration initialized
+2025-08-09 05:42:21,736 - quizmaster.config - INFO - API Provider: OPENAI
+2025-08-09 05:42:21,736 - quizmaster.config - INFO - LLM Model: qwen3-coder:30b
+2025-08-09 05:42:21,736 - quizmaster.config - INFO - BookWorm Working Dir: bookworm_workspace
+2025-08-09 05:42:21,736 - quizmaster.config - INFO - qBank Data Dir: data/qbank
+2025-08-09 05:42:31,280 - quizmaster.config - INFO - QuizMaster configuration initialized
+2025-08-09 05:42:31,280 - quizmaster.config - INFO - API Provider: OPENAI
+2025-08-09 05:42:31,280 - quizmaster.config - INFO - LLM Model: qwen3-coder:30b
+2025-08-09 05:42:31,280 - quizmaster.config - INFO - BookWorm Working Dir: bookworm_workspace
+2025-08-09 05:42:31,280 - quizmaster.config - INFO - qBank Data Dir: data/qbank
+2025-08-09 05:42:31,283 - quizmaster.qbank_integration - INFO - qBank components initialized successfully
+2025-08-09 05:42:31,283 - quizmaster.qbank_integration - INFO - Retrieved user statistics
+2025-08-09 05:42:31,285 - quizmaster.qbank_integration - INFO - Generated review forecast for 7 days

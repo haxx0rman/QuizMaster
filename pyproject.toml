@@ -11,59 +11,42 @@ requires-python = ">=3.11"
 dependencies = [
     # Core frameworks
     "qbank @ git+https://github.com/haxx0rman/qBank.git",
-    "bookworm @ git+https://github.com/haxx0rman/BookWorm.git",
-    
+    "bookworm",
     # LLM and AI
     "openai>=1.0.0",
     "anthropic>=0.34.0",
     "tiktoken>=0.5.0",
-    
-    # Document processing
-    "PyMuPDF>=1.23.0",
-    "pdfplumber>=0.10.0",
-    "python-docx>=1.1.0",
-    "openpyxl>=3.1.0",
-    
     # Core utilities
     "pydantic>=2.0.0",
     "python-dotenv>=1.0.0",
     "click>=8.0.0",
     "rich>=13.0.0",
     "tqdm>=4.65.0",
-    
     # Data handling
-    "pandas>=2.0.0",
-    "numpy>=1.24.0",
     "aiofiles>=23.0.0",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=8.0.0",
-    "pytest-asyncio>=0.23.0",
-    "pytest-cov>=4.0.0",
-    "black>=24.0.0",
-    "isort>=5.13.0",
-    "mypy>=1.8.0",
-    "ruff>=0.1.0",
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
 ]
 
 [project.scripts]
 quizmaster = "quizmaster.cli:main"
 
 [tool.setuptools.packages.find]
+where = ["."]
 include = ["quizmaster*"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-python_files = ["test_*.py"]
-python_classes = ["Test*"]
-python_functions = ["test_*"]
-addopts = "-v --tb=short"
 
 [tool.black]
 line-length = 88
 target-version = ['py311']
+include = '\.pyi?$'
 
 [tool.isort]
 profile = "black"
@@ -75,6 +58,12 @@ warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
 
-[tool.ruff]
-line-length = 88
-target-version = "py311"
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.uv.sources]
+bookworm = { git = "https://github.com/haxx0rman/BookWorm.git" }

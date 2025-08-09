@@ -1,0 +1,18 @@
+{
+  "pipeline_summary": {
+    "documents_processed": 1,
+    "multiple_choice_questions": 3,
+    "qbank_ready_questions": 3,
+    "average_distractors_per_question": 3,
+    "difficulty_distribution": {
+      "easy": 1,
+      "medium": 1,
+      "hard": 1
+    },
+    "topics_covered": [
+      "Control Structures",
+      "Object-Oriented Programming",
+      "Variables and Data Types"
+    ]
+  }
+}

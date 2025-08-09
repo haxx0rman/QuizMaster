@@ -1,0 +1,7 @@
+[
+  "Why does Python's dynamic typing allow for greater flexibility in programming, and what are the potential trade-offs compared to statically typed languages?",
+  "How do control structures like loops and conditionals interact with data types to enable complex program behavior, and what role does the interpreter play in this process?",
+  "In what ways does the modular organization of functions support code reusability, and how can this be connected to object-oriented programming principles such as encapsulation?",
+  "Given Python's cross-platform compatibility and extensive libraries, how might these features influence a developer's choice of language when designing applications for diverse environments?",
+  "What are the implications of Python\u2019s interpreted nature on performance, debugging, and real-world application deployment compared to compiled languages?"
+]

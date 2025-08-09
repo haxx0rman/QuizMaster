@@ -1,0 +1,36 @@
+[
+  {
+    "question": "Which of the following best describes Python's dynamic typing feature?",
+    "correct_answer": "Variables can hold values of any type, and the type is determined at runtime.",
+    "difficulty": "easy",
+    "explanation": "Dynamic typing in Python means that you don't need to declare the type of a variable when defining it. The interpreter infers the type from the value assigned. For example, a variable can be assigned an integer and later reassigned to a string without error. Other options might incorrectly describe static typing or confuse it with other programming concepts.",
+    "topic": "Variables and Data Types",
+    "cognitive_level": "understand",
+    "choices": [
+      "Python requires all variables to be explicitly typed at the beginning of a program, similar to languages like C or Java.",
+      "Variables must be declared with a specific type before assigning values to them, and this type cannot be changed during execution.",
+      "Variables can hold values of any type, and the type is determined at runtime.",
+      "The type of a variable is determined when the variable is first assigned and cannot be changed throughout the program's execution."
+    ],
+    "correct_choice_index": 2,
+    "correct_choice_letter": "C",
+    "question_type": "multiple_choice"
+  },
+  {
+    "question": "A Python developer is building a data processing application that needs to handle large numerical datasets efficiently. Which library would be most appropriate to use in this scenario?",
+    "correct_answer": "NumPy",
+    "difficulty": "medium",
+    "explanation": "NumPy (Numerical Python) is specifically designed for efficient numerical computations on large, multi-dimensional arrays and matrices. It provides high-performance operations that are optimized for handling massive datasets, making it ideal for scientific computing and data analysis applications. While Pandas is excellent for data manipulation, it's built on top of NumPy and not the core library for raw numerical processing.",
+    "topic": "Popular Libraries",
+    "cognitive_level": "apply",
+    "choices": [
+      "Scrapy",
+      "Pandas",
+      "Django",
+      "NumPy"
+    ],
+    "correct_choice_index": 3,
+    "correct_choice_letter": "D",
+    "question_type": "multiple_choice"
+  }
+]

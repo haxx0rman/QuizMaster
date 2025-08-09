@@ -1,0 +1,16 @@
+Machine Learning Fundamentals
+    
+    Machine learning is a method of data analysis that automates analytical model building. 
+    It is a branch of artificial intelligence (AI) based on the idea that systems can learn from data, 
+    identify patterns and make decisions with minimal human intervention.
+    
+    Key Types of Machine Learning:
+    1. Supervised Learning - Uses labeled data to train models
+    2. Unsupervised Learning - Finds patterns in data without labels
+    3. Reinforcement Learning - Learns through interaction with environment
+    
+    Common algorithms include:
+    - Linear Regression
+    - Decision Trees
+    - Neural Networks
+    - Support Vector Machines

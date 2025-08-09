@@ -4,29 +4,34 @@ A modern question bank generator that integrates **qBank** for intelligent quest
 
 ## 🌟 Features
 
-### 🧠 Intelligent Question Generation
-- Generate high-quality multiple choice questions from any document
-- Support for various difficulty levels (easy, medium, hard)
-- Automatic question categorization and tagging
-- Integration with multiple LLM providers (OpenAI, Claude, DeepSeek, Gemini)
+### 🧠 Intelligent Question Generation Pipeline
+- **Document Processing**: Multi-format support via BookWorm (PDF, DOCX, TXT, Markdown)
+- **Knowledge Extraction**: Mindmap generation and semantic analysis
+- **Curious Questions**: AI-generated questions to explore knowledge gaps
+- **Educational Reports**: Comprehensive answers with gap analysis
+- **Quiz Generation**: Multiple choice questions with intelligent distractors
+- **Adaptive Learning**: Spaced repetition via qBank integration
 
-### 📚 Smart Learning System
-- **Spaced Repetition**: Questions scheduled using SM-2 algorithm
-- **ELO Rating**: Dynamic difficulty adjustment based on performance
-- **Adaptive Learning**: Personalized question recommendations
-- **Study Sessions**: Interactive learning with immediate feedback
-
-### 📄 Advanced Document Processing
+### 📚 Advanced Document Processing
+- **BookWorm Integration**: Leverages knowledge graphs and LightRAG
 - **Multi-format Support**: PDF, DOCX, TXT, Markdown, and more
-- **Knowledge Graph Integration**: Build semantic understanding of content
 - **Mindmap Generation**: Visual representation of document structure
 - **Batch Processing**: Handle multiple documents efficiently
+- **Knowledge Graph Queries**: Query processed content intelligently
 
-### 🔍 Knowledge Graph Queries
-- Query processed documents using natural language
-- Multiple query modes: local, global, hybrid, mixed
-- Generate questions from query results
-- Persistent knowledge storage across sessions
+### 🎯 Smart Learning System  
+- **qBank Integration**: Spaced repetition using SM-2 algorithm
+- **ELO Rating**: Dynamic difficulty adjustment based on performance
+- **Study Sessions**: Interactive learning with immediate feedback
+- **Progress Tracking**: Comprehensive analytics and forecasting
+- **Question Management**: Tagging, search, and organization
+
+### 🔧 Modern Architecture
+- **Async Processing**: Efficient concurrent document processing
+- **LLM Support**: OpenAI, Claude, DeepSeek, Gemini integration
+- **CLI Interface**: Complete command-line interface
+- **Configuration Management**: Environment-based setup
+- **Export/Import**: Question bank backup and sharing
 
 ## 🚀 Quick Start
 
@@ -47,6 +52,194 @@ cd QuizMaster
 ```bash
 uv sync
 ```
+
+3. Set up configuration:
+```bash
+cp .env.example .env
+# Edit .env with your API keys and preferences
+```
+
+### Basic Usage
+
+#### Check System Status
+```bash
+uv run quizmaster status
+```
+
+#### Process Documents
+```bash
+# Process a single document
+uv run quizmaster process document.pdf
+
+# Process an entire directory
+uv run quizmaster process ./documents/
+
+# Process with custom settings
+uv run quizmaster process ./documents/ -q 8 -z 15 -d 4
+```
+
+#### Start Study Session
+```bash
+# Start a study session
+uv run quizmaster study
+
+# Filter by difficulty and tags
+uv run quizmaster study -d medium -t python -t programming -q 20
+```
+
+#### View Statistics
+```bash
+uv run quizmaster stats
+```
+
+#### Export/Import Question Banks
+```bash
+# Export questions
+uv run quizmaster export -o my_questions.json
+
+# Import questions
+uv run quizmaster import-bank -i my_questions.json
+```
+
+## 📖 Configuration
+
+### Environment Variables
+
+Create a `.env` file based on `.env.example`:
+
+```bash
+# LLM API Keys
+OPENAI_API_KEY="your-openai-api-key"
+ANTHROPIC_API_KEY="your-anthropic-api-key"
+DEEPSEEK_API_KEY="your-deepseek-api-key"
+GEMINI_API_KEY="your-gemini-api-key"
+
+# Primary LLM Provider
+API_PROVIDER="OPENAI"  # Options: OPENAI, CLAUDE, DEEPSEEK, GEMINI
+LLM_MODEL="gpt-4o-mini"
+
+# Pipeline Configuration
+CURIOUS_QUESTIONS_COUNT=5
+QUIZ_QUESTIONS_COUNT=10
+DISTRACTORS_COUNT=3
+
+# Directories
+BOOKWORM_WORKING_DIR="./bookworm_workspace"
+QBANK_DATA_DIR="./qbank_data"
+OUTPUT_DIR="./output"
+```
+
+## 🏗️ Pipeline Architecture
+
+### Complete Processing Pipeline
+
+```
+Documents → BookWorm Processing → Knowledge Graphs → Mindmaps
+    ↓
+Curious Questions → Educational Reports → Combined Knowledge
+    ↓
+Quiz Questions → Distractor Generation → Complete Questions
+    ↓
+qBank Integration → Spaced Repetition → Study Sessions
+```
+
+### Core Components
+
+1. **BookWorm Integration**: Document processing and knowledge extraction
+2. **Question Generator**: LLM-powered question and content generation
+3. **qBank Integration**: Question management and spaced repetition
+4. **Pipeline Orchestrator**: Coordinates the complete workflow
+5. **CLI Interface**: User-friendly command-line access
+
+## 🎯 Use Cases
+
+### Academic Learning
+- Process research papers and textbooks
+- Generate study questions with spaced repetition
+- Track learning progress and identify knowledge gaps
+
+### Professional Development
+- Process technical documentation
+- Create certification study materials
+- Build domain-specific question banks
+
+### Content Creation
+- Generate educational content from source materials
+- Create comprehensive learning assessments
+- Build adaptive learning systems
+
+## 🔧 Development
+
+### Setting up Development Environment
+
+```bash
+# Clone repository
+git clone <repository-url>
+cd QuizMaster
+
+# Install development dependencies
+uv sync --dev
+
+# Run tests
+uv run pytest
+
+# Code formatting
+uv run black .
+uv run isort .
+
+# Type checking
+uv run mypy .
+```
+
+### Project Structure
+
+```
+QuizMaster/
+├── quizmaster/              # Main package
+│   ├── __init__.py         # Package initialization
+│   ├── config.py           # Configuration management
+│   ├── pipeline.py         # Main orchestration
+│   ├── bookworm_integration.py  # BookWorm interface
+│   ├── qbank_integration.py     # qBank interface
+│   ├── question_generator.py    # LLM question generation
+│   └── cli.py              # Command-line interface
+├── examples/               # Example scripts and demos
+├── tests/                  # Test suite
+├── docs/                   # Documentation
+├── main.py                 # Entry point
+├── pyproject.toml          # Project configuration
+└── .env.example            # Environment template
+```
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our contributing guidelines for details on:
+
+- Code style and standards
+- Testing requirements
+- Pull request process
+- Issue reporting
+
+## 📜 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- **qBank**: For the excellent spaced repetition framework
+- **BookWorm**: For advanced document processing capabilities
+- **LightRAG**: For knowledge graph generation
+- **Open Source Community**: For the amazing tools and libraries
+
+## 🔗 Related Projects
+
+- [qBank](https://github.com/haxx0rman/qBank) - Spaced repetition question bank system
+- [BookWorm](https://github.com/haxx0rman/BookWorm) - Advanced document processing system
+- [LightRAG](https://github.com/HKUDS/LightRAG) - Simple and Fast Retrieval-Augmented Generation
+
+---
+
+**QuizMaster 2.0** - Transform your documents into intelligent, adaptive learning experiences! 🧠📚🎯
 
 3. Set up configuration:
 ```bash

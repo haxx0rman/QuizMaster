@@ -1,0 +1,86 @@
+[
+  {
+    "id": "qm_001",
+    "type": "multiple_choice",
+    "question_text": "Which of the following best describes Python's approach to variable typing?",
+    "correct_answer": "Python uses dynamic typing, where variable types are determined at runtime.",
+    "choices": [
+      "Python uses static typing, where variable types must be declared before runtime and cannot be changed",
+      "Python implements compile-time typing, where all variable types are resolved when the code is compiled into machine instructions",
+      "Python employs weak typing, allowing implicit conversions between different data types without explicit casting",
+      "Python uses dynamic typing, where variable types are determined at runtime."
+    ],
+    "correct_choice_index": 3,
+    "explanation": "Python is dynamically typed, meaning you don't need to declare the type of a variable when defining it. The interpreter infers the type based on the value assigned. This contrasts with statically typed languages like Java or C++, where types must be declared upfront.",
+    "difficulty": "easy",
+    "topic": "Variables and Data Types",
+    "tags": [
+      "variables_and_data_types",
+      "easy",
+      "quizmaster_generated",
+      "multiple_choice"
+    ],
+    "cognitive_level": "understand",
+    "source": "QuizMaster Pipeline",
+    "created_timestamp": "2025-01-09T05:20:00Z",
+    "elo_rating": 1200,
+    "times_asked": 0,
+    "times_correct": 0
+  },
+  {
+    "id": "qm_002",
+    "type": "multiple_choice",
+    "question_text": "A developer wants to create a program that processes user input to calculate tax based on income brackets. Which control structure would be most appropriate for handling different income ranges?",
+    "correct_answer": "Conditional statements (if-elif-else) to evaluate income against each bracket.",
+    "choices": [
+      "A recursive function to calculate taxes for each income range",
+      "A loop structure to iterate through each tax bracket until a match is found",
+      "A switch-case statement to handle different income levels",
+      "Conditional statements (if-elif-else) to evaluate income against each bracket."
+    ],
+    "correct_choice_index": 3,
+    "explanation": "Since the program needs to make decisions based on specific conditions (income thresholds), conditional logic is essential. An if-elif-else structure allows for multiple decision points and evaluates conditions in order, making it ideal for tax bracket calculations.",
+    "difficulty": "medium",
+    "topic": "Control Structures",
+    "tags": [
+      "control_structures",
+      "medium",
+      "quizmaster_generated",
+      "multiple_choice"
+    ],
+    "cognitive_level": "apply",
+    "source": "QuizMaster Pipeline",
+    "created_timestamp": "2025-01-09T05:20:00Z",
+    "elo_rating": 1200,
+    "times_asked": 0,
+    "times_correct": 0
+  },
+  {
+    "id": "qm_003",
+    "type": "multiple_choice",
+    "question_text": "In Python, when implementing inheritance, what happens if a child class defines a method that already exists in its parent class?",
+    "correct_answer": "The child class's method overrides the parent class's method due to method overriding.",
+    "choices": [
+      "The child class's method overrides the parent class's method due to method overriding.",
+      "The parent class's method automatically gets called before the child class's method due to method chaining.",
+      "The child class must rename its method to avoid conflicts with the parent class's method.",
+      "Both methods coexist and can be called independently using different syntaxes."
+    ],
+    "correct_choice_index": 0,
+    "explanation": "Method overriding is a core concept in object-oriented programming where a subclass provides a specific implementation of a method that is already defined in its parent class. This allows for polymorphism, where objects of different types can be treated uniformly while still executing their specific behavior. Simply redefining the method in the child class overrides the parent's version.",
+    "difficulty": "hard",
+    "topic": "Object-Oriented Programming",
+    "tags": [
+      "object-oriented_programming",
+      "hard",
+      "quizmaster_generated",
+      "multiple_choice"
+    ],
+    "cognitive_level": "analyze",
+    "source": "QuizMaster Pipeline",
+    "created_timestamp": "2025-01-09T05:20:00Z",
+    "elo_rating": 1200,
+    "times_asked": 0,
+    "times_correct": 0
+  }
+]

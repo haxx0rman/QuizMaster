@@ -1,0 +1,26 @@
+[
+  {
+    "question": "In Python, what is the primary advantage of dynamic typing when compared to statically typed languages like Java or C++?",
+    "correct_answer": "Variables can be reassigned to different data types without explicit conversion, which speeds up development and reduces boilerplate code.",
+    "difficulty": "easy",
+    "explanation": "Dynamic typing allows for flexibility in variable assignment where a variable can hold different types of data (e.g., integer then string) during runtime. This contrasts with statically typed languages that require type declaration upfront and enforce type safety at compile time. Other options might mention benefits like performance or error detection, but these are not the primary advantages of dynamic typing.",
+    "topic": "Dynamic vs Static Typing",
+    "cognitive_level": "understand"
+  },
+  {
+    "question": "A Python developer writes a loop that iterates over a list containing mixed data types: [1, 'hello', 3.14, True]. Which of the following best describes how the interpreter handles this situation?",
+    "correct_answer": "The interpreter evaluates each element's type at runtime and allows operations specific to each type within the loop without requiring prior type declaration.",
+    "difficulty": "medium",
+    "explanation": "This question tests the application of understanding how Python\u2019s dynamic typing interacts with control structures. Since Python is interpreted, it resolves types dynamically during execution. The other options may incorrectly assume static behavior or suggest that errors would necessarily occur in such a scenario; however, the flexibility of Python allows for this kind of mixed-type iteration without compile-time errors.",
+    "topic": "Control Structures and Data Types",
+    "cognitive_level": "apply"
+  },
+  {
+    "question": "A data scientist uses Python to process a dataset where column values are sometimes strings and sometimes numbers. They decide to use dynamic typing throughout their script to avoid type conversion overhead. Evaluate whether this approach is optimal for long-term project maintenance.",
+    "correct_answer": "While dynamic typing accelerates initial development, it can introduce runtime errors that are hard to detect early in complex projects, making the codebase less robust and harder to maintain over time.",
+    "difficulty": "hard",
+    "explanation": "This question evaluates critical thinking by asking students to weigh the pros and cons of dynamic typing in a real-world context. It requires synthesis rather than simple recall. The correct answer acknowledges both advantages (speed of development) and disadvantages (maintainability and potential runtime issues), aligning with the trade-off discussed in the educational content. Other responses might overemphasize either benefit or drawback without considering context.",
+    "topic": "Trade-offs Between Dynamic and Static Typing",
+    "cognitive_level": "evaluate"
+  }
+]
