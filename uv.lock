@@ -2141,7 +2141,7 @@ wheels = [
 [[package]]
 name = "qbank"
 version = "0.1.0"
-source = { git = "https://github.com/haxx0rman/qBank.git#d728cbf9a898e6bc6b7dec697dabf68fd33a0ba8" }
+source = { git = "https://github.com/haxx0rman/qbank.git#d728cbf9a898e6bc6b7dec697dabf68fd33a0ba8" }
 
 [[package]]
 name = "quizmaster"
@@ -2186,7 +2186,7 @@ requires-dist = [
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=7.0.0" },
     { name = "pytest-asyncio", marker = "extra == 'dev'", specifier = ">=0.21.0" },
     { name = "python-dotenv", specifier = ">=1.0.0" },
-    { name = "qbank", git = "https://github.com/haxx0rman/qBank.git" },
+    { name = "qbank", git = "https://github.com/haxx0rman/qbank.git" },
     { name = "rich", specifier = ">=13.0.0" },
     { name = "tiktoken", specifier = ">=0.5.0" },
     { name = "tqdm", specifier = ">=4.65.0" },

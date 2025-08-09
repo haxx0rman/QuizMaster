@@ -659,3 +659,374 @@ def import_questions(
     except Exception as e:
         logger.error(f"Failed to import questions: {e}")
         return False
+
+
+# Enhanced qBank Features - New in QuizMaster 2.0
+
+def get_difficult_questions(
+    limit: int = 10,
+    config: Optional[QuizMasterConfig] = None
+) -> List[Dict[str, Any]]:
+    """
+    Get the most difficult questions based on low accuracy or high ELO ratings.
+    
+    Args:
+        limit: Maximum number of questions to return
+        config: Optional configuration instance
+        
+    Returns:
+        List of difficult questions with their statistics
+    """
+    global _global_config, _global_qbank
+    
+    if config is None:
+        config = _global_config or QuizMasterConfig()
+    
+    if _global_qbank is None:
+        _global_qbank = QBankIntegration(config)
+    
+    return _global_qbank.get_difficult_questions(limit=limit)
+
+
+def suggest_study_session_size(
+    target_minutes: int = 30,
+    config: Optional[QuizMasterConfig] = None
+) -> int:
+    """
+    Get a suggested number of questions for a study session based on target time.
+    
+    Args:
+        target_minutes: Target study session duration in minutes
+        config: Optional configuration instance
+        
+    Returns:
+        Suggested number of questions
+    """
+    global _global_config, _global_qbank
+    
+    if config is None:
+        config = _global_config or QuizMasterConfig()
+    
+    if _global_qbank is None:
+        _global_qbank = QBankIntegration(config)
+    
+    return _global_qbank.suggest_study_session_size(target_minutes=target_minutes)
+
+
+def skip_question(
+    question_id: str,
+    config: Optional[QuizMasterConfig] = None
+) -> bool:
+    """
+    Skip a question during a study session.
+    
+    Args:
+        question_id: ID of the question to skip
+        config: Optional configuration instance
+        
+    Returns:
+        True if skip was successful, False otherwise
+    """
+    global _global_config, _global_qbank
+    
+    if config is None:
+        config = _global_config or QuizMasterConfig()
+    
+    if _global_qbank is None:
+        _global_qbank = QBankIntegration(config)
+    
+    return _global_qbank.skip_question(question_id)
+
+
+def get_all_tags(config: Optional[QuizMasterConfig] = None) -> List[str]:
+    """
+    Get all available tags in the question bank.
+    
+    Args:
+        config: Optional configuration instance
+        
+    Returns:
+        List of all tags used in the question bank
+    """
+    global _global_config, _global_qbank
+    
+    if config is None:
+        config = _global_config or QuizMasterConfig()
+    
+    if _global_qbank is None:
+        _global_qbank = QBankIntegration(config)
+    
+    tags = _global_qbank.get_all_tags()
+    return list(tags)
+
+
+def search_questions(
+    query: Optional[str] = None,
+    tags: Optional[List[str]] = None,
+    config: Optional[QuizMasterConfig] = None
+) -> List[Dict[str, Any]]:
+    """
+    Search for questions in the question bank.
+    
+    Args:
+        query: Text query to search for
+        tags: List of tags to filter by
+        config: Optional configuration instance
+        
+    Returns:
+        List of matching questions
+    """
+    global _global_config, _global_qbank
+    
+    if config is None:
+        config = _global_config or QuizMasterConfig()
+    
+    if _global_qbank is None:
+        _global_qbank = QBankIntegration(config)
+    
+    return _global_qbank.search_questions(query=query, tags=tags)
+
+
+def get_questions_by_tag(
+    tag: str,
+    config: Optional[QuizMasterConfig] = None
+) -> List[Dict[str, Any]]:
+    """
+    Get all questions with a specific tag.
+    
+    Args:
+        tag: Tag to filter by
+        config: Optional configuration instance
+        
+    Returns:
+        List of questions with the specified tag
+    """
+    global _global_config, _global_qbank
+    
+    if config is None:
+        config = _global_config or QuizMasterConfig()
+    
+    if _global_qbank is None:
+        _global_qbank = QBankIntegration(config)
+    
+    return _global_qbank.search_questions(tags=[tag])
+
+
+def create_multiple_choice_question(
+    question_text: str,
+    correct_answer: str,
+    wrong_answers: List[str],
+    tags: Optional[List[str]] = None,
+    objective: Optional[str] = None,
+    config: Optional[QuizMasterConfig] = None
+) -> Optional[str]:
+    """
+    Create a multiple choice question using qBank's helper method.
+    
+    Args:
+        question_text: The question text
+        correct_answer: The correct answer
+        wrong_answers: List of incorrect answers
+        tags: Optional list of tags
+        objective: Optional learning objective
+        config: Optional configuration instance
+        
+    Returns:
+        Question ID if successful, None otherwise
+    """
+    global _global_config, _global_qbank
+    
+    if config is None:
+        config = _global_config or QuizMasterConfig()
+    
+    if _global_qbank is None:
+        _global_qbank = QBankIntegration(config)
+    
+    return _global_qbank.create_multiple_choice_question(
+        question_text=question_text,
+        correct_answer=correct_answer,
+        wrong_answers=wrong_answers,
+        tags=tags,
+        objective=objective
+    )
+
+
+def remove_question(
+    question_id: str,
+    config: Optional[QuizMasterConfig] = None
+) -> bool:
+    """
+    Remove a question from the question bank.
+    
+    Args:
+        question_id: ID of the question to remove
+        config: Optional configuration instance
+        
+    Returns:
+        True if removal was successful, False otherwise
+    """
+    global _global_config, _global_qbank
+    
+    if config is None:
+        config = _global_config or QuizMasterConfig()
+    
+    if _global_qbank is None:
+        _global_qbank = QBankIntegration(config)
+    
+    return _global_qbank.remove_question(question_id)
+
+
+def get_question(
+    question_id: str,
+    config: Optional[QuizMasterConfig] = None
+) -> Optional[Dict[str, Any]]:
+    """
+    Get a specific question by ID.
+    
+    Args:
+        question_id: ID of the question to retrieve
+        config: Optional configuration instance
+        
+    Returns:
+        Question data as dictionary, or None if not found
+    """
+    global _global_config, _global_qbank
+    
+    if config is None:
+        config = _global_config or QuizMasterConfig()
+    
+    if _global_qbank is None:
+        _global_qbank = QBankIntegration(config)
+    
+    return _global_qbank.get_question(question_id)
+
+
+async def create_adaptive_study_session(
+    subject_tags: Optional[List[str]] = None,
+    difficulty_preference: str = "adaptive",  # "easy", "medium", "hard", "adaptive"
+    target_minutes: int = 30,
+    config: Optional[QuizMasterConfig] = None
+) -> Tuple[List[Dict[str, Any]], int]:
+    """
+    Create an adaptive study session that adjusts to the user's performance.
+    
+    Args:
+        subject_tags: Tags to filter questions by subject
+        difficulty_preference: Difficulty level preference
+        target_minutes: Target session duration in minutes
+        config: Optional configuration instance
+        
+    Returns:
+        Tuple of (questions list, suggested session size)
+    """
+    global _global_config, _global_qbank
+    
+    if config is None:
+        config = _global_config or QuizMasterConfig()
+    
+    if _global_qbank is None:
+        _global_qbank = QBankIntegration(config)
+    
+    # Get suggested session size
+    suggested_size = _global_qbank.suggest_study_session_size(target_minutes)
+    
+    # Set difficulty range based on preference
+    difficulty_range = None
+    if difficulty_preference == "easy":
+        difficulty_range = (0, 1200)  # Lower ELO ratings
+    elif difficulty_preference == "medium":
+        difficulty_range = (1200, 1600)
+    elif difficulty_preference == "hard":
+        difficulty_range = (1600, 3000)  # Higher ELO ratings
+    # "adaptive" uses None to let qBank decide
+    
+    # Start study session with filters
+    questions = _global_qbank.start_study_session(
+        max_questions=suggested_size,
+        tags=subject_tags,
+        difficulty_range=difficulty_range
+    )
+    
+    # Convert questions to dictionaries for API consistency
+    question_dicts = []
+    for question in questions:
+        if hasattr(question, 'question_text'):
+            question_dict = {
+                "id": question.id,
+                "question_text": question.question_text,
+                "answers": [
+                    {
+                        "id": answer.id,
+                        "text": answer.text,
+                        "is_correct": answer.is_correct,
+                        "explanation": getattr(answer, 'explanation', None)
+                    }
+                    for answer in getattr(question, 'answers', [])
+                ],
+                "tags": list(getattr(question, 'tags', [])),
+                "elo_rating": getattr(question, 'elo_rating', 1500),
+                "accuracy": getattr(question, 'accuracy', 0.0)
+            }
+            question_dicts.append(question_dict)
+    
+    return question_dicts, suggested_size
+
+
+async def analyze_learning_progress(
+    days: int = 30,
+    config: Optional[QuizMasterConfig] = None
+) -> Dict[str, Any]:
+    """
+    Analyze learning progress over a specified period.
+    
+    Args:
+        days: Number of days to analyze
+        config: Optional configuration instance
+        
+    Returns:
+        Dictionary containing progress analysis
+    """
+    global _global_config, _global_qbank
+    
+    if config is None:
+        config = _global_config or QuizMasterConfig()
+    
+    if _global_qbank is None:
+        _global_qbank = QBankIntegration(config)
+    
+    # Get user statistics
+    user_stats = _global_qbank.get_user_statistics()
+    
+    # Get review forecast
+    forecast = _global_qbank.get_review_forecast(days=days)
+    
+    # Get difficult questions for improvement areas
+    difficult_questions = _global_qbank.get_difficult_questions(limit=5)
+    
+    # Get all tags to analyze subject coverage
+    all_tags = _global_qbank.get_all_tags()
+    
+    analysis = {
+        "period_days": days,
+        "user_statistics": user_stats,
+        "review_forecast": forecast,
+        "improvement_areas": difficult_questions,
+        "subject_coverage": {
+            "total_subjects": len(all_tags),
+            "subjects": list(all_tags)
+        },
+        "recommendations": []
+    }
+    
+    # Add basic recommendations based on statistics
+    if user_stats.get("average_accuracy", 0) < 0.7:
+        analysis["recommendations"].append("Focus on reviewing incorrect answers and explanations")
+    
+    if len(difficult_questions) > 3:
+        analysis["recommendations"].append("Spend extra time on challenging questions")
+    
+    forecast_total = sum(forecast.get("forecast", {}).values()) if isinstance(forecast.get("forecast"), dict) else 0
+    if forecast_total > 20:
+        analysis["recommendations"].append("You have many questions due for review - consider shorter, more frequent sessions")
+    
+    return analysis

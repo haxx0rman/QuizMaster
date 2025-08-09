@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     # Core frameworks
-    "qbank @ git+https://github.com/haxx0rman/qBank.git",
+    "qbank",
     "bookworm",
     # LLM and AI
     "openai>=1.0.0",
@@ -67,3 +67,4 @@ addopts = "-v --tb=short"
 
 [tool.uv.sources]
 bookworm = { git = "https://github.com/haxx0rman/BookWorm.git" }
+qbank = { git = "https://github.com/haxx0rman/qbank.git" }

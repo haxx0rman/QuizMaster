@@ -9,12 +9,21 @@ import logging
 import json
 from dataclasses import dataclass, asdict
 from pathlib import Path
-from typing import Dict, Any, List, Optional, Set, Union, Tuple
+from typing import Dict, Any, List, Optional, Set, Union, Tuple, TYPE_CHECKING
+
+# Type checking imports
+if TYPE_CHECKING:
+    from qbank import QuestionBankManager as QBankManager
+else:
+    QBankManager = Any
 from datetime import datetime
 
 # We'll import qBank components when available
 try:
-    from qbank import QuestionBankManager, Question, Answer, StudySession
+    from qbank import (
+        QuestionBankManager, Question, Answer, StudySession, AnswerResult,
+        ELORatingSystem, SpacedRepetitionScheduler, UserRatingTracker
+    )
     QBANK_AVAILABLE = True
 except ImportError:
     QBANK_AVAILABLE = False
@@ -22,6 +31,10 @@ except ImportError:
     Question = None
     Answer = None
     StudySession = None
+    AnswerResult = None
+    ELORatingSystem = None
+    SpacedRepetitionScheduler = None
+    UserRatingTracker = None
 
 from .config import QuizMasterConfig
 
@@ -48,6 +61,7 @@ class QBankIntegration:
         """Initialize qBank integration with configuration."""
         self.config = config
         self.qbank_config = config.get_qbank_config()
+        self.manager: Optional['QBankManager'] = None
         
         # Initialize qBank components if available
         if QBANK_AVAILABLE:
@@ -92,18 +106,24 @@ class QBankIntegration:
         if not self.is_available():
             logger.warning("qBank not available - question not added to bank")
             return None
-        
+
         try:
-            # Convert tags to list if needed
-            tags = list(quiz_question.tags) if quiz_question.tags else []
+            # Convert tags to set if needed
+            tags = set(quiz_question.tags) if quiz_question.tags else set()
             
-            # Use the add_question method from qBank
-            question = self.manager.add_question(
+            # Create explanations dict if explanation is provided
+            explanations = {}
+            if quiz_question.explanation:
+                explanations[quiz_question.correct_answer] = quiz_question.explanation
+            
+            # Use the enhanced add_question method with explanations
+            question = self.manager.add_question(  # type: ignore
                 question_text=quiz_question.question_text,
                 correct_answer=quiz_question.correct_answer,
                 incorrect_answers=quiz_question.wrong_answers,
-                tags=set(tags),
-                objective=quiz_question.explanation or quiz_question.topic
+                tags=tags,
+                objective=quiz_question.topic,
+                explanations=explanations if explanations else None
             )
             
             logger.info(f"Added question to qBank: {question.id}")
@@ -126,21 +146,27 @@ class QBankIntegration:
         if not self.is_available():
             logger.warning("qBank not available - questions not added to bank")
             return []
-        
+
         # Convert QuizQuestion objects to the format expected by bulk_add_questions
         questions_data = []
         for quiz_question in quiz_questions:
+            # Create explanations dict if explanation is provided
+            explanations = {}
+            if quiz_question.explanation:
+                explanations[quiz_question.correct_answer] = quiz_question.explanation
+            
             question_data = {
                 "question": quiz_question.question_text,
                 "correct_answer": quiz_question.correct_answer,
                 "wrong_answers": quiz_question.wrong_answers,
                 "tags": quiz_question.tags or set(),
-                "objective": quiz_question.explanation or quiz_question.topic
+                "objective": quiz_question.topic,
+                "explanations": explanations if explanations else None
             }
             questions_data.append(question_data)
-        
+
         try:
-            questions = self.manager.bulk_add_questions(questions_data)
+            questions = self.manager.bulk_add_questions(questions_data)  # type: ignore
             question_ids = [q.id for q in questions]
             
             logger.info(f"Added {len(question_ids)} out of {len(quiz_questions)} questions to qBank")
@@ -158,7 +184,7 @@ class QBankIntegration:
         
         Args:
             max_questions: Maximum number of questions to include
-            tags: Filter questions by tags (note: current qBank API doesn't support filtering in start_study_session)
+            tags: Filter questions by tags
             difficulty_range: Tuple of (min_elo, max_elo) for difficulty filtering
             
         Returns:
@@ -167,11 +193,16 @@ class QBankIntegration:
         if not self.is_available():
             logger.warning("qBank not available - cannot start study session")
             return []
-        
+
         try:
-            # qBank API: start_study_session only takes max_questions parameter
-            questions = self.manager.start_study_session(
-                max_questions=max_questions or 10
+            # Convert tags list to set for filtering
+            tags_filter = set(tags) if tags else None
+            
+            # Use the enhanced start_study_session with filtering
+            questions = self.manager.start_study_session(  # type: ignore
+                max_questions=max_questions or 10,
+                tags_filter=tags_filter,
+                difficulty_range=difficulty_range
             )
             
             logger.info(f"Started study session with {len(questions)} questions")
@@ -287,12 +318,16 @@ class QBankIntegration:
             if tags:
                 # get_questions_by_tag expects a single tag string, so we need to iterate
                 all_questions = []
+                seen_ids = set()
                 for tag in tags:
-                    tag_questions = self.manager.get_questions_by_tag(tag)
-                    all_questions.extend(tag_questions)
-                questions = list(set(all_questions))  # Remove duplicates
+                    tag_questions = self.manager.get_questions_by_tag(tag)  # type: ignore
+                    for question in tag_questions:
+                        if question.id not in seen_ids:
+                            all_questions.append(question)
+                            seen_ids.add(question.id)
+                questions = all_questions
             elif query:
-                questions = self.manager.search_questions(query)
+                questions = self.manager.search_questions(query)  # type: ignore
             else:
                 questions = []
             
@@ -419,3 +454,211 @@ class QBankIntegration:
                 "available": False,
                 "error": str(e)
             }
+
+    def get_difficult_questions(self, limit: int = 10) -> List[Dict[str, Any]]:
+        """
+        Get the most difficult questions based on low accuracy or high ELO ratings.
+        
+        Args:
+            limit: Maximum number of questions to return
+            
+        Returns:
+            List of difficult questions with their statistics
+        """
+        if not self.is_available():
+            logger.warning("qBank not available - cannot get difficult questions")
+            return []
+
+        try:
+            questions = self.manager.get_difficult_questions(limit=limit)  # type: ignore
+            
+            difficult_questions = []
+            for question in questions:
+                question_dict = {
+                    "id": question.id,
+                    "question_text": question.question_text,
+                    "elo_rating": question.elo_rating,
+                    "accuracy": question.accuracy,
+                    "times_answered": question.times_answered,
+                    "times_correct": question.times_correct,
+                    "tags": list(question.tags)
+                }
+                difficult_questions.append(question_dict)
+            
+            logger.info(f"Retrieved {len(difficult_questions)} difficult questions")
+            return difficult_questions
+            
+        except Exception as e:
+            logger.error(f"Failed to get difficult questions: {e}")
+            return []
+
+    def suggest_study_session_size(self, target_minutes: int = 30) -> int:
+        """
+        Get a suggested number of questions for a study session based on target time.
+        
+        Args:
+            target_minutes: Target study session duration in minutes
+            
+        Returns:
+            Suggested number of questions
+        """
+        if not self.is_available():
+            logger.warning("qBank not available - using default session size")
+            return max(1, target_minutes // 3)  # Rough estimate: 3 minutes per question
+
+        try:
+            suggested_size = self.manager.suggest_study_session_size(target_minutes=target_minutes)  # type: ignore
+            logger.info(f"Suggested study session size: {suggested_size} questions for {target_minutes} minutes")
+            return suggested_size
+            
+        except Exception as e:
+            logger.error(f"Failed to get study session suggestion: {e}")
+            return max(1, target_minutes // 3)  # Fallback estimate
+
+    def skip_question(self, question_id: str) -> bool:
+        """
+        Skip a question during a study session.
+        
+        Args:
+            question_id: ID of the question to skip
+            
+        Returns:
+            True if skip was successful, False otherwise
+        """
+        if not self.is_available():
+            logger.warning("qBank not available - cannot skip question")
+            return False
+
+        try:
+            self.manager.skip_question(question_id=question_id)  # type: ignore
+            logger.info(f"Skipped question {question_id}")
+            return True
+            
+        except Exception as e:
+            logger.error(f"Failed to skip question: {e}")
+            return False
+
+    def get_all_tags(self) -> Set[str]:
+        """
+        Get all available tags in the question bank.
+        
+        Returns:
+            Set of all tags used in the question bank
+        """
+        if not self.is_available():
+            logger.warning("qBank not available - returning empty tag set")
+            return set()
+
+        try:
+            tags = self.manager.get_all_tags()  # type: ignore
+            logger.info(f"Retrieved {len(tags)} tags from question bank")
+            return tags
+            
+        except Exception as e:
+            logger.error(f"Failed to get tags: {e}")
+            return set()
+
+    def create_multiple_choice_question(self, question_text: str, correct_answer: str, 
+                                      wrong_answers: List[str], tags: Optional[List[str]] = None,
+                                      objective: Optional[str] = None) -> Optional[str]:
+        """
+        Create a multiple choice question using qBank's helper method.
+        
+        Args:
+            question_text: The question text
+            correct_answer: The correct answer
+            wrong_answers: List of incorrect answers
+            tags: Optional list of tags
+            objective: Optional learning objective
+            
+        Returns:
+            Question ID if successful, None otherwise
+        """
+        if not self.is_available():
+            logger.warning("qBank not available - cannot create question")
+            return None
+
+        try:
+            question = self.manager.create_multiple_choice_question(  # type: ignore
+                question_text=question_text,
+                correct_answer=correct_answer,
+                wrong_answers=wrong_answers,
+                tags=tags,
+                objective=objective
+            )
+            
+            logger.info(f"Created multiple choice question: {question.id}")
+            return question.id
+            
+        except Exception as e:
+            logger.error(f"Failed to create multiple choice question: {e}")
+            return None
+
+    def remove_question(self, question_id: str) -> bool:
+        """
+        Remove a question from the question bank.
+        
+        Args:
+            question_id: ID of the question to remove
+            
+        Returns:
+            True if removal was successful, False otherwise
+        """
+        if not self.is_available():
+            logger.warning("qBank not available - cannot remove question")
+            return False
+
+        try:
+            self.manager.remove_question(question_id)  # type: ignore
+            logger.info(f"Removed question {question_id} from bank")
+            return True
+            
+        except Exception as e:
+            logger.error(f"Failed to remove question: {e}")
+            return False
+
+    def get_question(self, question_id: str) -> Optional[Dict[str, Any]]:
+        """
+        Get a specific question by ID.
+        
+        Args:
+            question_id: ID of the question to retrieve
+            
+        Returns:
+            Question data as dictionary, or None if not found
+        """
+        if not self.is_available():
+            logger.warning("qBank not available - cannot get question")
+            return None
+
+        try:
+            question = self.manager.get_question(question_id)  # type: ignore
+            if question:
+                question_dict = {
+                    "id": question.id,
+                    "question_text": question.question_text,
+                    "answers": [
+                        {
+                            "id": answer.id,
+                            "text": answer.text,
+                            "is_correct": answer.is_correct,
+                            "explanation": answer.explanation
+                        }
+                        for answer in question.answers
+                    ],
+                    "objective": question.objective,
+                    "tags": list(question.tags),
+                    "elo_rating": question.elo_rating,
+                    "accuracy": question.accuracy,
+                    "times_answered": question.times_answered,
+                    "times_correct": question.times_correct,
+                    "created_at": question.created_at.isoformat() if question.created_at else None,
+                    "last_studied": question.last_studied.isoformat() if question.last_studied else None,
+                    "next_review": question.next_review.isoformat() if question.next_review else None
+                }
+                return question_dict
+            return None
+            
+        except Exception as e:
+            logger.error(f"Failed to get question: {e}")
+            return None

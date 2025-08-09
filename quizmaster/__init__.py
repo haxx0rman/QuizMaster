@@ -12,6 +12,13 @@ Key Features:
 - Spaced repetition learning via qBank integration
 - Multiple difficulty levels and question types
 - Comprehensive CLI interface
+- Enhanced qBank integration with advanced features:
+  * Adaptive study sessions with difficulty filtering
+  * Question search and tag-based filtering
+  * Learning progress analysis and recommendations
+  * Explanation support for answer choices
+  * Study session time estimation
+  * Question difficulty analysis
 
 Main Components:
 - pipeline: Core orchestration and workflow management
@@ -52,6 +59,19 @@ from .core_api import (
     get_user_statistics,
     get_review_forecast,
     
+    # Enhanced qBank features (new in 2.0)
+    get_difficult_questions,
+    suggest_study_session_size,
+    skip_question,
+    get_all_tags,
+    search_questions,
+    get_questions_by_tag,
+    create_multiple_choice_question,
+    remove_question,
+    get_question,
+    create_adaptive_study_session,
+    analyze_learning_progress,
+    
     # Complete workflows
     complete_pipeline,
     generate_qbank_from_documents,
@@ -88,9 +108,26 @@ __all__ = [
     "end_study_session",
     "get_user_statistics",
     "get_review_forecast",
+    
+    # Enhanced qBank features (new in 2.0)
+    "get_difficult_questions",
+    "suggest_study_session_size",
+    "skip_question",
+    "get_all_tags",
+    "search_questions",
+    "get_questions_by_tag",
+    "create_multiple_choice_question",
+    "remove_question",
+    "get_question",
+    "create_adaptive_study_session",
+    "analyze_learning_progress",
+    
+    # Complete workflows
     "complete_pipeline",
     "generate_qbank_from_documents",
     "create_study_session_from_documents",
+    
+    # Utilities
     "create_config",
     "check_dependencies",
     "export_questions",
