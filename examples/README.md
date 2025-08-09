@@ -1,174 +1,161 @@
 # QuizMaster Examples
 
-This directory contains demonstration scripts showcasing the capabilities of the QuizMaster system, which implements a Ragas-inspired methodology adapted for human learning.
+This directory contains comprehensive examples demonstrating QuizMaster's capabilities, from basic usage to advanced pipeline scenarios.
 
-## 🚀 Quick Start with UV
+## Quick Start
 
-Our project uses [uv](https://github.com/astral-sh/uv) for fast Python package management:
+First, make sure you have your environment set up:
 
-### Prerequisites
 ```bash
-# Install uv (if not already installed)
-curl -LsSf https://astral.sh/uv/install.sh | sh
+# Copy the environment template
+cp env.example .env
 
-# Navigate to project directory
-cd /home/michael/Dev/QuizMaster
+# Edit .env with your API keys
+# OPENAI_API_KEY=your-key-here
+# CLAUDE_API_KEY=your-key-here
+# etc.
+
+# Install dependencies
+uv sync
 ```
 
-### Setup and Run Examples
-```bash
-# Install dependencies using uv
-uv pip install -e .
+## Examples Overview
 
-# Run the basic question generation demo
+### 1. Simple Pipeline Test (`simple_pipeline_test.py`)
+**Start here first!** A basic test to verify your setup works correctly.
+
+```bash
+uv run python examples/simple_pipeline_test.py
+```
+
+This test:
+- Creates a simple test document
+- Processes it through the QuizMaster pipeline
+- Generates a few questions
+- Tests study session functionality
+- Validates knowledge graph querying
+
+### 2. Complete Pipeline Demo (`complete_pipeline_demo.py`)
+**The full showcase!** Demonstrates the complete document-to-questions pipeline.
+
+```bash
+uv run python examples/complete_pipeline_demo.py
+```
+
+This comprehensive demo:
+- **Document Creation**: Creates multiple educational documents (ML, Deep Learning, Data Science)
+- **BookWorm Processing**: Processes documents and builds knowledge graphs
+- **Mindmap Generation**: Creates visual mindmaps of the content
+- **LLM Query Generation**: Uses AI to analyze mindmaps and generate intelligent queries
+- **Knowledge Graph Querying**: Queries the knowledge base for each generated query
+- **Report Generation**: Creates comprehensive reports from knowledge graph responses
+- **Question Generation**: Generates multiple-choice questions from each report
+- **qBank Integration**: Stores questions with metadata and difficulty levels
+- **Study Session**: Demonstrates adaptive spaced repetition learning
+- **Export/Import**: Shows how to save and load question banks
+
+### 3. Basic Question Generation (`basic_question_generation.py`)
+Simple examples of generating questions from text content.
+
+```bash
 uv run python examples/basic_question_generation.py
-
-# Run the advanced scenario generation demo  
-uv run python examples/advanced_scenario_demo.py
-
-# Run the complete integration pipeline demo
-uv run python examples/complete_integration_demo.py
 ```
 
-### Configuration
-```bash
-# Copy the example environment file
-cp .env.example .env
+### 4. Integration Demos
 
-# Edit .env with your API keys (optional for demo mode)
-# Set MOCK_LLM_RESPONSES=true for demo without API keys
+#### LightRAG Integration (`lightrag_integration_demo.py`)
+Shows how BookWorm's knowledge graph capabilities work.
+
+#### qBank Integration (`qbank_integration_demo.py`)
+Demonstrates question bank management and spaced repetition.
+
+#### GraphWalker Demo (`graphwalker_demo.py`)
+Advanced knowledge graph traversal and query generation.
+
+## Pipeline Flow
+
+The complete pipeline follows this flow:
+
+```
+📄 Documents → 🔄 BookWorm Processing → 🗺️ Mindmaps → 🧠 AI Analysis
+    ↓
+🎯 Smart Queries → 🔍 Knowledge Graph → 📋 Reports → ❓ Questions
+    ↓
+📚 qBank Storage → 🎓 Spaced Repetition → 📈 Adaptive Learning
 ```
 
-## Available Demos
+## Key Features Demonstrated
 
-### 1. Basic Question Generation (`basic_question_generation.py`)
-
-Demonstrates the core question generation capabilities:
-- Creating sample knowledge graphs
-- Generating questions with different complexity levels
-- Learning objective alignment
-- Mock mode for testing without API keys
-
-**Features showcased:**
-- Single-hop and multi-hop reasoning questions
-- Educational optimization for human learning
-- Question quality validation
-- Persona-based generation
-
-**Usage:**
-```bash
-cd examples
-python basic_question_generation.py
-```
-
-### 2. Advanced Scenario Generation (`advanced_scenario_demo.py`)
-
-Showcases the sophisticated scenario generation system:
-- Persona-based learning scenarios (4 different learner types)
-- Knowledge graph traversal algorithms
-- Educational pathway identification
-- Complexity level analysis
-
-**Features showcased:**
-- Curious Student, Critical Thinker, Systems Analyst, Research Expert personas
-- Multi-hop reasoning paths through knowledge graphs
-- Progressive concept building
-- Indirect cluster detection for complex scenarios
-
-**Usage:**
-```bash
-cd examples
-python advanced_scenario_demo.py
-```
-
-### 3. Complete Pipeline Demo (`complete_pipeline_demo.py`)
-
-Demonstrates the end-to-end QuizMaster pipeline:
-- Document processing and knowledge extraction
+### Document Processing (BookWorm)
+- Multi-format support (PDF, DOCX, TXT, MD, etc.)
+- Content extraction and chunking
+- Metadata extraction
 - Knowledge graph construction
-- Question generation from real content
-- Educational analytics and insights
 
-**Features showcased:**
-- Full document-to-questions workflow
-- Educational content analysis
-- Learning pathway identification
-- Question diversity scoring
-- Prerequisite relationship detection
+### Knowledge Management
+- Semantic querying with LightRAG
+- Relationship mapping between concepts
+- Context-aware information retrieval
+- Mindmap visualization
 
-**Usage:**
-```bash
-cd examples
-python complete_pipeline_demo.py
-```
+### Question Generation
+- Context-aware multiple-choice questions
+- Difficulty level assignment
+- Automatic tagging and categorization
+- Source tracking and metadata
 
-## Configuration
-
-All demos respect the configuration in your `.env` file. Key settings:
-
-- **Mock Mode**: Set `MOCK_LLM_RESPONSES=true` to run demos without API keys
-- **API Keys**: Configure `OPENAI_API_KEY` for real LLM integration
-- **Debug Mode**: Set `DEBUG_MODE=true` for detailed logging
-
-## Mock vs Real Mode
-
-### Mock Mode (Default)
-- Runs without requiring API credentials
-- Uses pre-generated sample data
-- Perfect for understanding system capabilities
-- Fast execution for development/testing
-
-### Real Mode (API Required)
-- Requires valid OpenAI API key
-- Generates real questions using LLM
-- Demonstrates full system capabilities
-- Processes actual content
-
-## Understanding the Output
-
-### Knowledge Graphs
-- **Nodes**: Concepts, entities, or topics extracted from content
-- **Edges**: Relationships between concepts with strength weights
-- **Traversal**: How the system navigates between related concepts
-
-### Question Types
-- **Single-hop**: Direct questions about individual concepts
-- **Multi-hop**: Questions requiring reasoning across multiple concepts
-- **Abstract**: Conceptual understanding questions
-- **Specific**: Detailed implementation or application questions
-
-### Personas
-- **Curious Student**: Fundamental concept exploration
-- **Critical Thinker**: Analysis and comparison questions
-- **Systems Analyst**: Process and workflow understanding
-- **Research Expert**: Advanced synthesis and evaluation
-
-## Ragas Methodology Integration
-
-These demos showcase how we've adapted Ragas' knowledge graph-based test generation for educational purposes:
-
-1. **Scenario Generation**: Creating educational contexts rather than just test cases
-2. **Persona-Based Design**: Tailoring questions to different learning styles
-3. **Progressive Complexity**: Building difficulty incrementally
-4. **Educational Validation**: Ensuring learning objective alignment
-
-## Next Steps
-
-After running these demos:
-
-1. Try modifying the knowledge graphs in `basic_question_generation.py`
-2. Experiment with different persona configurations
-3. Test with your own educational content in the complete pipeline
-4. Integrate with real LightRAG and qBank systems
+### Adaptive Learning (qBank)
+- Spaced repetition algorithms (SM-2)
+- ELO rating system for difficulty
+- Performance tracking
+- Study session management
 
 ## Troubleshooting
 
-**Common Issues:**
-- Import errors: Make sure you're running from the examples directory
-- API errors: Check your `.env` file configuration
-- Mock data: Set `MOCK_LLM_RESPONSES=true` to run without API keys
+### Common Issues
 
-**Getting Help:**
-- Check the main project README for setup instructions
-- Review the `.env.example` file for configuration options
-- Enable debug mode for detailed logging
+1. **API Key Errors**
+   ```
+   ❌ No API key found for OPENAI
+   ```
+   Solution: Set your API key in the `.env` file
+
+2. **Import Errors**
+   ```
+   ModuleNotFoundError: No module named 'qbank'
+   ```
+   Solution: Run `uv sync` to install dependencies
+
+3. **Processing Errors**
+   ```
+   Error processing document: ...
+   ```
+   Solution: Check file permissions and format support
+
+### Getting Help
+
+If you encounter issues:
+
+1. Run the simple test first: `uv run python examples/simple_pipeline_test.py`
+2. Check the logs in `logs/quizmaster.log`
+3. Verify your API keys are correctly set
+4. Ensure all dependencies are installed with `uv sync`
+
+## Next Steps
+
+After running the examples:
+
+1. Try processing your own documents
+2. Experiment with different LLM providers
+3. Customize question generation prompts
+4. Build your own specialized question banks
+5. Integrate with your learning management system
+
+## Advanced Usage
+
+For advanced scenarios, see:
+- `complete_integration_demo.py` - Full feature integration
+- `complete_pipeline_demo.py` - Production-ready pipeline
+- Custom scripts in your own projects
+
+The examples demonstrate both the power and simplicity of combining qBank's adaptive learning with BookWorm's intelligent document processing.

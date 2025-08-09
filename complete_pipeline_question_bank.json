@@ -1,0 +1,1238 @@
+{
+  "name": "Complete Pipeline Bank",
+  "created_at": "2025-08-08T22:15:15.507257",
+  "questions": {
+    "41455ebf-c95e-4139-b56f-9a1d45b222a3": {
+      "id": "41455ebf-c95e-4139-b56f-9a1d45b222a3",
+      "question_text": "In the context of training deep neural networks, what is the primary mechanism through which backpropagation updates network weights?",
+      "objective": "Understanding the mathematical mechanism of backpropagation in neural network training",
+      "answers": [
+        {
+          "id": "2adc8658-d28e-4228-b782-a7ecdb9dc989",
+          "text": "It calculates gradients of the loss function with respect to each weight using the chain rule of calculus",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "e7500fe8-fc25-4be2-8131-0c6be46fb13f",
+          "text": "It randomly adjusts weights based on input data patterns",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "8e9c6c15-ef06-4788-84fd-f919473ff5b9",
+          "text": "It directly modifies output values to match target values",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "ad4329e2-b1b8-4149-af92-78664bac8cd7",
+          "text": "It uses genetic algorithms to optimize weight configurations",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "gradient descent",
+        "neural networks",
+        "backpropagation"
+      ],
+      "elo_rating": 1184.736306793522,
+      "times_answered": 1,
+      "times_correct": 1,
+      "created_at": "2025-08-08T22:15:59.319710",
+      "last_studied": "2025-08-08T22:18:28.315789",
+      "next_review": "2025-08-10T00:42:28.315789",
+      "interval_days": 1.1,
+      "ease_factor": 2.6999999999999997,
+      "repetition_count": 1
+    },
+    "1beb7df5-dbab-4a76-b5f1-22bd32bd7934": {
+      "id": "1beb7df5-dbab-4a76-b5f1-22bd32bd7934",
+      "question_text": "Which of the following statements best describes the relationship between backpropagation and the vanishing gradient problem in deep networks?",
+      "objective": "Analyzing the relationship between backpropagation and common deep learning challenges",
+      "answers": [
+        {
+          "id": "d2b9a85b-3068-4755-aa52-5ea29a93dbbb",
+          "text": "Backpropagation can amplify the vanishing gradient problem because gradients are multiplied through many layers during reverse computation",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "e57f34c7-a53b-4c98-96de-8f3ffc1b03b5",
+          "text": "Backpropagation completely eliminates the vanishing gradient problem in all network architectures",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "a0bcc459-d360-4be9-8e16-5d845ce1e1e9",
+          "text": "Backpropagation only affects the vanishing gradient problem in convolutional networks",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "bb9f1da0-899a-45c7-90f7-42f9202d45a9",
+          "text": "Backpropagation is designed to prevent gradient explosion rather than address vanishing gradients",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "gradient problem",
+        "deep learning",
+        "backpropagation"
+      ],
+      "elo_rating": 1184.0,
+      "times_answered": 1,
+      "times_correct": 1,
+      "created_at": "2025-08-08T22:15:59.319741",
+      "last_studied": "2025-08-08T22:18:28.315607",
+      "next_review": "2025-08-10T00:42:28.315607",
+      "interval_days": 1.1,
+      "ease_factor": 2.6999999999999997,
+      "repetition_count": 1
+    },
+    "acdd6922-f05e-4394-b4cb-3de4593325b8": {
+      "id": "acdd6922-f05e-4394-b4cb-3de4593325b8",
+      "question_text": "What is a critical requirement for backpropagation to function correctly in training neural networks?",
+      "objective": "Identifying prerequisites and mathematical requirements for backpropagation algorithm implementation",
+      "answers": [
+        {
+          "id": "a980390d-fa52-406e-ac86-d190f702c8ed",
+          "text": "The activation functions must be differentiable throughout their domain",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "d1482a10-7e06-4f24-9bb7-c390e077eb4f",
+          "text": "All weights must start with identical values",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "b37f674f-69a1-4f46-8f9c-8dedeaeb543b",
+          "text": "Input data must be normalized to zero mean and unit variance",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "c0a9c7a9-361f-466f-8589-098aea175acb",
+          "text": "The network architecture must be fully connected without skip connections",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "differentiation",
+        "backpropagation",
+        "activation functions"
+      ],
+      "elo_rating": 1185.4358728782763,
+      "times_answered": 1,
+      "times_correct": 1,
+      "created_at": "2025-08-08T22:15:59.319781",
+      "last_studied": "2025-08-08T22:18:28.315847",
+      "next_review": "2025-08-10T00:42:28.315847",
+      "interval_days": 1.1,
+      "ease_factor": 2.6999999999999997,
+      "repetition_count": 1
+    },
+    "8c5f2e8c-bb37-4d7d-8a08-7621817c55b4": {
+      "id": "8c5f2e8c-bb37-4d7d-8a08-7621817c55b4",
+      "question_text": "Which of the following techniques is most effective for preventing overfitting when dealing with a small dataset and high-dimensional features?",
+      "objective": "Application of appropriate prevention techniques based on dataset characteristics",
+      "answers": [
+        {
+          "id": "e8e9dd35-6ba1-46a3-bf2d-3379ded54058",
+          "text": "Regularization techniques such as L1 or L2 regularization",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "3d2c494d-4cf6-4fb5-8a0a-88ebf90a8fdd",
+          "text": "Increasing the training dataset size through data augmentation",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "be18d475-ec1d-4aaf-a12c-2e03a8b2c7d8",
+          "text": "Adding more complex model architectures with additional layers",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "a06a783a-8154-4ff0-b018-15e0f8700d25",
+          "text": "Reducing the number of epochs during training",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "model complexity",
+        "overfitting",
+        "regularization"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:16:11.917248",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "c963a576-a0f0-4f73-9d83-b0f5c8b27a56": {
+      "id": "c963a576-a0f0-4f73-9d83-b0f5c8b27a56",
+      "question_text": "A machine learning practitioner observes that their model performs well on training data but shows significantly worse performance on validation data. Which of the following would be the LEAST effective approach to address this issue?",
+      "objective": "Analysis of which methods are effective versus ineffective for overfitting prevention",
+      "answers": [
+        {
+          "id": "d92dc56c-9be6-416d-aa39-2c12dcd982a2",
+          "text": "Increasing the number of features in the dataset",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "5dba1560-3d9b-4852-a7ef-d97379cfafb2",
+          "text": "Implementing cross-validation to better estimate model performance",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "adfe4cd9-f84a-4c07-ade6-d4e81ac044d3",
+          "text": "Using dropout layers in neural networks",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "4aacf5e6-cfad-438d-afaf-107ac9875374",
+          "text": "Applying early stopping during training",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "overfitting",
+        "model evaluation",
+        "training techniques"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:16:11.917295",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "2189e6ee-c5bb-4049-a067-91b17ab7711b": {
+      "id": "2189e6ee-c5bb-4049-a067-91b17ab7711b",
+      "question_text": "In the context of decision tree models, which of the following methods would most directly prevent overfitting by limiting model complexity?",
+      "objective": "Understanding specific techniques for preventing overfitting in particular model types",
+      "answers": [
+        {
+          "id": "dce6fed5-e668-494d-80ee-fa5578373e42",
+          "text": "Setting maximum depth limits and minimum samples required for leaf nodes",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "5a407a83-78c3-4193-b48f-7fdb09270c22",
+          "text": "Increasing the number of trees in a random forest ensemble",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "9c0eba9f-5d99-48f5-927c-125dca4f166e",
+          "text": "Using all available features without any selection",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "75856fca-8112-4c3b-a4c9-dfa04c374149",
+          "text": "Training with a very large learning rate",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "decision trees",
+        "model pruning",
+        "overfitting prevention"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:16:11.917334",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "b117e536-b8df-489b-b83e-9d941c0c15ae": {
+      "id": "b117e536-b8df-489b-b83e-9d941c0c15ae",
+      "question_text": "Which activation function is most likely to suffer from the vanishing gradient problem during backpropagation in deep networks, and why is this problematic for training?",
+      "objective": "Understanding the mathematical properties and practical implications of different activation functions",
+      "answers": [
+        {
+          "id": "5673d86b-2b93-49bc-b365-083c1df07867",
+          "text": "Sigmoid activation function because its gradients become extremely small for inputs far from zero, causing slow learning or convergence to suboptimal solutions",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "b2612b64-907f-40c9-bcac-e844baaa73a6",
+          "text": "ReLU activation function because it sets all negative inputs to zero, losing gradient information",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "d522a6e2-2cf1-485e-abcd-daef3635245b",
+          "text": "Tanh activation function because it has a fixed range that limits gradient magnitude",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "6459d277-c85d-4d59-a1cd-5bff972fa0d4",
+          "text": "Linear activation function because it lacks non-linearity needed for complex pattern recognition",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "gradient-descent",
+        "deep-learning",
+        "activation-functions"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:16:25.740994",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "ce44f790-8710-459b-bd84-3ed9b1e2267c": {
+      "id": "ce44f790-8710-459b-bd84-3ed9b1e2267c",
+      "question_text": "In what scenario would you most likely choose to use Leaky ReLU over standard ReLU in a neural network architecture?",
+      "objective": "Comparing activation function properties and selecting appropriate functions for specific neural network scenarios",
+      "answers": [
+        {
+          "id": "db1e9a0b-54e3-4d7d-8cbd-85b0e59b4d56",
+          "text": "When dealing with networks where some negative inputs are important for learning and you want to avoid the dead neuron problem that can occur with standard ReLU",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "bab18598-1b8f-4fde-8e2a-4b8c3bfd3dcb",
+          "text": "When you need to ensure all outputs are strictly positive for better numerical stability",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "b88d4fbf-e851-4546-87d0-207ad59cf60a",
+          "text": "When implementing very deep networks where computational efficiency is paramount",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "fe2cdce3-510b-481e-899e-d73b69a5f7e2",
+          "text": "When working with data that has no negative values in the feature space",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "deep-learning",
+        "neural-networks",
+        "activation-functions"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:16:25.741058",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "b43b5c67-8f60-471a-a052-26c011085ff2": {
+      "id": "b43b5c67-8f60-471a-a052-26c011085ff2",
+      "question_text": "What is a key advantage of using tanh activation function over sigmoid in hidden layers of neural networks?",
+      "objective": "Analyzing the mathematical characteristics and training benefits of different activation functions",
+      "answers": [
+        {
+          "id": "b5dc8b3d-1b82-4097-8726-a5a109bd1fd4",
+          "text": "Tanh has zero-centered outputs which help with gradient flow and can lead to faster convergence during training",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "877a18c6-4e61-4326-980a-c7388cb47dd5",
+          "text": "Tanh provides higher computational efficiency as it requires fewer operations than sigmoid",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "78cb268a-8c2a-40ac-9a2e-4605d5b0df64",
+          "text": "Tanh avoids the vanishing gradient problem completely in all network depths",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "962646f5-c539-4382-a147-5209aa8bac4e",
+          "text": "Tanh produces outputs that are more interpretable as probability values between 0 and 1",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "neural-networks",
+        "activation-functions",
+        "gradient-flow"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:16:25.741137",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "87b2b592-a638-47fc-9eea-4764d68a056c": {
+      "id": "87b2b592-a638-47fc-9eea-4764d68a056c",
+      "question_text": "Which mechanism in LSTM architectures specifically prevents the vanishing gradient problem by allowing information to flow unchanged through time?",
+      "objective": "Understanding how specific LSTM components address vanishing gradient problem",
+      "answers": [
+        {
+          "id": "1f5afbcb-0e7d-41f0-9acd-1b8f9d11121b",
+          "text": "The forget gate mechanism",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "5af75eb5-0396-4210-b080-8ca14890c38d",
+          "text": "The output gate mechanism",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "79a367f2-d719-4a1e-b1a8-92c69d4f4d14",
+          "text": "The input gate mechanism",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "e0dd67a7-74bd-4e97-bab6-cdc42338df8f",
+          "text": "The tanh activation function",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "vanishing gradient",
+        "LSTM",
+        "recurrent neural networks"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:16:37.413066",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "08dba277-f1e5-44d7-a9b8-7634646fbe43": {
+      "id": "08dba277-f1e5-44d7-a9b8-7634646fbe43",
+      "question_text": "Compared to traditional RNNs, what key architectural feature of GRU units helps mitigate the vanishing gradient problem more effectively?",
+      "objective": "Comparing GRU architecture features with traditional RNNs in gradient handling",
+      "answers": [
+        {
+          "id": "47ff4f71-00e9-4e1c-af4b-6cfd11169707",
+          "text": "The reset gate that controls information flow from previous hidden states",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "28d29af6-5e3d-4952-98a8-041fbe08343c",
+          "text": "The use of batch normalization",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "a4dd0c43-111a-4f15-8f19-544be26d0718",
+          "text": "The addition of dropout layers",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "7e9d9350-27af-4f51-8157-ad046538bda5",
+          "text": "The application of residual connections",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "neural network architectures",
+        "vanishing gradient",
+        "GRU"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:16:37.413122",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "e1acfdb9-614d-4b98-b00a-22dd1336c287": {
+      "id": "e1acfdb9-614d-4b98-b00a-22dd1336c287",
+      "question_text": "Which mathematical property of LSTM's gate mechanisms contributes most significantly to solving the vanishing gradient problem compared to standard RNN implementations?",
+      "objective": "Analyzing mathematical properties that enable gradient flow in LSTM architectures",
+      "answers": [
+        {
+          "id": "f7d70584-d80e-42fd-823a-e625d67c4527",
+          "text": "The sigmoid function outputs that can approach 1, allowing gradients to flow unchanged",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "ee401c54-7441-4701-9849-0959b357f456",
+          "text": "The tanh activation function that bounds gradients",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "d25c3549-39d0-4a22-9be2-32b61f725905",
+          "text": "The linear transformation matrices that preserve magnitude",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "ddb78797-0f4f-4040-89f1-14a36a454bc6",
+          "text": "The softmax output layer that normalizes probabilities",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "gradient flow",
+        "LSTM",
+        "mathematical analysis"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:16:37.413166",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "0a44bbd1-3989-44c2-a76b-f13a7e968f4d": {
+      "id": "0a44bbd1-3989-44c2-a76b-f13a7e968f4d",
+      "question_text": "Which architectural feature of the transformer model fundamentally改变了 how sequence-to-sequence tasks are approached compared to previous models like RNNs and LSTMs?",
+      "objective": "Understanding the core architectural innovation that makes transformers revolutionary for sequence modeling",
+      "answers": [
+        {
+          "id": "20430c87-719f-4319-9b0e-16a7654d05b6",
+          "text": "The self-attention mechanism that allows parallel processing of all input tokens simultaneously",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "234960f4-e08d-40ca-b656-409a2a5d23c8",
+          "text": "The use of recurrent connections that process sequences step-by-step",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "962d85a0-31e5-47e1-a985-3ec02caa0741",
+          "text": "The incorporation of bidirectional hidden states for better context understanding",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "a943a3c9-a74a-4a24-b9c7-361fb167de0c",
+          "text": "The implementation of attention weights that are learned through backpropagation",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "transformer",
+        "attention mechanism",
+        "sequence modeling"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:16:50.623404",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "29f9e822-8c14-4768-8f67-a7f3bcdf06bf": {
+      "id": "29f9e822-8c14-4768-8f67-a7f3bcdf06bf",
+      "question_text": "What is a significant advantage of the transformer architecture over traditional RNN-based models when processing long sequences?",
+      "objective": "Analyzing the computational and architectural advantages of transformers over traditional sequence models",
+      "answers": [
+        {
+          "id": "e87c9ef5-8f89-4a3a-972e-8fb07555d651",
+          "text": "It eliminates the vanishing gradient problem and allows for parallel computation across all positions",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "9a29281f-ec2f-477f-b76e-d5b3fffcedc9",
+          "text": "It requires fewer parameters to achieve comparable performance",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "e1aedfa6-eaf7-44d5-b838-ca12850da76a",
+          "text": "It has a fixed computational complexity regardless of sequence length",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "fd8df74e-4062-4b20-8d58-98a3eb9090d9",
+          "text": "It processes input tokens in a linear order without dependency on previous computations",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "transformer",
+        "RNN",
+        "computational efficiency"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:16:50.623473",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "ce059650-33cf-4a06-bc4c-997c55fa1985": {
+      "id": "ce059650-33cf-4a06-bc4c-997c55fa1985",
+      "question_text": "In the transformer architecture, what role do positional encodings play and why are they necessary?",
+      "objective": "Understanding the necessity and function of positional encodings in transformer architecture",
+      "answers": [
+        {
+          "id": "21418606-f7c1-44e0-8c04-6bf94dc9e664",
+          "text": "They provide information about the relative or absolute position of tokens in a sequence since the model has no inherent notion of order",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "a2906767-3151-49a3-8bd5-18df741531c3",
+          "text": "They serve as learnable embeddings that capture semantic meaning of words in context",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "f2a2ec22-f1e7-4f97-a80b-d7fdbbce66e8",
+          "text": "They help reduce the dimensionality of the input representations to improve efficiency",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "164f163e-dcbe-412c-a39a-08b701fa4890",
+          "text": "They are used to mask future tokens during training to prevent information leakage",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "transformer",
+        "positional encoding",
+        "sequence modeling"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:16:50.623509",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "c96a1c87-8124-454d-9c32-e3a7ac674fe0": {
+      "id": "c96a1c87-8124-454d-9c32-e3a7ac674fe0",
+      "question_text": "When evaluating a binary classification model, which metric would be most appropriate to use when the cost of false positives is significantly higher than false negatives?",
+      "objective": "Ability to select appropriate evaluation metrics based on business requirements and error cost analysis",
+      "answers": [
+        {
+          "id": "3ce9bffd-d808-4e6e-9e23-823761aa72df",
+          "text": "Precision",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "d9169ef8-94f7-440e-82fe-70cb9b060e88",
+          "text": "Recall",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "1179d06e-aa08-4623-854d-eaa4784cca5e",
+          "text": "F1-Score",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "c0fbac5e-8266-4dc9-bfbd-87b116cd9dc8",
+          "text": "Accuracy",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "classification",
+        "precision",
+        "evaluation-metrics"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:17:17.152837",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "5c54f762-fa3f-401d-b366-7d76a1e9dd62": {
+      "id": "5c54f762-fa3f-401d-b366-7d76a1e9dd62",
+      "question_text": "A regression model predicting house prices has an R² value of 0.85 and a Mean Absolute Error (MAE) of $25,000. What does this combination of metrics suggest about the model's performance?",
+      "objective": "Understanding how to interpret and combine different regression metrics for comprehensive model evaluation",
+      "answers": [
+        {
+          "id": "53c588b3-0021-4728-a786-85e43bcce885",
+          "text": "The model explains 85% of the variance in house prices but on average predicts prices with an error of $25,000",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "9adf7d83-5578-4cc4-9dff-7f627736e013",
+          "text": "The model perfectly predicts house prices with only $25,000 error",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "5fea2559-0031-4d72-90d5-ae423c430487",
+          "text": "The model has poor performance with low R² and high MAE",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "485cd4d9-2f7b-43f5-83d8-9125c2027b63",
+          "text": "The model's predictions are biased toward higher prices",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "evaluation-metrics",
+        "regression",
+        "r-squared"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:17:17.152899",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "6536dfa1-7ae7-467e-9031-fb8b3c73abfa": {
+      "id": "6536dfa1-7ae7-467e-9031-fb8b3c73abfa",
+      "question_text": "Which of the following scenarios would make using AUC-ROC as a classification evaluation metric inappropriate?",
+      "objective": "Understanding limitations and appropriate use cases for specific evaluation metrics in different data conditions",
+      "answers": [
+        {
+          "id": "eadb7b03-fcc7-4760-a719-15293976cbd6",
+          "text": "When dealing with severely imbalanced datasets where one class represents less than 1% of the data",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "79f176e0-4e78-4c94-b508-bf3194c66a75",
+          "text": "When evaluating a model for medical diagnosis where both false positives and false negatives are critical",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "31b11346-3ada-4632-b66e-1c56f93fc303",
+          "text": "When comparing multiple models on the same dataset with balanced classes",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "7dd3c635-7d63-4bb5-854e-3a46444b6e7a",
+          "text": "When the model outputs probability scores that need to be thresholded for different applications",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "classification",
+        "evaluation-metrics",
+        "auc-roc"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:17:17.152940",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "97a8e104-85f5-4068-8771-2bf3482ef1ac": {
+      "id": "97a8e104-85f5-4068-8771-2bf3482ef1ac",
+      "question_text": "Which of the following approaches would be most effective for addressing algorithmic bias in a hiring system that has been found to disproportionately favor male candidates?",
+      "objective": "Application of bias mitigation techniques in real-world ML systems",
+      "answers": [
+        {
+          "id": "ce9a26c1-cb18-4531-802e-cc8800854d16",
+          "text": "Implementing adversarial debiasing techniques that specifically target gender-based discrimination during model training",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "1a82e735-1e35-4cee-9788-98eb4547bc07",
+          "text": "Increasing the dataset size with more diverse examples without any bias detection mechanisms",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "f0128af4-ac5d-4b17-ae3f-196e531c52a8",
+          "text": "Simply removing gender from the training data to prevent any gender-based learning",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "a18a5c3d-7ffe-4f0d-9998-49e85232fbad",
+          "text": "Using a more complex model architecture to better capture all relevant features",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "bias mitigation",
+        "fairness",
+        "machine learning"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:17:30.257387",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "f36339b4-8d82-4a06-bcdb-c8d07784e07e": {
+      "id": "f36339b4-8d82-4a06-bcdb-c8d07784e07e",
+      "question_text": "In the context of fairness-aware machine learning, what does the concept of 'statistical parity' primarily measure?",
+      "objective": "Understanding different fairness metrics and their definitions",
+      "answers": [
+        {
+          "id": "ab30abc9-6178-4fa8-9ece-39000596b096",
+          "text": "The difference in selection rates between different groups relative to their representation in the population",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "f23de1a9-7454-4841-aed4-79fc3e8bbeb0",
+          "text": "The overall accuracy of predictions across all demographic groups",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "866c5e4b-011b-45ca-9535-3628569dd8f6",
+          "text": "The equal error rates across different protected attributes",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "8f2ea1f4-3796-44de-9173-746d30f0cb72",
+          "text": "The correlation between input features and protected group membership",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "fairness metrics",
+        "statistical parity",
+        "bias measurement"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:17:30.257408",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "73d1ea44-a2ee-4646-a7e2-72e5649a4be3": {
+      "id": "73d1ea44-a2ee-4646-a7e2-72e5649a4be3",
+      "question_text": "When implementing fairness constraints in machine learning models, what is a key challenge that practitioners must consider?",
+      "objective": "Recognition of practical challenges in implementing fair ML systems",
+      "answers": [
+        {
+          "id": "a71745db-65f8-4e9d-943c-18e241441903",
+          "text": "Balancing multiple conflicting fairness criteria that may lead to reduced overall model performance",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "795d7dfa-8e9f-487a-8d56-2e9a9a079a6a",
+          "text": "The computational complexity of training fair models is always higher than standard models",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "22a9b609-08a2-4614-bdd0-08d975bc1065",
+          "text": "Fairness can only be achieved when all sensitive attributes are known and included in the training data",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "a4a6394e-a6df-44ca-a1a4-62cbda0f9b5c",
+          "text": "All fairness metrics are equivalent and can be used interchangeably without affecting outcomes",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "fairness trade-offs",
+        "practical implementation",
+        "model optimization"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:17:30.257446",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "724d5d75-a2d5-420f-9d99-11b2292f0849": {
+      "id": "724d5d75-a2d5-420f-9d99-11b2292f0849",
+      "question_text": "Which of the following best explains how Random Forest reduces overfitting compared to a single decision tree?",
+      "objective": "Understanding how ensemble methods reduce overfitting through averaging",
+      "answers": [
+        {
+          "id": "e807d9e0-58bb-401f-a46c-96ed596c65ed",
+          "text": "By averaging predictions from many diverse trees, reducing the impact of any single tree's overfitting tendencies",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "758a4ecb-e6f3-48ad-8cf9-83e16e5523c5",
+          "text": "By using only the most important features in each tree to limit complexity",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "f6f4fae2-a42c-42ea-a0d7-b4648dabe01b",
+          "text": "By increasing the depth of individual trees to capture more complex patterns",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "3fe1cfed-38de-410b-bbf3-d805c06f639b",
+          "text": "By applying stronger regularization techniques than single decision trees",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "overfitting",
+        "random_forest",
+        "ensemble_methods"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:17:53.602131",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "8884aadd-5c5f-45b8-ae08-54e566075a0e": {
+      "id": "8884aadd-5c5f-45b8-ae08-54e566075a0e",
+      "question_text": "In a Random Forest algorithm, what is the primary purpose of introducing randomness in the tree-building process?",
+      "objective": "Comprehending the role of randomness in creating diverse ensemble members",
+      "answers": [
+        {
+          "id": "50cf27e0-b164-48f3-8e1c-7d1a5c2f705b",
+          "text": "To create diverse trees that learn different aspects of the data, improving overall model generalization",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "9e694bda-211f-4f97-8773-c93d34376229",
+          "text": "To speed up computation by reducing the number of trees needed",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "4b07160a-e4e2-4232-983e-8957ae3404e8",
+          "text": "To ensure all trees make identical predictions for better accuracy",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "e098b6c0-23a5-474a-8425-3e3f71dc606f",
+          "text": "To minimize memory usage during model training",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "diversity",
+        "random_forest",
+        "ensemble_methods"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:17:53.602159",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "6850e15c-7ff4-4413-9458-aa2972100f06": {
+      "id": "6850e15c-7ff4-4413-9458-aa2972100f06",
+      "question_text": "If a Random Forest model is showing poor performance on a dataset, which of the following changes would most likely improve its performance?",
+      "objective": "Applying knowledge about Random Forest hyperparameter tuning for performance optimization",
+      "answers": [
+        {
+          "id": "898d5a8a-c282-44b9-ac83-922594f9b369",
+          "text": "Increasing the number of trees in the forest to reduce variance",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "5fb2d0db-510a-4d3e-b9db-ffe3a3327fa4",
+          "text": "Reducing the number of features considered at each split to decrease complexity",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "efa1e806-0b84-44ba-9ca7-3f08424d6887",
+          "text": "Decreasing the maximum depth of individual trees to prevent overfitting",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "ff9732c6-d2b7-43c8-b327-4f6f56cc1c0c",
+          "text": "Using a single decision tree instead of an ensemble to increase model interpretability",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "hyperparameter_tuning",
+        "random_forest",
+        "model_performance"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:17:53.602222",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "93c38dec-77b9-4d00-a497-4b76a417ccaa": {
+      "id": "93c38dec-77b9-4d00-a497-4b76a417ccaa",
+      "question_text": "When an AI decision-making system produces biased outcomes against certain demographic groups, which ethical principle is primarily at risk of being violated?",
+      "objective": "Analyze the relationship between AI bias and ethical principles",
+      "answers": [
+        {
+          "id": "eb5a8f3e-5eff-4cb4-a03a-f41e423a2f22",
+          "text": "Fairness",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "22dd57e5-4b57-4dcb-91a4-0144bee9063f",
+          "text": "Transparency",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "9e96837a-67e9-4b27-ae16-f07ba980b69f",
+          "text": "Accountability",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "30b6c155-451d-4fbd-82f0-9c332c1a38e4",
+          "text": "Autonomy",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "bias",
+        "fairness",
+        "AI ethics"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:18:28.314919",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "a29dc10d-7da1-4f47-96bd-cd902b21ed99": {
+      "id": "a29dc10d-7da1-4f47-96bd-cd902b21ed99",
+      "question_text": "In healthcare AI systems, if a machine learning model consistently recommends less aggressive treatment for patients from certain socioeconomic backgrounds, what primary ethical concern does this illustrate?",
+      "objective": "Apply ethical frameworks to identify specific types of harm in AI applications",
+      "answers": [
+        {
+          "id": "98bded49-2486-4058-950d-0e2849ac8f1a",
+          "text": "Discriminatory harm",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "92e94539-000c-4325-ae50-7e1bf6b6bd15",
+          "text": "Lack of transparency",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "80c931af-7ef6-4de1-8c2d-303a43076c4c",
+          "text": "Privacy violation",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "66dfa0e9-3fc8-4960-95f8-8227c370f9b9",
+          "text": "Inadequate documentation",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "medical ethics",
+        "discrimination",
+        "AI healthcare"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:18:28.314941",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    },
+    "7f671d90-9e47-45b9-bbaf-083a2d4dda8c": {
+      "id": "7f671d90-9e47-45b9-bbaf-083a2d4dda8c",
+      "question_text": "Which approach best addresses the challenge of accountability when an AI system makes a harmful decision that cannot be clearly traced back to specific human actions?",
+      "objective": "Evaluate solutions for maintaining accountability in AI decision-making",
+      "answers": [
+        {
+          "id": "3c286333-c642-49f1-8440-3d9b5fa13b65",
+          "text": "Implementing explainable AI mechanisms",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "9ddd1234-d5d4-42f0-a141-c733156e702f",
+          "text": "Removing the AI from decision-making",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "42766bef-f72e-49f1-a952-f372d019f208",
+          "text": "Increasing computational power",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "d0ee368d-3907-449f-ba79-19ec627751b8",
+          "text": "Reducing dataset size",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "AI governance",
+        "accountability",
+        "explainability"
+      ],
+      "elo_rating": 1200.0,
+      "times_answered": 0,
+      "times_correct": 0,
+      "created_at": "2025-08-08T22:18:28.314978",
+      "last_studied": null,
+      "next_review": null,
+      "interval_days": 1.0,
+      "ease_factor": 2.5,
+      "repetition_count": 0
+    }
+  },
+  "study_sessions": [
+    {
+      "session_id": "a65b365b-993a-4754-9cf8-101060a9bb22",
+      "questions_studied": [
+        "1beb7df5-dbab-4a76-b5f1-22bd32bd7934",
+        "41455ebf-c95e-4139-b56f-9a1d45b222a3",
+        "acdd6922-f05e-4394-b4cb-3de4593325b8"
+      ],
+      "results": {
+        "1beb7df5-dbab-4a76-b5f1-22bd32bd7934": "correct",
+        "41455ebf-c95e-4139-b56f-9a1d45b222a3": "correct",
+        "acdd6922-f05e-4394-b4cb-3de4593325b8": "correct"
+      },
+      "start_time": "2025-08-08T22:18:28.315387",
+      "end_time": "2025-08-08T22:18:28.315886"
+    }
+  ]
+}

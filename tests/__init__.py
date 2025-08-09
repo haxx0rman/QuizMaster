@@ -1,1 +1,1 @@
-# QuizMaster Tests
+"""Test runner for QuizMaster."""

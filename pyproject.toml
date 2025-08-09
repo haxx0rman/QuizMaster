@@ -1,66 +1,80 @@
 [build-system]
-requires = ["setuptools>=45", "wheel"]
+requires = ["setuptools>=70", "wheel"]
 build-backend = "setuptools.build_meta"
-
-[tool.setuptools.packages.find]
-include = ["quizmaster*"]
 
 [project]
 name = "quizmaster"
-version = "0.1.0"
-description = "A standalone module that integrates Ragas question generation with LightRAG knowledge graphs and qBank for human-friendly question banks"
+version = "2.0.0"
+description = "A modern question bank generator using qBank and BookWorm for intelligent content processing and adaptive learning"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "ragas>=0.2.0",
-    "langchain>=0.3.0",
-    "langchain-openai>=0.2.0",
+    # Core frameworks
+    "qbank @ git+https://github.com/haxx0rman/qBank.git",
+    "bookworm @ git+https://github.com/haxx0rman/BookWorm.git",
+    
+    # LLM and AI
     "openai>=1.0.0",
+    "anthropic>=0.34.0",
     "tiktoken>=0.5.0",
-    "numpy>=1.24.0",
-    "pandas>=2.0.0",
+    
+    # Document processing
+    "PyMuPDF>=1.23.0",
+    "pdfplumber>=0.10.0",
+    "python-docx>=1.1.0",
+    "openpyxl>=3.1.0",
+    
+    # Core utilities
     "pydantic>=2.0.0",
     "python-dotenv>=1.0.0",
-    "networkx>=3.0",
-    "aiofiles>=23.0.0",
+    "click>=8.0.0",
+    "rich>=13.0.0",
     "tqdm>=4.65.0",
-    "dataclasses-json>=0.6.0",
-    "qbank @ git+https://github.com/haxx0rman/qBank.git",
-    "lightrag-hku>=1.4.0",
-    "ollama>=0.5.2",
-    "faiss-cpu>=1.11.0.post1",
-    "pytest>=8.4.1",
-    "pytest-asyncio>=1.1.0",
-    "graphwalker",
+    
+    # Data handling
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "aiofiles>=23.0.0",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=7.0.0",
-    "pytest-asyncio>=0.21.0",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
     "pytest-cov>=4.0.0",
-    "black>=23.0.0",
-    "isort>=5.0.0",
-    "mypy>=1.0.0",
+    "black>=24.0.0",
+    "isort>=5.13.0",
+    "mypy>=1.8.0",
+    "ruff>=0.1.0",
 ]
 
 [project.scripts]
-quizmaster = "main:cli_main"
+quizmaster = "quizmaster.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["quizmaster*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
+python_classes = ["Test*"]
 python_functions = ["test_*"]
 addopts = "-v --tb=short"
-asyncio_mode = "auto"
 
 [tool.black]
-line-length = 100
+line-length = 88
 target-version = ['py311']
 
 [tool.isort]
 profile = "black"
-line_length = 100
+line_length = 88
 
-[tool.uv.sources]
-graphwalker = { git = "https://github.com/haxx0rman/GraphWalker.git" }
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"

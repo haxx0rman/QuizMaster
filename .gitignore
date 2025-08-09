@@ -10,3 +10,5 @@ wheels/
 .venv
 .env
 lightrag_test_report.json
+/data/lightrag
+/data/lightrag

@@ -1,248 +1,131 @@
 #!/usr/bin/env python3
 """
-QuizMaster CLI - Ragas-Inspired Question Generation System
+QuizMaster 2.0 - Modern question bank generator using qBank and BookWorm.
 
-This CLI provides access to all QuizMaster functionality including:
-- Complete pipeline demonstrations
-- Configuration validation
-- Knowledge extraction and question generation
-- Integration with LightRAG
+This is the main entry point for QuizMaster. It provides both CLI access
+and demonstrates basic usage of the QuizMaster system.
 """
 
-import asyncio
-import argparse
 import sys
-import logging
+import asyncio
 from pathlib import Path
-from typing import Optional, List
 
-from quizmaster.core.integration import QuizMasterPipeline, demonstrate_complete_system
-from quizmaster.core.config import get_config, validate_config
-from quizmaster.core.knowledge_extractor import KnowledgeExtractor
+# Add the current directory to Python path for local imports
+sys.path.insert(0, str(Path(__file__).parent))
 
 
-def setup_logging(verbose: bool = False):
-    """Configure logging for the CLI."""
-    level = logging.DEBUG if verbose else logging.INFO
-    logging.basicConfig(
-        level=level,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        handlers=[
-            logging.StreamHandler(sys.stdout)
-        ]
-    )
-
-
-async def run_demo():
-    """Run the complete system demonstration."""
-    print("🎓 QuizMaster: Running Complete System Demonstration")
+def main():
+    """Main entry point for QuizMaster."""
+    
+    print("🧠 QuizMaster 2.0")
+    print("Modern question bank generator using qBank and BookWorm")
     print("=" * 60)
     
     try:
-        results = await demonstrate_complete_system()
-        print("\n✅ Demonstration completed successfully!")
-        return True
-    except Exception as e:
-        print(f"\n❌ Demonstration failed: {e}")
-        logging.exception("Demo failed")
-        return False
-
-
-async def validate_configuration():
-    """Validate the current configuration."""
-    print("🔧 QuizMaster: Validating Configuration")
-    print("=" * 60)
-    
-    try:
-        config = get_config()
-        validation_result = validate_config(config)
+        # Import and run the CLI
+        from quizmaster.cli import main as cli_main
+        cli_main()
         
-        if validation_result.get("valid", False):
-            print("✅ Configuration is valid!")
-            print(f"   LLM Model: {config.llm.llm_model}")
-            print(f"   Embedding Model: {config.llm.embedding_model}")
-            print(f"   Working Directory: {config.knowledge_extraction.lightrag_working_dir}")
-        else:
-            print("❌ Configuration validation failed:")
-            for error in validation_result.get("errors", []):
-                print(f"   - {error}")
-            return False
-            
-        return True
-    except Exception as e:
-        print(f"❌ Configuration validation failed: {e}")
-        logging.exception("Config validation failed")
-        return False
-
-
-async def generate_questions_from_files(
-    file_paths: List[str],
-    num_questions: int = 10,
-    topic: str = "General Knowledge",
-    output_file: Optional[str] = None
-):
-    """Generate questions from input files."""
-    print(f"📚 QuizMaster: Generating {num_questions} questions from {len(file_paths)} files")
-    print("=" * 60)
-    
-    try:
-        # Read documents
-        documents = []
-        for file_path in file_paths:
-            path = Path(file_path)
-            if not path.exists():
-                print(f"❌ File not found: {file_path}")
-                return False
-                
-            print(f"📖 Reading: {file_path}")
-            with open(path, 'r', encoding='utf-8') as f:
-                documents.append(f.read())
+    except ImportError as e:
+        print(f"❌ Import Error: {e}")
+        print("\n💡 Please install dependencies:")
+        print("   uv sync")
+        print("   # or")
+        print("   pip install -e .")
         
-        # Initialize pipeline
-        pipeline = QuizMasterPipeline()
-        
-        # Generate questions
-        results = await pipeline.process_documents_to_questions(
-            documents=documents,
-            num_questions=num_questions,
-            topic=topic
-        )
-        
-        print(f"\n✅ Generated {len(results['questions'])} questions")
-        print(f"📊 Knowledge Graph: {results['knowledge_graph']['nodes']} nodes, {results['knowledge_graph']['edges']} edges")
-        
-        # Save results if output file specified
-        if output_file:
-            import json
-            output_path = Path(output_file)
-            with open(output_path, 'w', encoding='utf-8') as f:
-                json.dump(results, f, indent=2, default=str)
-            print(f"💾 Results saved to: {output_file}")
-        
-        # Display sample questions
-        print("\n📝 Sample Questions:")
-        for i, question in enumerate(results['questions'][:3], 1):
-            print(f"\n{i}. {question['question']}")
-            if question.get('options'):
-                for j, option in enumerate(question['options'], 1):
-                    print(f"   {chr(96+j)}) {option}")
-            print(f"   Difficulty: {question.get('difficulty', 'N/A')}")
-        
-        if len(results['questions']) > 3:
-            print(f"\n... and {len(results['questions']) - 3} more questions")
-        
-        return True
-        
-    except Exception as e:
-        print(f"❌ Question generation failed: {e}")
-        logging.exception("Question generation failed")
-        return False
-
-
-def create_parser():
-    """Create the argument parser."""
-    parser = argparse.ArgumentParser(
-        description="QuizMaster: Ragas-Inspired Question Generation System",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Examples:
-  %(prog)s demo                           # Run complete system demonstration
-  %(prog)s validate                       # Validate configuration
-  %(prog)s generate doc1.txt doc2.txt     # Generate questions from files
-  %(prog)s generate *.md -n 20 -t "AI"   # Generate 20 questions on AI topic
-        """
-    )
-    
-    parser.add_argument(
-        "-v", "--verbose",
-        action="store_true",
-        help="Enable verbose logging"
-    )
-    
-    subparsers = parser.add_subparsers(dest="command", help="Available commands")
-    
-    # Demo command
-    demo_parser = subparsers.add_parser(
-        "demo",
-        help="Run complete system demonstration"
-    )
-    
-    # Validate command
-    validate_parser = subparsers.add_parser(
-        "validate",
-        help="Validate configuration"
-    )
-    
-    # Generate command
-    generate_parser = subparsers.add_parser(
-        "generate",
-        help="Generate questions from files"
-    )
-    generate_parser.add_argument(
-        "files",
-        nargs="+",
-        help="Input files to process"
-    )
-    generate_parser.add_argument(
-        "-n", "--num-questions",
-        type=int,
-        default=10,
-        help="Number of questions to generate (default: 10)"
-    )
-    generate_parser.add_argument(
-        "-t", "--topic",
-        default="General Knowledge",
-        help="Topic/subject area (default: General Knowledge)"
-    )
-    generate_parser.add_argument(
-        "-o", "--output",
-        help="Output file for results (JSON format)"
-    )
-    
-    return parser
-
-
-async def main():
-    """Main CLI entry point."""
-    parser = create_parser()
-    args = parser.parse_args()
-    
-    setup_logging(args.verbose)
-    
-    if not args.command:
-        parser.print_help()
         return 1
-    
-    success = False
-    
-    if args.command == "demo":
-        success = await run_demo()
-    elif args.command == "validate":
-        success = await validate_configuration()
-    elif args.command == "generate":
-        success = await generate_questions_from_files(
-            file_paths=args.files,
-            num_questions=args.num_questions,
-            topic=args.topic,
-            output_file=args.output
-        )
-    
-    return 0 if success else 1
-
-
-def cli_main():
-    """Synchronous entry point for CLI."""
-    try:
-        exit_code = asyncio.run(main())
-        sys.exit(exit_code)
+        
     except KeyboardInterrupt:
-        print("\n👋 Goodbye!")
-        sys.exit(0)
+        print("\n👋 QuizMaster interrupted by user")
+        return 0
+        
     except Exception as e:
         print(f"❌ Unexpected error: {e}")
-        logging.exception("Unexpected error")
-        sys.exit(1)
+        return 1
+
+
+async def demo():
+    """Run a simple demo of QuizMaster functionality."""
+    
+    print("🎯 QuizMaster Demo")
+    print("-" * 30)
+    
+    try:
+        # Setup configuration
+        from quizmaster.config import QuizMasterConfig, setup_logging
+        
+        config = QuizMasterConfig.from_env()
+        setup_logging(config)
+        
+        # Check if we have an API key
+        if not config.validate_api_key():
+            print(f"⚠️ No API key found for {config.api_provider}")
+            print("Please set your API key in .env file to run the demo")
+            return
+        
+        # Import QuizMaster (do this here to catch import errors)
+        from quizmaster.core import QuizMaster
+        
+        # Initialize QuizMaster
+        qm = QuizMaster(config, "demo_user", "Demo Bank")
+        
+        # Create a simple test document
+        test_doc = Path("demo_doc.txt")
+        test_content = """
+        Artificial Intelligence (AI) is intelligence demonstrated by machines, 
+        in contrast to the natural intelligence displayed by humans and animals. 
+        
+        Machine Learning is a subset of AI that provides systems the ability 
+        to automatically learn and improve from experience without being 
+        explicitly programmed.
+        
+        Deep Learning is a subset of machine learning that uses neural networks 
+        with three or more layers to simulate the reasoning of a human brain.
+        """
+        
+        test_doc.write_text(test_content.strip())
+        print(f"📄 Created demo document: {test_doc}")
+        
+        # Process the document
+        print("⚙️ Processing document...")
+        results = await qm.process_documents([str(test_doc)])
+        
+        print(f"✅ Generated {len(results['generated_questions'])} questions")
+        
+        # Show a sample question
+        if results['generated_questions']:
+            sample_q = results['generated_questions'][0]
+            print(f"\\n📝 Sample question:")
+            print(f"   {sample_q['question_text']}")
+            
+            correct_answer = next(
+                a['text'] for a in sample_q['answers'] if a['is_correct']
+            )
+            print(f"   ✅ Answer: {correct_answer}")
+        
+        # Query knowledge graph
+        print("\\n🔍 Querying knowledge graph...")
+        result = await qm.query_knowledge_graph("What is artificial intelligence?")
+        
+        if result['success']:
+            print(f"🧠 Query result: {result['result'][:100]}...")
+        
+        # Cleanup
+        test_doc.unlink(missing_ok=True)
+        print(f"\\n🎉 Demo completed successfully!")
+        
+    except ImportError as e:
+        print(f"❌ Missing dependencies: {e}")
+        print("Please install required packages with: uv sync")
+        
+    except Exception as e:
+        print(f"❌ Demo error: {e}")
 
 
 if __name__ == "__main__":
-    cli_main()
+    # Check if user wants to run demo
+    if len(sys.argv) > 1 and sys.argv[1] == "demo":
+        asyncio.run(demo())
+    else:
+        # Run the main CLI
+        sys.exit(main())
