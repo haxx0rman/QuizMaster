@@ -200,7 +200,7 @@ class QBankIntegration:
             
             # Use the enhanced start_study_session with filtering
             questions = self.manager.start_study_session(  # type: ignore
-                max_questions=max_questions or 10,
+                max_questions=max_questions,
                 tags_filter=tags_filter,
                 difficulty_range=difficulty_range
             )
@@ -455,12 +455,12 @@ class QBankIntegration:
                 "error": str(e)
             }
 
-    def get_difficult_questions(self, limit: int = 10) -> List[Dict[str, Any]]:
+    def get_difficult_questions(self, limit: Optional[int] = None) -> List[Dict[str, Any]]:
         """
         Get the most difficult questions based on low accuracy or high ELO ratings.
         
         Args:
-            limit: Maximum number of questions to return
+            limit: Maximum number of questions to return (None for unlimited)
             
         Returns:
             List of difficult questions with their statistics

@@ -1,0 +1,1502 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d11" for="edge" attr.name="created_at" attr.type="long"/>
+<key id="d10" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d9" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d8" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d7" for="edge" attr.name="description" attr.type="string"/>
+<key id="d6" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d5" for="node" attr.name="created_at" attr.type="long"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL">
+  <data key="d0">SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL</data>
+  <data key="d1">category</data>
+  <data key="d2">A comprehensive study guide and textbook designed for preparing for the Securities Industry Essentials (SIE) exam, covering topics like capital markets, securities, and regulatory frameworks.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Kaplan North America, LLC">
+  <data key="d0">Kaplan North America, LLC</data>
+  <data key="d1">organization</data>
+  <data key="d2">The publishing company responsible for creating and distributing the Securities Industry Essentials License Exam Manual, including educational resources and study materials.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="FINRA">
+  <data key="d0">FINRA</data>
+  <data key="d1">organization</data>
+  <data key="d2">The Financial Industry Regulatory Authority that administers the SIE exam and regulates securities industry practices in the United States.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="SIE">
+  <data key="d0">SIE</data>
+  <data key="d1">event</data>
+  <data key="d2">The Securities Industry Essentials exam, a qualifying examination required for individuals seeking to work as representative-level registrants in the securities industry.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Prometric Testing Centers">
+  <data key="d0">Prometric Testing Centers</data>
+  <data key="d1">organization</data>
+  <data key="d2">Third-party testing centers that proctor FINRA-administered exams including the SIE exam.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Federal Reserve">
+  <data key="d0">Federal Reserve</data>
+  <data key="d1">organization</data>
+  <data key="d2">The central banking system of the United States responsible for monetary policy and economic regulation, mentioned in relation to economic theories and market impacts.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="SEC">
+  <data key="d0">SEC</data>
+  <data key="d1">organization</data>
+  <data key="d2">The Securities and Exchange Commission, a federal agency that regulates the securities industry and enforces securities laws.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="World Athletics Championship">
+  <data key="d0">World Athletics Championship</data>
+  <data key="d1">event</data>
+  <data key="d2">A global sports competition featuring top athletes in track and field events, mentioned as an example of an event in the text but not directly related to securities content.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Tokyo">
+  <data key="d0">Tokyo</data>
+  <data key="d1">geo</data>
+  <data key="d2">The host city of the World Athletics Championship, mentioned as an example of a location in the text but not directly related to securities content.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Noah Carter">
+  <data key="d0">Noah Carter</data>
+  <data key="d1">person</data>
+  <data key="d2">A sprinter who set a new 100m sprint record at the World Athletics Championship, mentioned as an example in the text but not directly related to securities content.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="100m Sprint Record">
+  <data key="d0">100m Sprint Record</data>
+  <data key="d1">category</data>
+  <data key="d2">A benchmark in athletics representing the fastest time recorded for the 100-meter sprint, referenced in a sports context but not directly tied to securities.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Carbon-Fiber Spikes">
+  <data key="d0">Carbon-Fiber Spikes</data>
+  <data key="d1">category</data>
+  <data key="d2">Advanced sprinting shoes used in athletics that provide enhanced speed and traction, mentioned as an example in the text but not directly related to securities content.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="World Athletics Federation">
+  <data key="d0">World Athletics Federation</data>
+  <data key="d1">organization</data>
+  <data key="d2">The governing body overseeing the World Athletics Championship and record validations, mentioned as an example in the text but not directly related to securities content.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Investment Company Act of 1940">
+  <data key="d0">Investment Company Act of 1940</data>
+  <data key="d1">category</data>
+  <data key="d2">A federal law regulating investment companies, covered in Unit 4 of the Securities Industry Essentials manual.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Federal Reserve Policy Announcement">
+  <data key="d0">Federal Reserve Policy Announcement</data>
+  <data key="d1">event</data>
+  <data key="d2">An anticipated policy decision by the Federal Reserve that could influence investor confidence and market stability, mentioned as a regulatory issue.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Central Registration Depository">
+  <data key="d0">Central Registration Depository</data>
+  <data key="d1">organization</data>
+  <data key="d2">The system through which FINRA member firms apply for and pay fees to register individuals for FINRA-administered exams like the SIE.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Web CRD">
+  <data key="d0">Web CRD</data>
+  <data key="d1">category</data>
+  <data key="d2">The online system used by FINRA for managing registration information, including exam history and firm affiliations.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="CRD">
+  <data key="d0">CRD</data>
+  <data key="d1">organization</data>
+  <data key="d2">The Central Registration Depository system used by FINRA for managing registration information, also known as Web CRD.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Qualified Institutional Buyers">
+  <data key="d0">Qualified Institutional Buyers</data>
+  <data key="d1">category</data>
+  <data key="d2">Institutional investors who own and invest a minimum of $100 million in securities on a discretionary basis, mentioned in the context of primary market participants.&lt;SEP&gt;Institutional investors who own and invest a minimum of $100 million in securities on a discretionary basis.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="SecuritiesPro TM QBank">
+  <data key="d0">SecuritiesPro TM QBank</data>
+  <data key="d1">category</data>
+  <data key="d2">An exam preparation tool included in Kaplan's study package that provides practice questions similar in style and content to the actual SIE exam.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Checkpoint Exams">
+  <data key="d0">Checkpoint Exams</data>
+  <data key="d1">event</data>
+  <data key="d2">Fixed exams administered after each unit of the course to check student progress before advancing to the next unit.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Midterm Exam">
+  <data key="d0">Midterm Exam</data>
+  <data key="d1">event</data>
+  <data key="d2">A fixed exam administered approximately at the midpoint of the course to assess overall progress.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Practice Exam">
+  <data key="d0">Practice Exam</data>
+  <data key="d1">event</data>
+  <data key="d2">A fixed exam designed to closely replicate the true exam experience for practice purposes.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Mastery Exam">
+  <data key="d0">Mastery Exam</data>
+  <data key="d1">event</data>
+  <data key="d2">A fixed exam designed to closely replicate the true exam experience, typically taken close to the actual exam date.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Performance Tracker">
+  <data key="d0">Performance Tracker</data>
+  <data key="d1">category</data>
+  <data key="d2">A tool used to identify areas of weakness after completing practice and mastery exams, allowing for targeted study.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Video Library">
+  <data key="d0">Video Library</data>
+  <data key="d1">category</data>
+  <data key="d2">A collection of short, engaging videos covering key topics in the securities industry curriculum.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Exam Tips and Content Updates">
+  <data key="d0">Exam Tips and Content Updates</data>
+  <data key="d1">category</data>
+  <data key="d2">Informational resources on the Kaplan dashboard providing updates about rule and regulation changes for the exam.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Corrections Link">
+  <data key="d0">Corrections Link</data>
+  <data key="d1">category</data>
+  <data key="d2">A resource on the Kaplan dashboard that provides information about corrections to errors in the text.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Test Topic Alert">
+  <data key="d0">Test Topic Alert</data>
+  <data key="d1">category</data>
+  <data key="d2">Features in the manual that highlight content especially likely to appear on the exam.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Take Note">
+  <data key="d0">Take Note</data>
+  <data key="d1">category</data>
+  <data key="d2">Special information sections in the manual designed to amplify important points.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Example">
+  <data key="d0">Example</data>
+  <data key="d1">category</data>
+  <data key="d2">Practical applications of theory presented in the manual as quick, interactive, real-world illustrations.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Practice Question">
+  <data key="d0">Practice Question</data>
+  <data key="d1">category</data>
+  <data key="d2">Questions within each learning objective designed to help students see how topics might be presented on the exam.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Knowledge Check">
+  <data key="d0">Knowledge Check</data>
+  <data key="d1">category</data>
+  <data key="d2">Short tests after each lesson to measure comprehension and reinforce essential material covered in that lesson.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Study Calendar">
+  <data key="d0">Study Calendar</data>
+  <data key="d1">category</data>
+  <data key="d2">A customizable tool on the Kaplan dashboard that helps students plan their use of study materials and tools.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Primary Markets">
+  <data key="d0">Primary Markets</data>
+  <data key="d1">category</data>
+  <data key="d2">Markets where securities are sold by issuers to raise capital, contrasting with secondary markets where securities trade between investors.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Secondary Markets">
+  <data key="d0">Secondary Markets</data>
+  <data key="d1">category</data>
+  <data key="d2">Markets where securities trade between investors after their initial issuance in primary markets.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Initial Public Offering">
+  <data key="d0">Initial Public Offering</data>
+  <data key="d1">event</data>
+  <data key="d2">The first time an issuer distributes securities to the public, also known as an IPO.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Additional Public Offering">
+  <data key="d0">Additional Public Offering</data>
+  <data key="d1">event</data>
+  <data key="d2">A subsequent offering of securities by a company after its initial public offering, also called APO or follow-on offering.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Underwriting Commitments">
+  <data key="d0">Underwriting Commitments</data>
+  <data key="d1">category</data>
+  <data key="d2">Agreements between underwriters and issuers that define the level of commitment required from underwriters in securities offerings.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Best Efforts Underwriting">
+  <data key="d0">Best Efforts Underwriting</data>
+  <data key="d1">category</data>
+  <data key="d2">An underwriting arrangement where underwriters act as agents and are not committed to purchasing unsold shares, with funds held in escrow.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Firm Commitment Underwriting">
+  <data key="d0">Firm Commitment Underwriting</data>
+  <data key="d1">category</data>
+  <data key="d2">An underwriting contract where underwriters commit to purchasing securities from the issuer at a specified price, acting as principals.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Syndicates">
+  <data key="d0">Syndicates</data>
+  <data key="d1">organization</data>
+  <data key="d2">Groups of broker-dealers that form joint ventures to facilitate large capital-raising processes in underwriting.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Selling Group">
+  <data key="d0">Selling Group</data>
+  <data key="d1">organization</data>
+  <data key="d2">Members of a syndicate who assist in selling securities but do not commit capital or hold inventory, unlike syndicate members.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Managing Underwriter">
+  <data key="d0">Managing Underwriter</data>
+  <data key="d1">person</data>
+  <data key="d2">A member of a syndicate who takes on a lead role and provides significant resources to the venture.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Institutional Investors">
+  <data key="d0">Institutional Investors</data>
+  <data key="d1">category</data>
+  <data key="d2">Entities that pool money to purchase securities and other investment assets, including banks, insurance companies, pension funds, hedge funds, and mutual funds.&lt;SEP&gt;Institutional investors are entities that invest large sums of money and have higher communication and disclosure expectations compared to retail investors.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f&lt;SEP&gt;chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Retail Investors">
+  <data key="d0">Retail Investors</data>
+  <data key="d1">category</data>
+  <data key="d2">Individual investors who invest their own assets, typically less knowledgeable than institutional investors with higher disclosure expectations.&lt;SEP&gt;Individual investors who invest their own assets, typically less knowledgeable than institutional investors.&lt;SEP&gt;Retail investors are individual investors who typically have lower sophistication levels and require more protection in investment transactions.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f&lt;SEP&gt;chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Accredited Investors">
+  <data key="d0">Accredited Investors</data>
+  <data key="d1">category</data>
+  <data key="d2">Accredited investors are a subset of investors that include institutional investors and certain qualified retail investors with specific financial criteria or professional credentials.&lt;SEP&gt;Individuals or entities who meet specific financial criteria to qualify for special investor protections and privileges.&lt;SEP&gt;Investors who meet certain financial criteria, including those who qualify as institutional investors and certain retail investors with specific income or asset thresholds.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f&lt;SEP&gt;chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Insiders of Security Issuer">
+  <data key="d0">Insiders of Security Issuer</data>
+  <data key="d1">person</data>
+  <data key="d2">Officers, board members, and major stockholders of a security's issuer who qualify as accredited investors.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Government-Issued Bonds">
+  <data key="d0">Government-Issued Bonds</data>
+  <data key="d1">category</data>
+  <data key="d2">Debt securities issued by the federal government or its agencies, including Treasury bonds and agency debt.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Municipal Bonds">
+  <data key="d0">Municipal Bonds</data>
+  <data key="d1">category</data>
+  <data key="d2">Debt securities issued by municipalities such as counties and cities for funding infrastructure projects.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Corporate Bonds">
+  <data key="d0">Corporate Bonds</data>
+  <data key="d1">category</data>
+  <data key="d2">Debt securities issued by corporations to raise capital, mentioned in the context of debt securities.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Equity Securities">
+  <data key="d0">Equity Securities</data>
+  <data key="d1">category</data>
+  <data key="d2">Securities representing ownership in a company, including common stocks and preferred stocks.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Common Stocks">
+  <data key="d0">Common Stocks</data>
+  <data key="d1">category</data>
+  <data key="d2">Equity securities that represent ownership in a corporation with voting rights and potential for dividends.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Preferred Stock">
+  <data key="d0">Preferred Stock</data>
+  <data key="d1">category</data>
+  <data key="d2">Equity securities that have characteristics of both common stock and bonds, typically paying fixed dividends.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="ADRs">
+  <data key="d0">ADRs</data>
+  <data key="d1">category</data>
+  <data key="d2">American Depositary Receipts, representing foreign company shares traded in U.S. markets.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Options">
+  <data key="d0">Options</data>
+  <data key="d1">category</data>
+  <data key="d2">Derivative securities that give the holder the right, but not the obligation, to buy or sell an underlying asset at a specified price.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Municipal Fund Securities">
+  <data key="d0">Municipal Fund Securities</data>
+  <data key="d1">category</data>
+  <data key="d2">Securities related to municipal investment funds, including municipal bonds and other debt instruments.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Partnerships">
+  <data key="d0">Partnerships</data>
+  <data key="d1">category</data>
+  <data key="d2">Investment vehicles that are pass-through entities for tax purposes, mentioned in the context of other investment vehicles.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="REITs">
+  <data key="d0">REITs</data>
+  <data key="d1">category</data>
+  <data key="d2">Real Estate Investment Trusts that own and operate income-generating real estate properties.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="ETFs">
+  <data key="d0">ETFs</data>
+  <data key="d1">category</data>
+  <data key="d2">Exchange-Traded Funds that trade like stocks on exchanges but hold diversified portfolios of assets.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="ETNs">
+  <data key="d0">ETNs</data>
+  <data key="d1">category</data>
+  <data key="d2">Exchange-Traded Notes, debt securities issued by financial institutions that track indices or other benchmarks.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Life Insurance-Based Products">
+  <data key="d0">Life Insurance-Based Products</data>
+  <data key="d1">category</data>
+  <data key="d2">Insurance products that combine life insurance with investment components, covered in Unit 4 of the manual.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Investment Company">
+  <data key="d0">Investment Company</data>
+  <data key="d1">organization</data>
+  <data key="d2">A company that pools money from investors to invest in securities, regulated under the Investment Company Act of 1940.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Customer Accounts">
+  <data key="d0">Customer Accounts</data>
+  <data key="d1">category</data>
+  <data key="d2">Accounts maintained by broker-dealers for their clients, including nonqualified and qualified accounts.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Nonqualified Accounts">
+  <data key="d0">Nonqualified Accounts</data>
+  <data key="d1">category</data>
+  <data key="d2">Customer accounts that do not meet the requirements for qualified retirement accounts.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Qualified Accounts">
+  <data key="d0">Qualified Accounts</data>
+  <data key="d1">category</data>
+  <data key="d2">Customer accounts that meet specific requirements for tax-advantaged retirement accounts.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Account Features">
+  <data key="d0">Account Features</data>
+  <data key="d1">category</data>
+  <data key="d2">Characteristics and capabilities of customer accounts including margin features and other account-specific attributes.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Investment Risks">
+  <data key="d0">Investment Risks</data>
+  <data key="d1">category</data>
+  <data key="d2">Potential losses or adverse outcomes associated with different types of investments, covered in Unit 7.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Making Recommendations">
+  <data key="d0">Making Recommendations</data>
+  <data key="d1">category</data>
+  <data key="d2">Process of providing investment advice to clients based on their needs and risk tolerance, covered in Unit 7.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Taxation">
+  <data key="d0">Taxation</data>
+  <data key="d1">category</data>
+  <data key="d2">The impact of taxes on investment returns and the methods for calculating tax implications of securities transactions.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Calculating Yields and Returns">
+  <data key="d0">Calculating Yields and Returns</data>
+  <data key="d1">category</data>
+  <data key="d2">Methods for determining the income and performance of investments, covered in Unit 8.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Business Cycle">
+  <data key="d0">Business Cycle</data>
+  <data key="d1">category</data>
+  <data key="d2">The periodic fluctuations in economic activity including expansion, peak, contraction, and trough phases.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Economic Theories">
+  <data key="d0">Economic Theories</data>
+  <data key="d1">category</data>
+  <data key="d2">Conceptual frameworks explaining how economies function, including theories about monetary and fiscal policy.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Government Regulators">
+  <data key="d0">Government Regulators</data>
+  <data key="d1">category</data>
+  <data key="d2">Regulatory bodies that oversee financial markets, including SEC and other government agencies.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Self-Regulatory Organizations">
+  <data key="d0">Self-Regulatory Organizations</data>
+  <data key="d1">organization</data>
+  <data key="d2">Industry groups that regulate their own members and maintain standards for securities industry practices.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Anti-Money Laundering">
+  <data key="d0">Anti-Money Laundering</data>
+  <data key="d1">category</data>
+  <data key="d2">Regulatory framework designed to prevent the use of financial systems for money laundering activities.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Bank Secrecy Act">
+  <data key="d0">Bank Secrecy Act</data>
+  <data key="d1">category</data>
+  <data key="d2">Federal law requiring financial institutions to maintain records and report suspicious transactions to prevent money laundering.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Market Manipulation">
+  <data key="d0">Market Manipulation</data>
+  <data key="d1">category</data>
+  <data key="d2">Unlawful practices that distort the price or supply of securities in the market.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Insider Trading">
+  <data key="d0">Insider Trading</data>
+  <data key="d1">category</data>
+  <data key="d2">The illegal trading of securities based on material non-public information.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Prohibited Activities">
+  <data key="d0">Prohibited Activities</data>
+  <data key="d1">category</data>
+  <data key="d2">Activities that are forbidden under securities regulations and industry rules.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Communications With the Public">
+  <data key="d0">Communications With the Public</data>
+  <data key="d1">category</data>
+  <data key="d2">Regulations governing how financial professionals communicate with investors and the public about securities.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Registered Representatives">
+  <data key="d0">Registered Representatives</data>
+  <data key="d1">person</data>
+  <data key="d2">Individuals who have passed required exams and are registered with FINRA to conduct securities business.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Member Firm">
+  <data key="d0">Member Firm</data>
+  <data key="d1">organization</data>
+  <data key="d2">A brokerage firm that is a member of FINRA and subject to its regulations.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Broker-Dealers">
+  <data key="d0">Broker-Dealers</data>
+  <data key="d1">organization</data>
+  <data key="d2">Financial institutions that engage in buying and selling securities for their own account or on behalf of customers.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Investment Bankers">
+  <data key="d0">Investment Bankers</data>
+  <data key="d1">person</data>
+  <data key="d2">Financial professionals who help companies issue securities and facilitate capital raising activities.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Underwriters">
+  <data key="d0">Underwriters</data>
+  <data key="d1">person</data>
+  <data key="d2">Broker-dealers who work with issuers to bring securities to the market and sell them to investors.&lt;SEP&gt;Underwriters are investment banks or broker-dealers who assist issuers in preparing registration statements and prospectuses, and help distribute securities in the primary market.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f&lt;SEP&gt;chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Issuers">
+  <data key="d0">Issuers</data>
+  <data key="d1">organization</data>
+  <data key="d2">Entities that create and offer securities to raise capital, including corporations, municipalities, and government agencies.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Investors">
+  <data key="d0">Investors</data>
+  <data key="d1">person</data>
+  <data key="d2">Individuals or entities who purchase securities in the primary market with intent to hold them for investment purposes.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Securities Industry Essentials">
+  <data key="d0">Securities Industry Essentials</data>
+  <data key="d1">category</data>
+  <data key="d2">The title of the comprehensive study guide for preparing for the SIE exam, covering all major topics in securities industry fundamentals.</data>
+  <data key="d3">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Securities and Exchange Commission (SEC)">
+  <data key="d0">Securities and Exchange Commission (SEC)</data>
+  <data key="d1">organization</data>
+  <data key="d2">The SEC is the primary federal regulator in the securities industry responsible for overseeing securities markets and enforcing securities laws.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Securities Act of 1933">
+  <data key="d0">Securities Act of 1933</data>
+  <data key="d1">event</data>
+  <data key="d2">The Securities Act of 1933 is a federal law designed to ensure investors are fully informed about securities and their issuing companies during primary market transactions.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Municipal Advisors">
+  <data key="d0">Municipal Advisors</data>
+  <data key="d1">organization</data>
+  <data key="d2">Municipal advisors are investment bankers who advise municipalities on issuing municipal debt and other municipal securities, but cannot serve as underwriters for the same issues.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Registration Statement (S-1)">
+  <data key="d0">Registration Statement (S-1)</data>
+  <data key="d1">event</data>
+  <data key="d2">The registration statement is a document filed with the SEC that discloses material information about a security issue before it can be sold in the primary market.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Cooling-Off Period">
+  <data key="d0">Cooling-Off Period</data>
+  <data key="d1">event</data>
+  <data key="d2">The cooling-off period is a minimum 20-day window after filing a registration statement during which no sales solicitations are allowed but certain advertising activities may occur.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Tombstone Advertisement">
+  <data key="d0">Tombstone Advertisement</data>
+  <data key="d1">event</data>
+  <data key="d2">A tombstone advertisement is a minimal announcement permitted during the cooling-off period that provides basic information about a new securities offering.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Preliminary Prospectus (Red Herring)">
+  <data key="d0">Preliminary Prospectus (Red Herring)</data>
+  <data key="d1">event</data>
+  <data key="d2">A preliminary prospectus or red herring is used to gauge investor interest and gather indications of interest before final pricing occurs.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Indication of Interest">
+  <data key="d0">Indication of Interest</data>
+  <data key="d1">event</data>
+  <data key="d2">An indication of interest is a nonbinding declaration by investors expressing potential interest in purchasing securities after the registration becomes effective.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Due Diligence">
+  <data key="d0">Due Diligence</data>
+  <data key="d1">event</data>
+  <data key="d2">Due diligence refers to the process where underwriters examine securities to determine suitability for specific customers and conduct formal presentations to representatives.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Blue-Sky Filings">
+  <data key="d0">Blue-Sky Filings</data>
+  <data key="d1">event</data>
+  <data key="d2">Blue-sky filings refer to state-level securities registrations that must be coordinated with federal registration processes for securities offerings.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Effective Date">
+  <data key="d0">Effective Date</data>
+  <data key="d1">event</data>
+  <data key="d2">The effective date is when the SEC allows a security to be offered to investors, marking the end of the cooling-off period and beginning of sales.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Broker-Dealers (BDs)">
+  <data key="d0">Broker-Dealers (BDs)</data>
+  <data key="d1">organization</data>
+  <data key="d2">Broker-dealers are financial institutions that act as intermediaries between issuers and investors in securities transactions.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Issuer">
+  <data key="d0">Issuer</data>
+  <data key="d1">organization</data>
+  <data key="d2">An issuer is a company or organization that creates and sells securities to raise capital in the primary market.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Primary Market">
+  <data key="d0">Primary Market</data>
+  <data key="d1">category</data>
+  <data key="d2">The primary market is where new securities are issued and sold directly by the issuer to investors for the first time.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Secondary Market">
+  <data key="d0">Secondary Market</data>
+  <data key="d1">category</data>
+  <data key="d2">The secondary market is where previously issued securities are traded between investors after their initial offering in the primary market.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Insiders of Security's Issuer">
+  <data key="d0">Insiders of Security's Issuer</data>
+  <data key="d1">person</data>
+  <data key="d2">Insiders of a security's issuer include officers, board members, and major stockholders who qualify as accredited investors.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Series 7 License">
+  <data key="d0">Series 7 License</data>
+  <data key="d1">category</data>
+  <data key="d2">The Series 7 license is a professional credential that qualifies individuals to sell securities in the primary market.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Series 65 License">
+  <data key="d0">Series 65 License</data>
+  <data key="d1">category</data>
+  <data key="d2">The Series 65 license is a professional credential that qualifies individuals to provide investment advice and conduct securities transactions.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Series 82 License">
+  <data key="d0">Series 82 License</data>
+  <data key="d1">category</data>
+  <data key="d2">The Series 82 license is a professional credential that qualifies individuals to act as municipal advisors.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Rule 501 of Regulation D">
+  <data key="d0">Rule 501 of Regulation D</data>
+  <data key="d1">event</data>
+  <data key="d2">Rule 501 of Regulation D establishes the criteria for determining who qualifies as an accredited investor under the Securities Act of 1933.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Municipal Debt">
+  <data key="d0">Municipal Debt</data>
+  <data key="d1">category</data>
+  <data key="d2">Municipal debt refers to bonds and other securities issued by municipalities to raise capital for public projects.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="Municipal Securities">
+  <data key="d0">Municipal Securities</data>
+  <data key="d1">category</data>
+  <data key="d2">Municipal securities include bonds, notes, and other debt instruments issued by municipalities.</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<node id="State Securities Laws">
+  <data key="d0">State Securities Laws</data>
+  <data key="d3">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d2">Blue-sky filings involve coordination between federal SEC regulations and individual state securities laws.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d5">1755652275</data>
+</node>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="Kaplan North America, LLC">
+  <data key="d6">9.0</data>
+  <data key="d7">Kaplan North America, LLC is the publisher of the Securities Industry Essentials License Exam Manual.</data>
+  <data key="d8">educational materials,publishing relationship</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="FINRA">
+  <data key="d6">8.0</data>
+  <data key="d7">The manual is designed to prepare students for the FINRA-administered SIE exam.</data>
+  <data key="d8">exam preparation,regulatory compliance</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="SecuritiesPro TM QBank">
+  <data key="d6">8.0</data>
+  <data key="d7">The QBank is an integrated study tool that supplements the manual for exam preparation.</data>
+  <data key="d8">exam practice,supplementary material</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="Checkpoint Exams">
+  <data key="d6">7.0</data>
+  <data key="d7">Checkpoints are fixed exams administered after each unit of the course to assess progress.</data>
+  <data key="d8">course assessment,learning evaluation</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="Midterm Exam">
+  <data key="d6">7.0</data>
+  <data key="d7">The midterm exam is a fixed assessment approximately at the midpoint of the course.</data>
+  <data key="d8">assessment milestone,course progression</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="Video Library">
+  <data key="d6">6.0</data>
+  <data key="d7">The video library provides additional educational content to supplement the manual.</data>
+  <data key="d8">educational resources,supplementary material</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="Exam Tips and Content Updates">
+  <data key="d6">7.0</data>
+  <data key="d7">The dashboard contains updates about rule changes and new information for the exam.</data>
+  <data key="d8">current information,exam preparation</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="Corrections Link">
+  <data key="d6">6.0</data>
+  <data key="d7">The corrections link provides information about errors in the manual text.</data>
+  <data key="d8">accuracy management,content maintenance</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="Test Topic Alert">
+  <data key="d6">7.0</data>
+  <data key="d7">Test Topic Alerts highlight content especially likely to appear on the exam.</data>
+  <data key="d8">exam preparation,key topics</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="Take Note">
+  <data key="d6">6.0</data>
+  <data key="d7">Take Note sections provide special information to amplify important points in the manual.</data>
+  <data key="d8">emphasis techniques,manual features</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="Example">
+  <data key="d6">6.0</data>
+  <data key="d7">Examples provide practical applications of theory in the manual.</data>
+  <data key="d8">learning tools,real-world application</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="Practice Question">
+  <data key="d6">7.0</data>
+  <data key="d7">Practice questions help students understand how topics might be presented on the exam.</data>
+  <data key="d8">exam preparation,question practice</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="Knowledge Check">
+  <data key="d6">7.0</data>
+  <data key="d7">Knowledge Checks measure comprehension after each lesson in the manual.</data>
+  <data key="d8">learning assessment,lesson review</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SECURITIES INDUSTRY ESSENTIALS LICENSE EXAM MANUAL" target="Study Calendar">
+  <data key="d6">8.0</data>
+  <data key="d7">The Study Calendar helps students plan their use of all study tools including the manual.</data>
+  <data key="d8">resource management,study planning</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Kaplan North America, LLC" target="SIE">
+  <data key="d6">7.0</data>
+  <data key="d7">Kaplan North America, LLC provides educational materials and resources for preparing for the SIE exam.</data>
+  <data key="d8">educational provider,exam preparation</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="FINRA" target="SIE">
+  <data key="d6">10.0</data>
+  <data key="d7">FINRA administers the SIE exam and regulates securities industry practices in the United States.</data>
+  <data key="d8">exam administration,regulatory oversight</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SIE" target="Prometric Testing Centers">
+  <data key="d6">8.0</data>
+  <data key="d7">Prometric Testing Centers proctor the SIE exam for FINRA.</data>
+  <data key="d8">exam proctoring,testing administration</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SIE" target="Central Registration Depository">
+  <data key="d6">7.0</data>
+  <data key="d7">FINRA member firms apply for and pay fees through CRD to register individuals for the SIE exam.</data>
+  <data key="d8">exam administration,registration process</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="SIE" target="Web CRD">
+  <data key="d6">7.0</data>
+  <data key="d7">The SIE exam requires a CRD number, which is managed through the Web CRD system.</data>
+  <data key="d8">digital infrastructure,registration requirement</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Central Registration Depository" target="Web CRD">
+  <data key="d6">6.0</data>
+  <data key="d7">CRD is also known as Web CRD, used by FINRA for managing registration information.</data>
+  <data key="d8">registration management,system identification</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Qualified Institutional Buyers" target="Institutional Investors">
+  <data key="d6">7.0</data>
+  <data key="d7">QIBs are a subset of institutional investors with significant asset thresholds.</data>
+  <data key="d8">investor categories,regulatory requirements</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Practice Exam" target="Mastery Exam">
+  <data key="d6">8.0</data>
+  <data key="d7">Both practice and mastery exams replicate the true exam experience for preparation purposes.</data>
+  <data key="d8">exam preparation,practice testing</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Practice Exam" target="Performance Tracker">
+  <data key="d6">7.0</data>
+  <data key="d7">The Performance Tracker helps identify areas of weakness after completing practice exams.</data>
+  <data key="d8">assessment tools,learning improvement</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Primary Markets" target="Secondary Markets">
+  <data key="d6">9.0</data>
+  <data key="d7">Primary markets are where securities are sold by issuers, while secondary markets are where securities trade between investors.</data>
+  <data key="d8">capital markets,market types</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Initial Public Offering" target="Additional Public Offering">
+  <data key="d6">8.0</data>
+  <data key="d7">IPO is the first issuance of securities to the public, while APO is a subsequent offering by the same company.</data>
+  <data key="d8">market transactions,securities issuance</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Best Efforts Underwriting" target="Firm Commitment Underwriting">
+  <data key="d6">8.0</data>
+  <data key="d7">These are two different types of underwriting agreements with different risk levels for underwriters and issuers.</data>
+  <data key="d8">risk management,underwriting types</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Syndicates" target="Selling Group">
+  <data key="d6">7.0</data>
+  <data key="d7">Syndicates are joint ventures that may include selling groups who assist in sales without capital commitment.</data>
+  <data key="d8">investment structures,underwriting roles</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Syndicates" target="Managing Underwriter">
+  <data key="d6">8.0</data>
+  <data key="d7">The managing underwriter takes a lead role in syndicate ventures and provides significant resources.</data>
+  <data key="d8">investment groups,underwriting leadership</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Institutional Investors" target="Retail Investors">
+  <data key="d6">14.0</data>
+  <data key="d7">Institutional investors and retail investors represent different categories of market participants with distinct communication and disclosure expectations.&lt;SEP&gt;These represent different categories of investors with different characteristics and regulatory considerations.</data>
+  <data key="d8">investor classification,investor types,market participants,market segmentation</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f&lt;SEP&gt;chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Institutional Investors" target="Accredited Investors">
+  <data key="d6">17.0</data>
+  <data key="d7">Accredited investors include both institutional investors and certain retail investors meeting specific criteria.&lt;SEP&gt;Accredited investors include institutional investors as one of their qualifying subsets.</data>
+  <data key="d8">investor classifications,investor qualification,regulatory framework</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f&lt;SEP&gt;chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Retail Investors" target="Accredited Investors">
+  <data key="d6">16.0</data>
+  <data key="d7">Accredited investors are a subset of retail investors who meet specific financial or professional criteria.&lt;SEP&gt;Accredited investors include certain retail investors who meet specific financial criteria.</data>
+  <data key="d8">investor classification,investor qualification,regulatory definitions,regulatory framework</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f&lt;SEP&gt;chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Accredited Investors" target="Insiders of Security's Issuer">
+  <data key="d6">8.0</data>
+  <data key="d7">Insiders of a security's issuer qualify as accredited investors under the definition provided in the text.</data>
+  <data key="d8">corporate governance,investor qualification</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Accredited Investors" target="Series 7 License">
+  <data key="d6">8.0</data>
+  <data key="d7">Holders of Series 7 licenses qualify as accredited investors based on professional certification criteria.</data>
+  <data key="d8">investor qualification,professional credentials</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Accredited Investors" target="Series 65 License">
+  <data key="d6">8.0</data>
+  <data key="d7">Holders of Series 65 licenses qualify as accredited investors based on professional certification criteria.</data>
+  <data key="d8">investor qualification,professional credentials</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Accredited Investors" target="Series 82 License">
+  <data key="d6">8.0</data>
+  <data key="d7">Holders of Series 82 licenses qualify as accredited investors based on professional certification criteria.</data>
+  <data key="d8">investor qualification,professional credentials</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Accredited Investors" target="Rule 501 of Regulation D">
+  <data key="d6">9.0</data>
+  <data key="d7">Rule 501 of Regulation D establishes the legal framework for determining who qualifies as an accredited investor.</data>
+  <data key="d8">regulatory framework,securities law</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Government-Issued Bonds" target="Municipal Bonds">
+  <data key="d6">7.0</data>
+  <data key="d7">Both are types of debt securities issued by government entities for funding purposes.</data>
+  <data key="d8">debt securities,government financing</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Corporate Bonds" target="Equity Securities">
+  <data key="d6">8.0</data>
+  <data key="d7">These represent different asset classes in the securities market with distinct characteristics and risks.</data>
+  <data key="d8">investment types,securities classification</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Equity Securities" target="ADRs">
+  <data key="d6">7.0</data>
+  <data key="d7">ADRs represent foreign company stocks traded in U.S. markets as a type of equity security.</data>
+  <data key="d8">international investment,securities classification</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Common Stocks" target="Preferred Stock">
+  <data key="d6">7.0</data>
+  <data key="d7">Both are types of equity securities representing ownership in corporations with different rights and benefits.</data>
+  <data key="d8">equity securities,ownership types</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Options" target="Municipal Fund Securities">
+  <data key="d6">6.0</data>
+  <data key="d7">These are different types of securities with distinct characteristics and purposes in the market.</data>
+  <data key="d8">investment products,securities classification</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Partnerships" target="REITs">
+  <data key="d6">7.0</data>
+  <data key="d7">Both are alternative investment vehicles with different structures and purposes in the financial markets.</data>
+  <data key="d8">alternative investments,investment vehicles</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="ETFs" target="ETNs">
+  <data key="d6">7.0</data>
+  <data key="d7">Both are exchange-traded products with similar trading characteristics but different underlying structures.</data>
+  <data key="d8">investment products,trading instruments</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Life Insurance-Based Products" target="Investment Company">
+  <data key="d6">6.0</data>
+  <data key="d7">These are different categories of financial products related to investment and insurance services.</data>
+  <data key="d8">financial products,service types</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Customer Accounts" target="Nonqualified Accounts">
+  <data key="d6">7.0</data>
+  <data key="d7">Customer accounts include both qualified and nonqualified account types with different tax implications.</data>
+  <data key="d8">account management,tax considerations</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Investment Risks" target="Making Recommendations">
+  <data key="d6">8.0</data>
+  <data key="d7">Understanding investment risks is essential for making appropriate recommendations to clients.</data>
+  <data key="d8">financial advice,risk management</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Taxation" target="Calculating Yields and Returns">
+  <data key="d6">7.0</data>
+  <data key="d7">Both topics are related to understanding the financial performance of investments including tax implications.</data>
+  <data key="d8">financial analysis,investment returns</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Business Cycle" target="Economic Theories">
+  <data key="d6">7.0</data>
+  <data key="d7">These concepts are both part of understanding macroeconomic factors affecting financial markets.</data>
+  <data key="d8">economic analysis,market influences</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Government Regulators" target="Self-Regulatory Organizations">
+  <data key="d6">8.0</data>
+  <data key="d7">Both types of organizations regulate the securities industry with different scopes and responsibilities.</data>
+  <data key="d8">oversight bodies,regulatory frameworks</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Anti-Money Laundering" target="Bank Secrecy Act">
+  <data key="d6">9.0</data>
+  <data key="d7">The Bank Secrecy Act provides the legal framework for anti-money laundering regulations.</data>
+  <data key="d8">financial crime prevention,regulatory compliance</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Market Manipulation" target="Insider Trading">
+  <data key="d6">8.0</data>
+  <data key="d7">Both are prohibited activities in securities markets with similar regulatory oversight.</data>
+  <data key="d8">market integrity,regulatory prohibitions</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Prohibited Activities" target="Communications With the Public">
+  <data key="d6">7.0</data>
+  <data key="d7">These are both categories of regulations governing conduct in securities markets.</data>
+  <data key="d8">industry standards,regulatory compliance</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Registered Representatives" target="Member Firm">
+  <data key="d6">8.0</data>
+  <data key="d7">Registered representatives work for member firms that are subject to FINRA regulations.</data>
+  <data key="d8">industry relationships,regulatory compliance</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Broker-Dealers" target="Underwriters">
+  <data key="d6">7.0</data>
+  <data key="d7">Both are financial professionals involved in securities transactions with different roles and responsibilities.</data>
+  <data key="d8">industry roles,market participants</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Underwriters" target="Due Diligence">
+  <data key="d6">8.0</data>
+  <data key="d7">Underwriters conduct due diligence to evaluate securities and determine suitability for specific customers.</data>
+  <data key="d8">investment analysis,securities underwriting</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Underwriters" target="Issuer">
+  <data key="d6">9.0</data>
+  <data key="d7">Underwriters assist issuers in preparing registration statements and prospectuses for securities offerings.</data>
+  <data key="d8">investment banking,securities distribution</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Underwriters" target="Broker-Dealers (BDs)">
+  <data key="d6">8.0</data>
+  <data key="d7">Broker-dealers are a type of underwriter that help distribute securities to investors.</data>
+  <data key="d8">investment banking,securities distribution</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Underwriters" target="Registration Statement (S-1)">
+  <data key="d6">8.0</data>
+  <data key="d7">Underwriters assist issuers in preparing and filing registration statements with the SEC.</data>
+  <data key="d8">investment banking,regulatory process</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Issuers" target="Investors">
+  <data key="d6">9.0</data>
+  <data key="d7">These are the two primary parties in securities transactions where issuers sell to investors.</data>
+  <data key="d8">market dynamics,transaction parties</data>
+  <data key="d9">chunk-1085ad7345f287974eee338e9af9a4a4</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Securities and Exchange Commission (SEC)" target="Securities Act of 1933">
+  <data key="d6">9.0</data>
+  <data key="d7">The SEC enforces the Securities Act of 1933 to protect investors in primary market transactions.</data>
+  <data key="d8">investor protection,regulatory enforcement</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Securities and Exchange Commission (SEC)" target="Registration Statement (S-1)">
+  <data key="d6">8.0</data>
+  <data key="d7">The SEC reviews and approves registration statements filed by issuers for securities offerings.</data>
+  <data key="d8">regulatory process,securities compliance</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Securities Act of 1933" target="Primary Market">
+  <data key="d6">9.0</data>
+  <data key="d7">The Securities Act of 1933 governs securities offerings in the primary market to ensure investor protection.</data>
+  <data key="d8">regulatory framework,securities law</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Municipal Advisors" target="Municipal Debt">
+  <data key="d6">8.0</data>
+  <data key="d7">Municipal advisors provide advice on issuing municipal debt securities.</data>
+  <data key="d8">investment banking,municipal finance</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Municipal Advisors" target="Municipal Securities">
+  <data key="d6">8.0</data>
+  <data key="d7">Municipal advisors advise municipalities on issuing various types of municipal securities.</data>
+  <data key="d8">investment banking,municipal finance</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Registration Statement (S-1)" target="Cooling-Off Period">
+  <data key="d6">7.0</data>
+  <data key="d7">The cooling-off period begins after a registration statement is filed with the SEC.</data>
+  <data key="d8">regulatory timeline,securities process</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Registration Statement (S-1)" target="Issuer">
+  <data key="d6">9.0</data>
+  <data key="d7">Issuers are responsible for filing registration statements with the SEC to register new securities offerings.</data>
+  <data key="d8">regulatory compliance,securities issuance</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Cooling-Off Period" target="Tombstone Advertisement">
+  <data key="d6">8.0</data>
+  <data key="d7">Tombstone advertisements are permitted during the cooling-off period to announce new securities offerings.</data>
+  <data key="d8">marketing regulation,securities communication</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Cooling-Off Period" target="Preliminary Prospectus (Red Herring)">
+  <data key="d6">7.0</data>
+  <data key="d7">The preliminary prospectus can be distributed during the cooling-off period to gauge investor interest.</data>
+  <data key="d8">market research,securities marketing</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Cooling-Off Period" target="Indication of Interest">
+  <data key="d6">6.0</data>
+  <data key="d7">Investors may express indications of interest during the cooling-off period before the security is officially released for sale.</data>
+  <data key="d8">investor engagement,securities process</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Cooling-Off Period" target="Effective Date">
+  <data key="d6">8.0</data>
+  <data key="d7">The effective date marks the end of the cooling-off period when securities can be officially sold to investors.</data>
+  <data key="d8">regulatory timeline,securities process</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Blue-Sky Filings" target="State Securities Laws">
+  <data key="d6">7.0</data>
+  <data key="d7">Blue-sky filings involve coordination between federal SEC regulations and individual state securities laws.</data>
+  <data key="d8">regulatory coordination,securities compliance</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Issuer" target="Primary Market">
+  <data key="d6">9.0</data>
+  <data key="d7">Issuers sell securities in the primary market when they first offer them to investors.</data>
+  <data key="d8">market segmentation,securities issuance</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Issuer" target="Insiders of Security's Issuer">
+  <data key="d6">7.0</data>
+  <data key="d7">Insiders are individuals who work for or own significant shares in the issuer company.</data>
+  <data key="d8">corporate governance,insider trading</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+<edge source="Primary Market" target="Secondary Market">
+  <data key="d6">7.0</data>
+  <data key="d7">The secondary market is where previously issued securities are traded after their initial offering in the primary market.</data>
+  <data key="d8">market segmentation,securities trading</data>
+  <data key="d9">chunk-25387032e3fafa342c61771c3ed04b6f</data>
+  <data key="d10">/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md</data>
+  <data key="d11">1755652275</data>
+</edge>
+</graph></graphml>

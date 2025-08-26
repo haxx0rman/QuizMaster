@@ -1,0 +1,33 @@
+{
+  "bde161b0-c6e8-4b0b-83f9-c02574c28bb8": {
+    "id": "bde161b0-c6e8-4b0b-83f9-c02574c28bb8",
+    "filename": "SIE_truncated.md",
+    "filepath": "/home/michael/Dev/BookWorm/workspace/docs/SIE_truncated.md",
+    "file_size": 46973,
+    "status": "processed",
+    "created_at": "2025-08-19T21:11:20.194522",
+    "updated_at": "2025-08-19T21:28:24.248850",
+    "processed_at": "2025-08-19T21:11:20.194964",
+    "processed_file_path": "workspace/processed_docs/473c5f1d-52ff-4a5d-9856-ffd1884cd031_SIE_truncated.txt",
+    "knowledge_graph_id": "workspace/knowledge_graphs/473c5f1d-52ff-4a5d-9856-ffd1884cd031",
+    "mindmap_id": null,
+    "title": null,
+    "author": null,
+    "description": "The main topic of this document is securities markets and investment products, with a strong focus on regulatory frameworks, market operations, and exam preparation for securities licensing. The content is primarily academic and professional, designed for individuals preparing for securities examinations and understanding financial markets. Key themes include primary and secondary markets, equity and debt securities, investment companies, insurance products, risk assessment, trading operations, regulatory compliance, and customer account management.",
+    "tags": [
+      "markets",
+      "tag2",
+      "regulation",
+      "securities",
+      "tag1",
+      "investment",
+      "risk management"
+    ],
+    "word_count": null,
+    "is_directory": false,
+    "sub_files": [],
+    "file_count": null,
+    "error_message": null,
+    "retry_count": 0
+  }
+}

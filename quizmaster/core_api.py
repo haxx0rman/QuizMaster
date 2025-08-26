@@ -371,7 +371,7 @@ def add_questions_to_qbank(
 
 
 def start_study_session(
-    max_questions: int = 10,
+    max_questions: Optional[int] = None,
     tags: Optional[List[str]] = None,
     difficulty: Optional[str] = None,
     config: Optional[QuizMasterConfig] = None
@@ -380,7 +380,7 @@ def start_study_session(
     Start a qBank study session.
     
     Args:
-        max_questions: Maximum number of questions in session
+        max_questions: Maximum number of questions in session (None for unlimited)
         tags: Optional tags to filter questions
         difficulty: Optional difficulty filter ('easy', 'medium', 'hard')
         config: Optional configuration instance
@@ -664,14 +664,14 @@ def import_questions(
 # Enhanced qBank Features - New in QuizMaster 2.0
 
 def get_difficult_questions(
-    limit: int = 10,
+    limit: Optional[int] = None,
     config: Optional[QuizMasterConfig] = None
 ) -> List[Dict[str, Any]]:
     """
     Get the most difficult questions based on low accuracy or high ELO ratings.
     
     Args:
-        limit: Maximum number of questions to return
+        limit: Maximum number of questions to return (None for unlimited)
         config: Optional configuration instance
         
     Returns:
@@ -1001,7 +1001,7 @@ async def analyze_learning_progress(
     forecast = _global_qbank.get_review_forecast(days=days)
     
     # Get difficult questions for improvement areas
-    difficult_questions = _global_qbank.get_difficult_questions(limit=5)
+    difficult_questions = _global_qbank.get_difficult_questions()
     
     # Get all tags to analyze subject coverage
     all_tags = _global_qbank.get_all_tags()

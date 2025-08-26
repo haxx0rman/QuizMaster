@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 """
-QuizMaster 2.0 Demo
+QuizMaster 2.0 - Document Processing Pipeline
 
-This script demonstrates the complete QuizMaster pipeline:
-1. Document processing with BookWorm (or fallback)
-2. Question generation with LLM
-3. Question bank management with qBank
-4. Educational reporting and analytics
+This script processes all documents in a specified directory and generates
+question banks for each document using the complete QuizMaster pipeline.
 """
 
 import asyncio
+import argparse
 import logging
 from pathlib import Path
+from typing import List, Optional
 
 from quizmaster import QuizMasterConfig, QuizMasterPipeline
 
@@ -24,187 +23,255 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-async def demo_basic_pipeline():
-    """Demonstrate basic QuizMaster pipeline functionality."""
-    print("🧠 QuizMaster 2.0 - Basic Pipeline Demo")
-    print("=" * 50)
+async def process_directory(directory: Path, output_dir: Optional[Path] = None, curious_count: int = 5, quiz_count: int = 3) -> None:
+    """Process all documents in a directory and generate question banks."""
     
-    # Initialize configuration
+    if not directory.exists() or not directory.is_dir():
+        print(f"❌ Directory not found: {directory}")
+        return
+    
+    # Find all text documents
+    doc_patterns = ['*.txt', '*.md', '*.pdf', '*.docx']
+    documents = []
+    
+    for pattern in doc_patterns:
+        documents.extend(directory.glob(pattern))
+    
+    if not documents:
+        print(f"📂 No documents found in {directory}")
+        print(f"   Looking for: {', '.join(doc_patterns)}")
+        return
+    
+    print(f"📂 Found {len(documents)} document(s) in {directory}")
+    for doc in documents:
+        print(f"   📄 {doc.name} ({doc.stat().st_size} bytes)")
+    
+    # Initialize QuizMaster pipeline
+    print("\n🔧 Initializing QuizMaster pipeline...")
     config = QuizMasterConfig()
     pipeline = QuizMasterPipeline(config)
     
     # Check system status
-    print("\n🔍 Checking system status...")
     deps = pipeline.check_dependencies()
-    
     print(f"✓ Configuration: {'Valid' if deps['config_valid'] else 'Invalid'}")
-    print(f"✓ BookWorm: {'Available' if deps['bookworm_available'] else 'Not Available (using fallback)'}")
+    print(f"✓ BookWorm: {'Available' if deps['bookworm_available'] else 'Fallback mode'}")
     print(f"✓ qBank: {'Available' if deps['qbank_available'] else 'Not Available'}")
     print(f"✓ LLM Client: {'Available' if deps['llm_available'] else 'Not Available'}")
     
-    # Create a sample document for testing
-    sample_doc_path = Path("sample_document.txt")
-    sample_content = """
-    Machine Learning Fundamentals
+    if not deps['llm_available']:
+        print("❌ LLM client not available. Cannot generate questions.")
+        print("   Please check your API keys and configuration in .env file")
+        return
     
-    Machine learning is a method of data analysis that automates analytical model building. 
-    It is a branch of artificial intelligence (AI) based on the idea that systems can learn from data, 
-    identify patterns and make decisions with minimal human intervention.
-    
-    Key Types of Machine Learning:
-    1. Supervised Learning - Uses labeled data to train models
-    2. Unsupervised Learning - Finds patterns in data without labels
-    3. Reinforcement Learning - Learns through interaction with environment
-    
-    Common algorithms include:
-    - Linear Regression
-    - Decision Trees
-    - Neural Networks
-    - Support Vector Machines
-    """
-    
-    # Write sample document
-    sample_doc_path.write_text(sample_content.strip())
-    print(f"\n📄 Created sample document: {sample_doc_path}")
-    
-    try:
-        # Process documents (use the correct method name)
-        print("\n🔄 Processing document...")
-        processed_docs = await pipeline.process_documents([sample_doc_path])
+    # Process each document
+    successful_docs = 0
+    total_curious_questions = 0
+    total_quiz_questions = 0
+    for i, doc_path in enumerate(documents, 1):
+        print(f"\n{'='*60}")
+        print(f"📄 Processing document {i}/{len(documents)}: {doc_path.name}")
+        print(f"{'='*60}")
         
-        if processed_docs:
-            print(f"✓ Processed {len(processed_docs)} document(s)")
-            
-            # Get the first processed document
-            doc = processed_docs[0]
-            print(f"✓ Document: {doc.file_path.name}")
-            print(f"✓ Content length: {len(doc.processed_text)} characters")
-            
-            # Try to generate questions for this document
-            print("\n🎯 Generating questions...")
-            try:
-                # Generate curious questions
-                curious_result = await pipeline.generate_curious_questions_for_all()
-                if curious_result:
-                    doc_questions = curious_result.get(str(doc.file_path), [])
-                    print(f"✓ Generated {len(doc_questions)} curious questions")
-                    
-                    # Show a few questions
-                    for i, question in enumerate(doc_questions[:3], 1):
-                        print(f"   {i}. {question}")
-                
-            except Exception as e:
-                print(f"⚠️ Question generation error: {e}")
-        
-        else:
-            print("⚠️ No documents were processed")
-    
-    except Exception as e:
-        print(f"❌ Error in pipeline: {e}")
-        logger.exception("Pipeline error")
-    
-    finally:
-        # Cleanup
-        if sample_doc_path.exists():
-            sample_doc_path.unlink()
-            print(f"\n🧹 Cleaned up sample document")
-
-
-async def demo_question_generation():
-    """Demonstrate question generation capabilities."""
-    print("\n\n🎯 QuizMaster 2.0 - Question Generation Demo")
-    print("=" * 50)
-    
-    # Use the same config as the main demo to ensure consistency
-    config = QuizMasterConfig()
-    # Ensure we're using the same API provider as the first demo
-    if hasattr(config, 'api_provider') and config.api_provider == "OLLAMA":
-        # If OLLAMA provider is configured, check the model exists
         try:
-            import httpx
-            import os
-            base_url = os.getenv("OPENAI_BASE_URL", "http://brainmachine:11434")
-            # Remove /v1 suffix if present for the tags endpoint
-            if base_url.endswith('/v1'):
-                tags_url = base_url[:-3] + '/api/tags'
-            else:
-                tags_url = base_url + '/api/tags'
+            # Process the document
+            print("🔄 Processing document...")
+            processed_docs = await pipeline.process_documents([doc_path])
+            
+            if not processed_docs:
+                print(f"⚠️ Failed to process {doc_path.name}")
+                continue
+            
+            doc = processed_docs[0]
+            print(f"✓ Processed document: {len(doc.processed_text)} characters")
+            
+            # Add to knowledge graph
+            print("🧠 Adding to knowledge graph...")
+            try:
+                kg_id = await pipeline.bookworm.add_to_knowledge_graph(doc)
+                if kg_id:
+                    print(f"✓ Added to knowledge graph: {kg_id}")
+                    # Update the document with the knowledge graph ID
+                    doc.knowledge_graph_id = kg_id
+                else:
+                    print("⚠️ Knowledge graph integration not available")
+            except Exception as kg_error:
+                print(f"⚠️ Knowledge graph integration failed: {kg_error}")
+                logger.warning(f"Knowledge graph integration failed for {doc_path.name}: {kg_error}")
+            
+            # Generate questions
+            print("🎯 Generating questions...")
+            
+            # Check document size
+            if len(doc.processed_text) < 100:
+                print(f"  ⚠️ Document too short ({len(doc.processed_text)} chars) - may not generate good questions")
+            
+            # Generate curious questions
+            print("  🤔 Generating curious questions...")
+            curious_result = await pipeline.generate_curious_questions_for_all()
+            
+            # Use curious questions to query knowledge graph for enhanced context
+            enhanced_context = doc.processed_text
+            if curious_result and doc_path.name in curious_result:
+                print("  🧠 Querying knowledge graph with curious questions...")
+                doc_curious_questions = curious_result[doc_path.name]
                 
-            async with httpx.AsyncClient() as client:
-                response = await client.get(tags_url)
-                if response.status_code == 200:
-                    models = response.json().get('models', [])
-                    model_names = [m['name'] for m in models]
-                    if config.llm_model not in model_names:
-                        print(f"⚠️ Model {config.llm_model} not found, using fallback")
-                        # Use the first available model as fallback
-                        if model_names:
-                            config.llm_model = model_names[0]
+                # Query knowledge graph with each curious question to get additional context
+                kg_context_parts = []
+                for question in doc_curious_questions[:3]:  # Use first 3 questions to avoid overwhelming context
+                    try:
+                        kg_result = await pipeline.bookworm.query_knowledge_graph(question)
+                        if kg_result and 'content' in kg_result:
+                            kg_context_parts.append(f"Knowledge Graph Context for '{question[:50]}...':\n{kg_result['content']}")
+                    except Exception as kg_error:
+                        logger.debug(f"Knowledge graph query failed for question: {kg_error}")
+                
+                if kg_context_parts:
+                    enhanced_context = f"{doc.processed_text}\n\n--- Enhanced Context from Knowledge Graph ---\n" + "\n\n".join(kg_context_parts)
+                    print(f"  ✓ Enhanced context with {len(kg_context_parts)} knowledge graph insights")
+                else:
+                    print("  ⚠️ No additional knowledge graph context available")
+            
+            # Generate quiz questions with enhanced context
+            print("  📝 Generating multiple choice questions with enhanced context...")
+            quiz_result = await pipeline.generate_enhanced_multiple_choice_questions(enhanced_context, count_per_doc=quiz_count, doc_name=doc_path.name)
+            
+            # Convert multiple choice questions to QuizQuestion objects and store in pipeline
+            if quiz_result:
+                print("  🔧 Converting questions to qBank format...")
+                from quizmaster.qbank_integration import QuizQuestion
+                pipeline.quiz_questions = []
+                
+                for doc_path_str, questions in quiz_result.items():
+                    for q in questions:
+                        quiz_question = QuizQuestion(
+                            question_text=q.get('question', ''),
+                            correct_answer=q.get('correct_answer', ''),
+                            wrong_answers=q.get('wrong_answers', []),
+                            explanation=q.get('explanation'),
+                            difficulty_level=q.get('difficulty', 'medium'),
+                            topic=doc.file_path.stem
+                        )
+                        pipeline.quiz_questions.append(quiz_question)
+            
+            # Add questions to qBank (qBank handles its own file saving)
+            if quiz_result:
+                print("  💾 Adding questions to qBank...")
+                try:
+                    await pipeline.add_questions_to_qbank()
+                    print("  ✓ Questions added to qBank successfully")
+                except Exception as qbank_error:
+                    print(f"  ⚠️ qBank integration failed: {qbank_error}")
+                    logger.warning(f"qBank integration failed for {doc_path.name}: {qbank_error}")
+            else:
+                print("  ⚠️ No quiz questions generated - skipping qBank integration")
+            
+            # Show summary
+            doc_curious = curious_result.get(doc_path.name, []) if curious_result else []
+            doc_quiz = quiz_result.get(doc_path.name, []) if quiz_result else []
+            
+            # Update totals
+            successful_docs += 1
+            total_curious_questions += len(doc_curious)
+            total_quiz_questions += len(doc_quiz)
+            
+            print(f"✅ Complete! Generated:")
+            print(f"   - {len(doc_curious)} curious questions")
+            print(f"   - {len(doc_quiz)} quiz questions")
+            
+            # Show sample questions
+            if doc_curious:
+                print("\n📋 Sample curious questions:")
+                for j, question in enumerate(doc_curious[:3], 1):
+                    print(f"   {j}. {question}")
+            
+            if doc_quiz:
+                print("\n📋 Sample quiz questions:")
+                for j, question in enumerate(doc_quiz[:2], 1):
+                    q_text = question.get('question', 'N/A')
+                    answer = question.get('correct_answer', 'N/A')
+                    print(f"   {j}. {q_text}")
+                    print(f"      Answer: {answer}")
+            
         except Exception as e:
-            print(f"⚠️ Could not verify model availability: {e}")
+            print(f"❌ Error processing {doc_path.name}: {e}")
+            logger.exception(f"Error processing {doc_path}")
+            continue
     
-    pipeline = QuizMasterPipeline(config)
+    # Final summary
+    print(f"\n🎉 Processing Complete!")
+    print(f"📊 Summary:")
+    print(f"   - Documents processed: {successful_docs}/{len(documents)}")
+    print(f"   - Total curious questions: {total_curious_questions}")
+    print(f"   - Total quiz questions: {total_quiz_questions}")
+    print(f"   - Question banks saved by qBank integration")
     
-    # Create a ProcessedDocument for testing
-    from quizmaster.bookworm_integration import ProcessedDocument
-    
-    test_doc = ProcessedDocument(
-        file_path=Path("test.txt"),
-        processed_text="Python is a high-level programming language known for its simplicity and readability. It supports multiple programming paradigms and has extensive libraries.",
-        description="Test document about Python programming",
-        metadata={"source": "demo"}
-    )
-    
-    print(f"📖 Source content: {test_doc.processed_text[:100]}...")
-    
-    try:
-        # Generate curious questions
-        print("\n🤔 Generating curious questions...")
-        curious_questions = await pipeline.question_generator.generate_curious_questions(test_doc)
-        
-        if curious_questions:
-            print("✓ Curious Questions Generated:")
-            for i, question in enumerate(curious_questions[:3], 1):
-                print(f"   {i}. {question}")
-        
-        # Generate quiz questions using the content as "combined reports"
-        print("\n📝 Generating quiz questions...")
-        quiz_questions = await pipeline.question_generator.generate_quiz_questions(test_doc.processed_text)
-        
-        if quiz_questions:
-            print("✓ Quiz Questions Generated:")
-            for i, question in enumerate(quiz_questions[:2], 1):
-                print(f"\n   {i}. {question.get('question', 'N/A')}")
-                print(f"      Answer: {question.get('correct_answer', 'N/A')}")
-                print(f"      Distractors: {', '.join(question.get('wrong_answers', []))}")
-    
-    except Exception as e:
-        print(f"❌ Error in question generation: {e}")
-        logger.exception("Question generation error")
+    if successful_docs < len(documents):
+        failed_docs = len(documents) - successful_docs
+        print(f"⚠️  {failed_docs} document(s) failed to process - check logs for details")
 
 
 def main():
-    """Run the QuizMaster demo."""
-    print("🚀 Starting QuizMaster 2.0 Demo")
+    """Main entry point."""
+    parser = argparse.ArgumentParser(
+        description="Process documents and generate question banks",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python main.py                                    # Process docs/ directory
+  python main.py -d data/                           # Process data/ directory
+  python main.py -d ~/Documents/ -c 10 -q 5        # Custom question counts
+  python main.py -d . --verbose                    # Process current dir with verbose output
+        """
+    )
+    
+    parser.add_argument(
+        '-d', '--directory',
+        type=Path,
+        default=Path('docs'),
+        help='Directory containing documents to process (default: docs/)'
+    )
+    
+    parser.add_argument(
+        '-o', '--output',
+        type=Path,
+        help='Output directory for question banks (optional)'
+    )
+    
+    parser.add_argument(
+        '-c', '--curious-count',
+        type=int,
+        default=5,
+        help='Number of curious questions to generate per document (default: 5)'
+    )
+    
+    parser.add_argument(
+        '-q', '--quiz-count',
+        type=int,
+        default=3,
+        help='Number of quiz questions to generate per document (default: 3)'
+    )
+    
+    parser.add_argument(
+        '-v', '--verbose',
+        action='store_true',
+        help='Enable verbose logging'
+    )
+    
+    args = parser.parse_args()
+    
+    if args.verbose:
+        logging.getLogger().setLevel(logging.DEBUG)
+    
+    print("🚀 QuizMaster 2.0 - Document Processing Pipeline")
+    print(f"📂 Target directory: {args.directory}")
     
     try:
-        # Run basic pipeline demo
-        asyncio.run(demo_basic_pipeline())
-        
-        # Run question generation demo
-        asyncio.run(demo_question_generation())
-        
-        print("\n✅ Demo completed successfully!")
-        print("\nNext steps:")
-        print("1. Install BookWorm for enhanced document processing")
-        print("2. Configure your LLM API keys in .env file")
-        print("3. Try processing your own documents with 'uv run python -m quizmaster.cli process <file>'")
-        
+        asyncio.run(process_directory(args.directory, args.output, args.curious_count, args.quiz_count))
     except KeyboardInterrupt:
-        print("\n⏹️ Demo cancelled by user")
+        print("\n⏹️ Process cancelled by user")
     except Exception as e:
-        print(f"\n❌ Demo failed: {e}")
-        logger.exception("Demo error")
+        print(f"\n❌ Pipeline failed: {e}")
+        logger.exception("Pipeline error")
 
 
 if __name__ == "__main__":

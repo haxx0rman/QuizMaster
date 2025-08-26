@@ -1,0 +1,11 @@
+{
+    "document_filename": "NA",
+    "generated_at": "2025-08-19T21:27:51.409718",
+    "token_usage": {
+        "input_tokens": 256059,
+        "output_tokens": 29957,
+        "total_cost": 0.0,
+        "provider": "OLLAMA",
+        "model": "qwen3-coder:30b"
+    }
+}

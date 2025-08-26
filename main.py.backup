@@ -1,0 +1,256 @@
+#!/usr/bin/env python3
+"""
+QuizMaster 2.0 - Document Processing Pipeline
+
+This script proces        # Try t        # Add to qBank (let qBank handle its own file generation)
+        try:
+            if quiz_questions:
+                print("📚 Adding questions to qBank...")
+                from quizmaster.core_api import add_questions_to_qbank
+                qbank_ids = add_questions_to_qbank(quiz_questions, pipeline.config)
+                if qbank_ids:
+                    print(f"✓ Successfully added {len(qbank_ids)} questions to qBank")
+                else:
+                    print("⚠️ qBank integration returned no question IDs")
+        except Exception as e:
+            print(f"⚠️ qBank integration error: {e}")nk
+        try:
+            if quiz_questions:
+                print("📚 Adding questions to qBank...")
+                # Note: Simplified qBank export - check actual API later
+                qbank_file = doc_output_dir / "qbank_export.json"
+                qbank_data = {
+                    "source": doc_path.stem,
+                    "questions": quiz_questions,
+                    "generated_at": str(asyncio.get_event_loop().time())
+                }
+                with open(qbank_file, 'w') as f:
+                    json.dump(qbank_data, f, indent=2)
+                print(f"💾 Exported qBank to: {qbank_file}")
+        except Exception as e:
+            print(f"⚠️ qBank integration error: {e}")s from a specified directory and generates
+question banks for each document using the complete QuizMaster pipeline:
+1. Document processing with BookWorm
+2. Question generation with LLM
+3. Question bank creation and export
+"""
+
+import asyncio
+import json
+import logging
+import sys
+from pathlib import Path
+from typing import List, Optional
+
+from quizmaster import QuizMasterConfig, QuizMasterPipeline
+
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+
+logger = logging.getLogger(__name__)
+
+
+def find_documents(directory: Path, extensions: Optional[List[str]] = None) -> List[Path]:
+    """Find all documents in the specified directory with supported extensions."""
+    if extensions is None:
+        extensions = ['.txt', '.md', '.pdf', '.docx', '.doc']
+    
+    documents = []
+    for ext in extensions:
+        documents.extend(directory.glob(f"*{ext}"))
+        documents.extend(directory.glob(f"**/*{ext}"))  # Recursive search
+    
+    return sorted(set(documents))
+
+
+async def process_document_pipeline(pipeline: QuizMasterPipeline, doc_path: Path, output_dir: Path) -> bool:
+    """Process a single document through the complete pipeline."""
+    print(f"\n{'='*60}")
+    print(f"� Processing: {doc_path.name}")
+    print(f"{'='*60}")
+    
+    try:
+        # Process the document
+        print("🔄 Processing document...")
+        processed_docs = await pipeline.process_documents([doc_path])
+        
+        if not processed_docs:
+            print(f"❌ Failed to process document: {doc_path.name}")
+            return False
+        
+        doc = processed_docs[0]
+        print(f"✓ Document processed: {len(doc.processed_text)} characters")
+        
+        # Generate questions
+        print("🎯 Generating questions...")
+        
+        # Generate curious questions
+        curious_result = await pipeline.generate_curious_questions_for_all()
+        curious_questions = []
+        if curious_result:
+            curious_questions = curious_result.get(str(doc.file_path), [])
+            print(f"✓ Generated {len(curious_questions)} curious questions")
+        
+        # Generate quiz questions  
+        quiz_questions = await pipeline.question_generator.generate_quiz_questions(doc.processed_text)
+        print(f"✓ Generated {len(quiz_questions) if quiz_questions else 0} quiz questions")
+        
+        # Create output files
+        doc_output_dir = output_dir / doc_path.stem
+        doc_output_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Save curious questions
+        if curious_questions:
+            curious_file = doc_output_dir / "curious_questions.json"
+            with open(curious_file, 'w') as f:
+                json.dump(curious_questions, f, indent=2)
+            print(f"💾 Saved curious questions to: {curious_file}")
+        
+        # Save quiz questions
+        if quiz_questions:
+            quiz_file = doc_output_dir / "quiz_questions.json"
+            with open(quiz_file, 'w') as f:
+                json.dump(quiz_questions, f, indent=2)
+            print(f"� Saved quiz questions to: {quiz_file}")
+        
+        # Try to add to qBank
+        try:
+            if quiz_questions:
+                print("� Adding questions to qBank...")
+                qbank_result = await pipeline.add_questions_to_qbank(quiz_questions, doc_path.stem)
+                if qbank_result:
+                    qbank_file = doc_output_dir / "qbank_export.json"
+                    with open(qbank_file, 'w') as f:
+                        json.dump(qbank_result, f, indent=2)
+                    print(f"💾 Exported qBank to: {qbank_file}")
+        except Exception as e:
+            print(f"⚠️ qBank integration error: {e}")
+        
+        print(f"✅ Successfully processed: {doc_path.name}")
+        return True
+        
+    except Exception as e:
+        print(f"❌ Error processing {doc_path.name}: {e}")
+        logger.exception(f"Error processing {doc_path}")
+        return False
+
+
+async def main_pipeline(input_dir: str = "docs", output_dir: str = "output/processed"):
+    """Main pipeline to process all documents in a directory."""
+    print("🚀 QuizMaster 2.0 - Document Processing Pipeline")
+    print("=" * 60)
+    
+    # Setup paths
+    input_path = Path(input_dir)
+    output_path = Path(output_dir)
+    
+    if not input_path.exists():
+        print(f"❌ Input directory not found: {input_path}")
+        print(f"📁 Available directories:")
+        for item in Path(".").iterdir():
+            if item.is_dir() and not item.name.startswith('.'):
+                print(f"   - {item.name}/")
+        return False
+    
+    # Create output directory
+    output_path.mkdir(parents=True, exist_ok=True)
+    
+    # Find documents
+    documents = find_documents(input_path)
+    if not documents:
+        print(f"📄 No documents found in: {input_path}")
+        print(f"   Supported formats: .txt, .md, .pdf, .docx, .doc")
+        return False
+    
+    print(f"📄 Found {len(documents)} document(s) to process:")
+    for doc in documents:
+        print(f"   - {doc.relative_to(input_path)}")
+    
+    # Initialize pipeline
+    print(f"\n🔧 Initializing QuizMaster pipeline...")
+    config = QuizMasterConfig()
+    pipeline = QuizMasterPipeline(config)
+    
+    # Check dependencies
+    deps = pipeline.check_dependencies()
+    print(f"✓ Configuration: {'Valid' if deps['config_valid'] else 'Invalid'}")
+    print(f"✓ BookWorm: {'Available' if deps['bookworm_available'] else 'Not Available (using fallback)'}")
+    print(f"✓ qBank: {'Available' if deps['qbank_available'] else 'Not Available'}")
+    print(f"✓ LLM Client: {'Available' if deps['llm_available'] else 'Not Available'}")
+    
+    if not deps['llm_available']:
+        print("❌ LLM client not available. Please check your configuration.")
+        return False
+    
+    # Process documents
+    print(f"\n🔄 Processing {len(documents)} documents...")
+    
+    successful = 0
+    failed = 0
+    
+    for i, doc_path in enumerate(documents, 1):
+        print(f"\n📊 Progress: {i}/{len(documents)}")
+        
+        success = await process_document_pipeline(pipeline, doc_path, output_path)
+        if success:
+            successful += 1
+        else:
+            failed += 1
+    
+    # Summary
+    print(f"\n{'='*60}")
+    print(f"📊 PROCESSING COMPLETE")
+    print(f"{'='*60}")
+    print(f"✅ Successfully processed: {successful}")
+    print(f"❌ Failed: {failed}")
+    print(f"📁 Output directory: {output_path.absolute()}")
+    
+    if successful > 0:
+        print(f"\n🎯 Next steps:")
+        print(f"   - Review generated questions in: {output_path}/")
+        print(f"   - Import qBank files into your quiz system")
+        print(f"   - Use CLI for individual file processing: 'uv run python -m quizmaster.cli process <file>'")
+    
+    return successful > 0
+
+
+def main():
+    """Run the QuizMaster document processing pipeline."""
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="QuizMaster 2.0 - Document Processing Pipeline")
+    parser.add_argument("--input-dir", "-i", default="docs", 
+                       help="Input directory containing documents to process (default: docs)")
+    parser.add_argument("--output-dir", "-o", default="output/processed",
+                       help="Output directory for generated question banks (default: output/processed)")
+    
+    args = parser.parse_args()
+    
+    try:
+        # Run the main processing pipeline
+        success = asyncio.run(main_pipeline(args.input_dir, args.output_dir))
+        
+        if success:
+            print("\n✅ Pipeline completed successfully!")
+        else:
+            print("\n❌ Pipeline completed with errors")
+            sys.exit(1)
+        
+    except KeyboardInterrupt:
+        print("\n⏹️ Pipeline cancelled by user")
+        sys.exit(1)
+    except Exception as e:
+        print(f"\n❌ Pipeline failed: {e}")
+        logger.exception("Pipeline error")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
+
+
+if __name__ == "__main__":
+    main()

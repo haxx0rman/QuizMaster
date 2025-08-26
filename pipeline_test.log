@@ -1,0 +1,73 @@
+/home/michael/Dev/QuizMaster/.venv/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+2025-08-11 00:54:49,478 - quizmaster.bookworm_integration - ERROR - Failed to initialize BookWorm components: cannot import name 'Library' from 'bookworm' (/home/michael/Dev/QuizMaster/.venv/lib/python3.11/site-packages/bookworm/__init__.py)
+2025-08-11 00:54:49,478 - quizmaster.qbank_integration - INFO - qBank components initialized successfully
+2025-08-11 00:54:49,531 - quizmaster.question_generator - INFO - LLM client initialized for OPENAI
+2025-08-11 00:54:49,532 - quizmaster.pipeline - INFO - QuizMaster pipeline initialized
+2025-08-11 00:54:49,532 - quizmaster.pipeline - INFO - Dependency check: {'config_valid': True, 'bookworm_available': False, 'qbank_available': True, 'llm_available': True}
+2025-08-11 00:54:49,532 - quizmaster.pipeline - INFO - Starting document processing for 1 files
+2025-08-11 00:54:49,532 - quizmaster.pipeline - WARNING - BookWorm not available - using fallback processing
+2025-08-11 00:54:49,532 - quizmaster.bookworm_integration - WARNING - BookWorm not available - using fallback processing
+2025-08-11 00:54:49,539 - quizmaster.pipeline - INFO - Processed 1 documents using fallback
+2025-08-11 00:54:49,539 - quizmaster.bookworm_integration - WARNING - Knowledge graph not available - skipping document ingestion
+2025-08-11 00:54:49,539 - quizmaster.pipeline - INFO - Generating curious questions for 1 documents
+2025-08-11 00:54:54,399 - quizmaster.question_generator - INFO - Token usage - Total: 854, Prompt: 709, Completion: 145
+2025-08-11 00:54:54,399 - quizmaster.question_generator - INFO - Generated 5 curious questions for Series7_LEM_3E_REV.md
+2025-08-11 00:54:54,399 - quizmaster.pipeline - INFO - Generated 5 questions for Series7_LEM_3E_REV.md
+2025-08-11 00:54:54,399 - quizmaster.pipeline - INFO - Generated 5 total curious questions
+2025-08-11 00:54:54,399 - quizmaster.pipeline - INFO - Generating enhanced multiple choice questions for Series7_LEM_3E_REV.md
+2025-08-11 00:55:07,487 - quizmaster.question_generator - INFO - Token usage - Total: 1900, Prompt: 1418, Completion: 482
+2025-08-11 00:55:07,487 - quizmaster.question_generator - INFO - Generated 3 quiz questions
+2025-08-11 00:55:09,421 - quizmaster.question_generator - INFO - Token usage - Total: 291, Prompt: 206, Completion: 85
+2025-08-11 00:55:09,421 - quizmaster.question_generator - INFO - Generated distractors response
+2025-08-11 00:55:09,421 - quizmaster.question_generator - INFO - Generated 3 distractors
+2025-08-11 00:55:09,421 - quizmaster.question_generator - INFO - Generated 1 multiple choice questions
+2025-08-11 00:55:09,421 - quizmaster.pipeline - INFO - Generated 1 enhanced multiple choice questions for Series7_LEM_3E_REV.md
+2025-08-11 00:55:09,421 - quizmaster.pipeline - INFO - Adding 1 questions to qBank
+2025-08-11 00:55:09,421 - quizmaster.qbank_integration - INFO - Added 1 out of 1 questions to qBank
+2025-08-11 00:55:09,421 - quizmaster.pipeline - INFO - Successfully added 1 questions to qBank
+🚀 QuizMaster 2.0 - Document Processing Pipeline
+📂 Target directory: bookworm_workspace/docs
+📂 Found 1 document(s) in bookworm_workspace/docs
+   📄 Series7_LEM_3E_REV.md (1683384 bytes)
+
+🔧 Initializing QuizMaster pipeline...
+✓ Configuration: Valid
+✓ BookWorm: Fallback mode
+✓ qBank: Available
+✓ LLM Client: Available
+
+============================================================
+📄 Processing document 1/1: Series7_LEM_3E_REV.md
+============================================================
+🔄 Processing document...
+✓ Processed document: 1678990 characters
+🧠 Adding to knowledge graph...
+⚠️ Knowledge graph integration not available
+🎯 Generating questions...
+  🤔 Generating curious questions...
+  🧠 Querying knowledge graph with curious questions...
+  ⚠️ No additional knowledge graph context available
+  📝 Generating multiple choice questions with enhanced context...
+  🔧 Converting questions to qBank format...
+  💾 Adding questions to qBank...
+  ✓ Questions added to qBank successfully
+✅ Complete! Generated:
+   - 5 curious questions
+   - 1 quiz questions
+
+📋 Sample curious questions:
+   1. Why is it crucial for the Series 7 exam manual to emphasize that exam content may evolve after publication, and how does this affect a candidate's preparation strategy?
+   2. How might the principles of marketing new issues connect to broader concepts in securities regulation and investor protection?
+   3. What are the potential implications of relying on a standardized exam manual for a dynamic field like securities, and how could this impact real-world decision-making?
+
+📋 Sample quiz questions:
+   1. An investor purchases a corporate bond at a discount and holds it until maturity. Which of the following best describes the tax treatment of the bond's interest income and capital gains?
+      Answer: The bond's interest income is fully taxable as ordinary income, and the discount amortization is treated as additional taxable interest income.
+
+🎉 Processing Complete!
+📊 Summary:
+   - Documents processed: 1/1
+   - Total curious questions: 5
+   - Total quiz questions: 1
+   - Question banks saved by qBank integration

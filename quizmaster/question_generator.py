@@ -11,12 +11,40 @@ import json
 from typing import Dict, Any, Optional, Union, List
 from dataclasses import dataclass
 
+from openai import AsyncOpenAI
+from pydantic import BaseModel
+from pydantic_ai import Agent
+from pydantic_ai.models.openai import OpenAIModel
+from pydantic_ai.providers.ollama import OllamaProvider
+from pydantic_ai.providers.openai import OpenAIProvider
+
 from .config import QuizMasterConfig
 from .bookworm_integration import ProcessedDocument
-from .qbank_integration import QuizQuestion
 
 logger = logging.getLogger(__name__)
 
+class CuriousQuerries(BaseModel):
+    """Represents a single question with multiple choice answers"""
+    querries: List[str]
+
+class Question(BaseModel):
+    """Represents a single question with multiple choice answers"""
+    question_text: str
+    answer: str
+    distractors: List[str]
+    learning_objective: str  # What the question is testing for
+    explanation: str
+    tags: List[str]
+
+class Lesson(BaseModel):
+    question: str
+    comprehensive_answer: str
+    key_concepts: list[str]
+    practical_applications: list[str]
+    knowledge_gaps: list[str]
+    related_topics: list[str]
+    difficulty_level: str  # "easy", "medium", "hard"
+    tags: list[str]
 
 @dataclass
 class EducationalReport:
@@ -36,31 +64,78 @@ class QuestionGenerator:
     def __init__(self, config: QuizMasterConfig):
         """Initialize question generator with configuration."""
         self.config = config
-        self.llm_client = None
-        self._setup_llm_client()
-    
+        # self.llm_client = None
+        # self._setup_llm_client()
+
+    async def llm_call(self, prompt, output_type = None):
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+
+        client = AsyncOpenAI(
+            api_key="ollama",  # OLLAMA doesn't require a real API key
+            base_url='http://brainmachine:11434/v1',  # Default OLLAMA URL,
+            timeout=3000,
+        )
+        model = OpenAIModel(
+            model_name=self.config.llm_model,
+            provider=OpenAIProvider(openai_client=client),
+        )
+        if output_type:
+            agent = Agent(model, output_type=output_type)
+        else:
+            agent = Agent(model)
+
+        
+        result = await agent.run(prompt)
+
+        return result
+
     def _setup_llm_client(self) -> None:
         """Set up the LLM client based on configuration."""
         try:
-            if self.config.api_provider == "OPENAI":
-                import openai
-                self.llm_client = openai.AsyncOpenAI(
-                    api_key=self.config.openai_api_key
-                )
-            elif self.config.api_provider == "CLAUDE":
-                import anthropic
-                self.llm_client = anthropic.AsyncAnthropic(
-                    api_key=self.config.anthropic_api_key
-                )
-            elif self.config.api_provider == "OLLAMA":
-                import openai
-                # Use OpenAI client for OLLAMA compatibility
-                self.llm_client = openai.AsyncOpenAI(
-                    api_key="ollama",  # OLLAMA doesn't require a real API key
-                    base_url="http://localhost:11434/v1"  # Default OLLAMA URL
-                )
-            else:
-                logger.warning(f"LLM provider {self.config.api_provider} not yet implemented")
+
+            async_provider = AsyncOpenAI(
+                api_key="ollama",  # OLLAMA doesn't require a real API key
+                base_url='http://brainmachine:11434/v1',  # Default OLLAMA URL,
+                timeout=3000,
+            )
+            self.llm_client = OpenAIModel(
+                model_name=self.config.llm_model,
+                provider=OpenAIProvider(openai_client=async_provider),
+            )
+
+            # self.llm_client = OpenAIModel(
+            #     model_name=self.config.llm_model,
+            #     provider=OllamaProvider(base_url='http://brainmachine:11434/v1'),
+            # )
+
+            
+
+            # self.llm_client = AsyncOpenAI(
+            #     api_key="ollama",  # OLLAMA doesn't require a real API key
+            #     base_url='http://brainmachine:11434/v1',  # Default OLLAMA URL,
+            #     timeout=3000,   
+            #     model=self.config.llm_model
+            # )
+            # if self.config.api_provider == "OPENAI":
+            #     import openai
+            #     self.llm_client = openai.AsyncOpenAI(
+            #         api_key=self.config.openai_api_key
+            #     )
+            # elif self.config.api_provider == "CLAUDE":
+            #     import anthropic
+            #     self.llm_client = anthropic.AsyncAnthropic(
+            #         api_key=self.config.anthropic_api_key
+            #     )
+            # elif self.config.api_provider == "OLLAMA":
+            #     import openai
+            #     # Use OpenAI client for OLLAMA compatibility
+            #     self.llm_client = openai.AsyncOpenAI(
+            #         api_key="ollama",  # OLLAMA doesn't require a real API key
+            #         base_url="http://localhost:11434/v1"  # Default OLLAMA URL
+            #     )
+            # else:
+            #     logger.warning(f"LLM provider {self.config.api_provider} not yet implemented")
                 
             logger.info(f"LLM client initialized for {self.config.api_provider}")
             
@@ -68,13 +143,10 @@ class QuestionGenerator:
             logger.error(f"Failed to initialize LLM client: {e}")
             self.llm_client = None
     
-    def is_available(self) -> bool:
-        """Check if LLM client is available."""
-        return self.llm_client is not None
     
     async def generate_curious_questions(
         self, 
-        processed_doc: ProcessedDocument
+        mindmap: str
     ) -> list[str]:
         """
         Generate curious questions from a processed document's mindmap and description.
@@ -85,25 +157,14 @@ class QuestionGenerator:
         Returns:
             List of curious questions designed to explore knowledge gaps
         """
-        if not self.is_available():
-            raise RuntimeError("LLM client is not available")
-        
-        # Enhanced context using mindmap structure
-        mindmap_summary = self._extract_mindmap_topics(processed_doc.mindmap) if processed_doc.mindmap else []
+        # self._setup_llm_client()
+        # # Enhanced context using mindmap structure
+        # mindmap_summary = self._extract_mindmap_topics(processed_doc.mindmap) if processed_doc.mindmap else []
         
         context = f"""
-        Document Analysis:
-        ==================
-        Document: {processed_doc.file_path.name}
-        
-        Description: {processed_doc.description or "No description available"}
-        
-        Key Topics from Mindmap: {', '.join(mindmap_summary[:10]) if mindmap_summary else 'No topics extracted'}
-        
-        Hierarchical Structure:
-        {processed_doc.mindmap[:2000] + "..." if processed_doc.mindmap and len(processed_doc.mindmap) > 2000 else processed_doc.mindmap or "No mindmap available"}
-        
-        Content Preview: {processed_doc.processed_text[:1500]}...
+        <mindmap-of-content>
+        {mindmap}
+        </mindmap-of-content>
         """
         
         prompt = f"""
@@ -124,71 +185,24 @@ class QuestionGenerator:
         - Identify what they still need to learn
         - Think critically about implications and applications
 
-        Return ONLY a JSON array of question strings, no other text or formatting.
-        
-        Example format: ["Question 1?", "Question 2?", "Question 3?"]
+        Return ONLY a CuriousQuerries object with an array of question strings, no other text or formatting.
         """
-        
-        try:
-            response = await self._call_llm(prompt)
-            logger.debug(f"Raw LLM response for curious questions: {response[:500]}...")
+        questions = []
+        # agent = Agent(self.llm_client, output_type=CuriousQuerries)
+
+        # result = await agent.run(prompt)
+
+        result = await self.llm_call(prompt, output_type=CuriousQuerries)
+        logger.info(f"LLM usage: {result.usage()}")
+        questions = result.output.querries
             
-            # Try to parse as JSON
-            try:
-                # Clean up the response - remove any markdown formatting
-                clean_response = response.strip()
-                if clean_response.startswith('```json'):
-                    clean_response = clean_response[7:]
-                if clean_response.endswith('```'):
-                    clean_response = clean_response[:-3]
-                clean_response = clean_response.strip()
-                
-                questions = json.loads(clean_response)
-                if isinstance(questions, list) and all(isinstance(q, str) for q in questions):
-                    logger.info(f"Generated {len(questions)} curious questions for {processed_doc.file_path.name}")
-                    return questions[:self.config.curious_questions_count]
-                else:
-                    logger.warning(f"Invalid JSON structure for curious questions: {type(questions)}")
-            except json.JSONDecodeError as json_error:
-                logger.warning(f"Failed to parse JSON response: {json_error}")
-                logger.debug(f"Raw response was: {response}")
-            
-            # Fallback: extract questions from response using various patterns
-            lines = [line.strip() for line in response.split('\n') if line.strip()]
-            questions = []
-            
-            for line in lines:
-                # Skip empty lines, comments, and JSON formatting
-                if not line or line.startswith('#') or line.startswith('//') or line in ['[', ']', '{', '}']:
-                    continue
-                # Remove quotes and commas from JSON-like formatting
-                clean_line = line.strip().strip('",').strip('"').strip()
-                if clean_line and len(clean_line) > 10:  # Ensure it's a meaningful question
-                    questions.append(clean_line)
-            
-            if questions:
-                logger.info(f"Generated {len(questions)} curious questions for {processed_doc.file_path.name} (fallback parsing)")
-                return questions[:self.config.curious_questions_count]
-            else:
-                logger.warning("No valid questions found in response, using fallback questions")
-            
-        except Exception as e:
-            logger.error(f"Failed to generate curious questions: {e}")
-            
-        # Return fallback questions
-        return [
-            f"What are the key concepts in {processed_doc.file_path.name}?",
-            "How do the main topics relate to each other?",
-            "What practical applications emerge from this content?",
-            "What knowledge gaps exist in understanding this material?",
-            "How could this information be applied in real-world scenarios?"
-        ][:self.config.curious_questions_count]
+        return questions
     
     async def generate_educational_report(
         self, 
         question: str, 
-        context: str
-    ) -> EducationalReport:
+        knowledge_graph
+    ) -> Lesson:
         """
         Generate a comprehensive educational report for a curious question.
         
@@ -199,17 +213,13 @@ class QuestionGenerator:
         Returns:
             Educational report with comprehensive answer and analysis
         """
-        if not self.is_available():
-            raise RuntimeError("LLM client is not available")
-        
+
         prompt = f"""
         You are an expert educator creating a comprehensive educational report. Your task is to answer the question thoroughly and provide structured learning guidance.
 
         Question to Answer:
         {question}
 
-        Available Context:
-        {context[:3000]}{'...' if len(context) > 3000 else ''}
 
         Create a detailed educational report that:
         1. **Answers the question comprehensively** with clear explanations
@@ -219,58 +229,48 @@ class QuestionGenerator:
         5. **Suggests related topics** for extended learning
         6. **Assesses difficulty level** appropriately
 
-        Return ONLY a JSON object with this exact structure:
-        {{
-            "comprehensive_answer": "A detailed, educational answer that fully addresses the question with clear explanations, examples, and reasoning. Should be 3-5 paragraphs that build understanding progressively.",
-            "key_concepts": ["List 3-5 fundamental concepts that learners must understand to grasp this topic"],
-            "practical_applications": ["List 3-4 real-world examples or applications where this knowledge is useful"],
-            "knowledge_gaps": ["List 2-3 areas where learners might need additional information or clarification"],
-            "related_topics": ["List 3-4 topics that connect to or extend this knowledge"],
-            "difficulty_level": "easy|medium|hard"
-        }}
-
         Focus on creating educational value that helps learners build deep understanding.
         """
         
-        try:
-            response = await self._call_llm(prompt)
-            
-            # Try to parse as JSON
-            try:
-                report_data = json.loads(response)
-                return EducationalReport(
-                    question=question,
-                    comprehensive_answer=report_data.get("comprehensive_answer", ""),
-                    key_concepts=report_data.get("key_concepts", []),
-                    practical_applications=report_data.get("practical_applications", []),
-                    knowledge_gaps=report_data.get("knowledge_gaps", []),
-                    related_topics=report_data.get("related_topics", []),
-                    difficulty_level=report_data.get("difficulty_level", "medium")
-                )
-            except json.JSONDecodeError:
-                # Fallback to basic report
-                return EducationalReport(
-                    question=question,
-                    comprehensive_answer=response,
-                    key_concepts=[],
-                    practical_applications=[],
-                    knowledge_gaps=[],
-                    related_topics=[],
-                    difficulty_level="medium"
-                )
-                
-        except Exception as e:
-            logger.error(f"Failed to generate educational report: {e}")
-            return EducationalReport(
-                question=question,
-                comprehensive_answer=f"Unable to generate comprehensive answer for: {question}",
-                key_concepts=[],
-                practical_applications=[],
-                knowledge_gaps=[],
-                related_topics=[],
-                difficulty_level="medium"
-            )
-    
+        # step 1: initial querry
+        report = await knowledge_graph.query(prompt)
+        # step 2: fact check
+        fact_check_prompt = f"Please write the final draft for this report. Ensure all information is accurate, complete, and well-organized: {report}"
+        revised_report = await knowledge_graph.query(fact_check_prompt)
+
+        # return revised_report
+        # step 3: generate final report using the pydantc object for educational report
+        # agent = Agent(self.llm_client, output_type=Lesson)
+        
+
+        prompt = f"""
+        You are an expert educator creating a comprehensive educational report. Your task is to answer the question thoroughly and provide structured learning guidance.
+
+        Question to Answer:
+        {question}
+
+        <research>
+        {revised_report}
+        </research>
+
+        Create a detailed educational report that:
+        1. **Answers the question comprehensively** with clear explanations
+        2. **Identifies key concepts** that learners need to understand
+        3. **Provides practical applications** showing real-world relevance
+        4. **Highlights knowledge gaps** that need further exploration
+        5. **Suggests related topics** for extended learning
+        6. **Assesses difficulty level** appropriately
+
+        Focus on creating educational value that helps learners build deep understanding.
+        """
+
+        # result = await agent.run(prompt)
+        result = await self.llm_call(prompt, output_type=Lesson)
+        logger.info(f"LLM usage: {result.usage()}")
+        report = result.output
+
+        return report
+
     async def generate_quiz_questions(
         self, 
         combined_reports: str,
@@ -286,9 +286,7 @@ class QuestionGenerator:
         Returns:
             List of quiz questions with basic structure
         """
-        if not self.is_available():
-            raise RuntimeError("LLM client is not available")
-        
+
         question_count = count or self.config.quiz_questions_count
         
         prompt = f"""
@@ -325,34 +323,8 @@ class QuestionGenerator:
         Focus on creating questions that genuinely test learning rather than trivial details.
         """
         
-        try:
-            response = await self._call_llm(prompt)
+        response = await self._call_llm(prompt)
             
-            # Try to parse as JSON
-            try:
-                questions = json.loads(response)
-                if isinstance(questions, list):
-                    logger.info(f"Generated {len(questions)} quiz questions")
-                    return questions[:question_count]
-            except json.JSONDecodeError:
-                pass
-            
-            # Fallback: create basic questions
-            logger.warning("Failed to parse LLM response as JSON, using fallback")
-            return [
-                {
-                    "question": f"What is the main concept discussed in section {i+1}?",
-                    "correct_answer": f"Concept {i+1}",
-                    "difficulty": "medium",
-                    "explanation": f"This tests understanding of concept {i+1}",
-                    "topic": f"General Knowledge {i+1}"
-                }
-                for i in range(question_count)
-            ]
-            
-        except Exception as e:
-            logger.error(f"Failed to generate quiz questions: {e}")
-            return []
     
     async def _call_llm(self, prompt: str) -> str:
         """
@@ -454,47 +426,6 @@ class QuestionGenerator:
             logger.error(f"LLM API call failed: {e}")
             raise
     
-    def _extract_mindmap_topics(self, mindmap_text: str) -> list[str]:
-        """Extract key topics from mindmap text."""
-        if not mindmap_text:
-            return []
-        
-        topics = []
-        lines = mindmap_text.split('\n')
-        
-        for line in lines:
-            line = line.strip()
-            # Look for main topic indicators in mindmap format
-            if '((' in line and '))' in line:
-                # Extract text between (( and ))
-                start = line.find('((') + 2
-                end = line.find('))', start)
-                if start > 1 and end > start:
-                    topic = line[start:end].strip()
-                    # Clean up topic text
-                    topic = topic.replace('📄', '').replace('📋', '').replace('📊', '').strip()
-                    if topic and len(topic) > 2:
-                        topics.append(topic)
-            elif line.startswith('    (') and ')' in line:
-                # Secondary topics
-                start = line.find('(') + 1
-                end = line.find(')', start)
-                if start > 0 and end > start:
-                    topic = line[start:end].strip()
-                    topic = topic.replace('📄', '').replace('📋', '').replace('📊', '').strip()
-                    if topic and len(topic) > 2:
-                        topics.append(topic)
-        
-        # Remove duplicates while preserving order
-        seen = set()
-        unique_topics = []
-        for topic in topics:
-            if topic.lower() not in seen:
-                seen.add(topic.lower())
-                unique_topics.append(topic)
-        
-        return unique_topics[:15]  # Return top 15 topics
-
     async def generate_distractors(self, question: str, correct_answer: str, 
                                  topic: str, count: int = 3) -> List[str]:
         """Generate plausible but incorrect answer choices for multiple choice questions."""

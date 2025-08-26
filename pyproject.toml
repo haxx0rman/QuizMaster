@@ -11,7 +11,6 @@ requires-python = ">=3.11"
 dependencies = [
     # Core frameworks
     "qbank",
-    "bookworm",
     # LLM and AI
     "openai>=1.0.0",
     "anthropic>=0.34.0",
@@ -24,6 +23,10 @@ dependencies = [
     "tqdm>=4.65.0",
     # Data handling
     "aiofiles>=23.0.0",
+    "update>=0.0.1",
+    "pydantic-ai>=0.7.3",
+    "python-levenshtein>=0.27.1",
+    "bookworm",
 ]
 
 [project.optional-dependencies]
@@ -66,5 +69,5 @@ python_functions = ["test_*"]
 addopts = "-v --tb=short"
 
 [tool.uv.sources]
-bookworm = { git = "https://github.com/haxx0rman/BookWorm.git" }
 qbank = { git = "https://github.com/haxx0rman/qbank.git" }
+bookworm = { git = "https://github.com/haxx0rman/BookWorm" }

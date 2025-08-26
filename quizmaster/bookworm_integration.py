@@ -64,6 +64,7 @@ class BookWormIntegration:
     def _setup_bookworm_components(self) -> None:
         """Set up BookWorm components with configuration."""
         try:
+            from bookworm import Library, DocumentProcessor, MindmapGenerator
             # Create BookWorm configuration using the load_config function
             if (BookWormConfig is not None and load_config is not None and 
                 LibraryManager is not None and DocumentProcessor is not None and
@@ -90,13 +91,6 @@ class BookWormIntegration:
                 # Store original values to restore later
                 original_api_provider = os.environ.get("API_PROVIDER")
                 original_llm_model = os.environ.get("LLM_MODEL")
-                
-                # Set BookWorm-specific environment variables temporarily
-                os.environ["BW_API_PROVIDER"] = "OLLAMA"  # Use BW_ prefix to avoid conflicts
-                os.environ["BW_LLM_MODEL"] = self.config.llm_model
-                os.environ["BW_EMBEDDING_MODEL"] = self.config.embedding_model or "bge-m3:latest"
-                os.environ["BW_LLM_HOST"] = ollama_host
-                os.environ["BW_EMBEDDING_HOST"] = ollama_host
                 
                 # For BookWorm compatibility, temporarily set standard names
                 os.environ["API_PROVIDER"] = "OLLAMA"
@@ -379,25 +373,73 @@ class BookWormIntegration:
         Returns:
             Dict containing query results and metadata
         """
-        if not self.is_available():
+        if not self.is_available() or self.knowledge_graph is None:
             return {
                 "results": [],
                 "query": query,
                 "mode": mode,
                 "status": "unavailable",
-                "message": "BookWorm is not available"
+                "message": "BookWorm knowledge graph is not available"
             }
         
-        # Placeholder for actual knowledge graph querying
-        return {
-            "results": [
-                {"content": "Sample result 1", "score": 0.95},
-                {"content": "Sample result 2", "score": 0.87}
-            ],
-            "query": query,
-            "mode": mode,
-            "status": "success"
-        }
+        try:
+            # Try to query the knowledge graph using available methods
+            if hasattr(self.knowledge_graph, 'query'):
+                result = await self.knowledge_graph.query(query, mode=mode)
+                return {
+                    "content": result,
+                    "query": query,
+                    "mode": mode,
+                    "status": "success"
+                }
+            elif hasattr(self.knowledge_graph, 'search'):
+                result = await self.knowledge_graph.search(query)
+                return {
+                    "content": result,
+                    "query": query,
+                    "mode": mode,
+                    "status": "success"
+                }
+            else:
+                # If no direct query method, try to get documents related to the query
+                # This is a fallback using the library's search capabilities
+                if hasattr(self.library_manager, 'search_documents'):
+                    docs = self.library_manager.search_documents(query)
+                    if docs:
+                        # Extract relevant content from found documents
+                        content_parts = []
+                        for doc in docs[:3]:  # Limit to top 3 results
+                            if hasattr(doc, 'content'):
+                                content_parts.append(doc.content[:500])  # First 500 chars
+                            elif hasattr(doc, 'description'):
+                                content_parts.append(doc.description)
+                        
+                        return {
+                            "content": "\n\n".join(content_parts),
+                            "query": query,
+                            "mode": mode,
+                            "status": "success"
+                        }
+                
+                # Final fallback - return empty but successful response
+                logger.debug(f"No query method available for knowledge graph")
+                return {
+                    "content": "",
+                    "query": query,
+                    "mode": mode,
+                    "status": "no_method",
+                    "message": "Knowledge graph query method not available"
+                }
+                
+        except Exception as e:
+            logger.error(f"Knowledge graph query failed: {e}")
+            return {
+                "content": "",
+                "query": query,
+                "mode": mode,
+                "status": "error",
+                "message": str(e)
+            }
     
     def get_library_stats(self) -> Dict[str, Any]:
         """
@@ -422,13 +464,13 @@ class BookWormIntegration:
             "library_path": self.bookworm_config["working_dir"]
         }
     
-    async def extract_key_concepts(self, content: str, limit: int = 10) -> List[str]:
+    async def extract_key_concepts(self, content: str, limit: Optional[int] = None) -> List[str]:
         """
         Extract key concepts from content.
         
         Args:
             content: Text content to analyze
-            limit: Maximum number of concepts to extract
+            limit: Maximum number of concepts to extract (None for unlimited)
             
         Returns:
             List of key concepts
@@ -436,7 +478,7 @@ class BookWormIntegration:
         if not self.is_available():
             # Simple fallback concept extraction
             words = content.split()
-            # Filter out common words and return the first N unique words
+            # Filter out common words and return unique words
             concepts = []
             common_words = {"the", "and", "or", "but", "in", "on", "at", "to", "for", "of", "with", "by", "a", "an", "is", "are", "was", "were", "be", "been", "being", "have", "has", "had", "do", "does", "did", "will", "would", "could", "should", "may", "might", "can", "must"}
             
@@ -444,7 +486,7 @@ class BookWormIntegration:
                 clean_word = word.strip('.,!?";:()[]{}').lower()
                 if clean_word not in common_words and len(clean_word) > 3:
                     concepts.append(clean_word)
-                    if len(concepts) >= limit:
+                    if limit is not None and len(concepts) >= limit:
                         break
             
             return concepts

@@ -15,8 +15,39 @@ from .config import QuizMasterConfig, setup_quizmaster
 from .bookworm_integration import BookWormIntegration, ProcessedDocument
 from .qbank_integration import QBankIntegration, QuizQuestion
 from .question_generator import QuestionGenerator, EducationalReport
+from bookworm import BookWormPipeline, LibraryManager
+from bookworm import load_config
+
+from pydantic import BaseModel
+from pydantic_ai import Agent
+from pydantic_ai.models.openai import OpenAIModel
+from pydantic_ai.providers.ollama import OllamaProvider
 
 logger = logging.getLogger(__name__)
+
+
+class CuriousQuerries(BaseModel):
+    """Represents a single question with multiple choice answers"""
+    querries: List[str]
+
+class Question(BaseModel):
+    """Represents a single question with multiple choice answers"""
+    question_text: str
+    answer: str
+    distractors: List[str]
+    learning_objective: str  # What the question is testing for
+    explanation: str
+    tags: List[str]
+
+class Lesson(BaseModel):
+    question: str
+    comprehensive_answer: str
+    key_concepts: list[str]
+    practical_applications: list[str]
+    knowledge_gaps: list[str]
+    related_topics: list[str]
+    difficulty_level: str  # "easy", "medium", "hard"
+    tags: list[str]
 
 
 @dataclass
@@ -39,8 +70,11 @@ class QuizMasterPipeline:
         """Initialize the QuizMaster pipeline with configuration."""
         self.config = config or setup_quizmaster()
         
-        # Initialize integrations
-        self.bookworm = BookWormIntegration(self.config)
+    
+        # Create pipeline instance
+        self.bookworm = BookWormPipeline(self.config)
+        # self.bookworm = BookWormIntegration(self.config)
+        self.library = LibraryManager(self.config)
         self.qbank = QBankIntegration(self.config)
         self.question_generator = QuestionGenerator(self.config)
         
@@ -51,22 +85,6 @@ class QuizMasterPipeline:
         
         logger.info("QuizMaster pipeline initialized")
     
-    def check_dependencies(self) -> Dict[str, bool]:
-        """
-        Check if all required dependencies are available.
-        
-        Returns:
-            Dictionary showing availability of each component
-        """
-        status = {
-            "config_valid": self.config.validate_api_setup(),
-            "bookworm_available": self.bookworm.is_available(),
-            "qbank_available": self.qbank.is_available(),
-            "llm_available": self.question_generator.is_available(),
-        }
-        
-        logger.info(f"Dependency check: {status}")
-        return status
     
     async def process_documents(
         self, 
@@ -83,27 +101,11 @@ class QuizMasterPipeline:
         """
         logger.info(f"Starting document processing for {len(file_paths)} files")
         
-        if not self.bookworm.is_available():
-            logger.warning("BookWorm not available - using fallback processing")
-            # Use fallback processing when BookWorm is not available
-            processed_docs = []
-            for file_path in file_paths:
-                try:
-                    doc = await self.bookworm.process_document(file_path)
-                    processed_docs.append(doc)
-                except Exception as e:
-                    logger.error(f"Failed to process {file_path}: {e}")
-            
-            self.processed_documents = processed_docs
-            logger.info(f"Processed {len(processed_docs)} documents using fallback")
-            return processed_docs
-        
         try:
             # Process documents through BookWorm
-            self.processed_documents = await self.bookworm.process_batch_documents(file_paths)
+            await self.bookworm.run()
             
-            logger.info(f"Successfully processed {len(self.processed_documents)} documents")
-            return self.processed_documents
+            logger.info("Successfully processed documents")
             
         except Exception as e:
             logger.error(f"Document processing failed: {e}")
@@ -116,22 +118,23 @@ class QuizMasterPipeline:
         Returns:
             Dictionary mapping document names to their curious questions
         """
-        if not self.processed_documents:
-            raise RuntimeError("No documents processed. Run process_documents first.")
-        
-        logger.info(f"Generating curious questions for {len(self.processed_documents)} documents")
+        all_docs = self.library.find_documents()
+        logger.info(f"Generating curious questions for {len(all_docs)} documents")
         
         curious_questions_map = {}
         
-        for doc in self.processed_documents:
+        for doc in all_docs:
             try:
-                questions = await self.question_generator.generate_curious_questions(doc)
-                curious_questions_map[doc.file_path.name] = questions
-                logger.info(f"Generated {len(questions)} questions for {doc.file_path.name}")
+                markdown_mindmap_filepath = self.library.get_mindmap(doc.mindmap_id).markdown_file
+                with open(markdown_mindmap_filepath, 'r', encoding='utf-8') as f:
+                    markdown_content = f.read()
+                questions = await self.question_generator.generate_curious_questions(markdown_content)
+                curious_questions_map[doc.id] = questions
+                logger.info(f"Generated {len(questions)} questions for {doc.id}")
                 
             except Exception as e:
-                logger.error(f"Failed to generate questions for {doc.file_path.name}: {e}")
-                curious_questions_map[doc.file_path.name] = []
+                logger.error(f"Failed to generate questions for {doc.id}: {e}")
+                curious_questions_map[doc.id] = []
         
         total_questions = sum(len(q) for q in curious_questions_map.values())
         logger.info(f"Generated {total_questions} total curious questions")
@@ -289,7 +292,7 @@ class QuizMasterPipeline:
         logger.info(f"Adding {len(self.quiz_questions)} questions to qBank")
         
         try:
-            question_ids = self.qbank.add_quiz_questions(self.quiz_questions)
+            question_ids = self.qbank.add_multiple_questions(self.quiz_questions)
             logger.info(f"Successfully added {len(question_ids)} questions to qBank")
             return question_ids
             
@@ -317,11 +320,6 @@ class QuizMasterPipeline:
         logger.info(f"Starting complete QuizMaster pipeline for {len(file_paths)} files")
         
         try:
-            # Step 1: Check dependencies
-            deps = self.check_dependencies()
-            if not all(deps.values()):
-                missing = [k for k, v in deps.items() if not v]
-                raise RuntimeError(f"Missing dependencies: {missing}")
             
             # Step 2: Process documents with BookWorm
             processed_docs = await self.process_documents(file_paths)
@@ -383,13 +381,6 @@ class QuizMasterPipeline:
                 errors=errors
             )
     
-    async def cleanup(self) -> None:
-        """Clean up pipeline resources."""
-        try:
-            await self.bookworm.cleanup()
-            logger.info("Pipeline cleanup completed")
-        except Exception as e:
-            logger.error(f"Pipeline cleanup failed: {e}")
     
     def export_results(self, output_dir: Optional[Path] = None) -> Dict[str, Path]:
         """
@@ -499,3 +490,22 @@ class QuizMasterPipeline:
         except Exception as e:
             logger.error(f"Failed to generate multiple choice questions for all documents: {e}")
             return {}
+
+    async def generate_enhanced_multiple_choice_questions(self, enhanced_context: str, count_per_doc: int = 3, doc_name: str = "document") -> Dict[str, List[Dict]]:
+        """Generate multiple choice questions using enhanced context from knowledge graph."""
+        try:
+            logger.info(f"Generating enhanced multiple choice questions for {doc_name}")
+            
+            # Generate multiple choice questions with the enhanced context
+            mc_questions = await self.question_generator.generate_multiple_choice_questions(
+                enhanced_context, count=count_per_doc
+            )
+            
+            mc_questions_map = {doc_name: mc_questions}
+            logger.info(f"Generated {len(mc_questions)} enhanced multiple choice questions for {doc_name}")
+            
+            return mc_questions_map
+            
+        except Exception as e:
+            logger.error(f"Failed to generate enhanced multiple choice questions for {doc_name}: {e}")
+            return {doc_name: []}

@@ -1,0 +1,39 @@
+{
+  "documents_by_filename": {
+    "SIE_truncated.md": "bde161b0-c6e8-4b0b-83f9-c02574c28bb8"
+  },
+  "documents_by_type": {},
+  "documents_by_status": {
+    "pending": [],
+    "processing": [],
+    "processed": [
+      "bde161b0-c6e8-4b0b-83f9-c02574c28bb8"
+    ],
+    "failed": [],
+    "archived": []
+  },
+  "mindmaps_by_document": {},
+  "tags": {
+    "tag1": [
+      "bde161b0-c6e8-4b0b-83f9-c02574c28bb8"
+    ],
+    "markets": [
+      "bde161b0-c6e8-4b0b-83f9-c02574c28bb8"
+    ],
+    "risk management": [
+      "bde161b0-c6e8-4b0b-83f9-c02574c28bb8"
+    ],
+    "investment": [
+      "bde161b0-c6e8-4b0b-83f9-c02574c28bb8"
+    ],
+    "tag2": [
+      "bde161b0-c6e8-4b0b-83f9-c02574c28bb8"
+    ],
+    "regulation": [
+      "bde161b0-c6e8-4b0b-83f9-c02574c28bb8"
+    ],
+    "securities": [
+      "bde161b0-c6e8-4b0b-83f9-c02574c28bb8"
+    ]
+  }
+}
