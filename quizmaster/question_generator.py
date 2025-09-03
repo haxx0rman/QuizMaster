@@ -21,30 +21,153 @@ from pydantic_ai.providers.openai import OpenAIProvider
 from .config import QuizMasterConfig
 from .bookworm_integration import ProcessedDocument
 
+# Additional imports for qBank integration
+from typing import Set, TYPE_CHECKING
+
+# Type checking imports for qBank
+if TYPE_CHECKING:
+    from qbank import QuestionBankManager as QBankManager
+else:
+    QBankManager = Any
+
+# We'll import qBank components when available
+try:
+    from qbank import (
+        QuestionBankManager, Question as QBankQuestion, Answer, StudySession, AnswerResult,
+        ELORatingSystem, SpacedRepetitionScheduler, UserRatingTracker
+    )
+    QBANK_AVAILABLE = True
+except ImportError:
+    QBANK_AVAILABLE = False
+    QuestionBankManager = None
+    QBankQuestion = None
+    Answer = None
+    StudySession = None
+    AnswerResult = None
+    ELORatingSystem = None
+    SpacedRepetitionScheduler = None
+    UserRatingTracker = None
+
 logger = logging.getLogger(__name__)
 
 class CuriousQuerries(BaseModel):
     """Represents a single question with multiple choice answers"""
     querries: List[str]
 
+
 class Question(BaseModel):
     """Represents a single question with multiple choice answers"""
-    question_text: str
+    question: str
     answer: str
     distractors: List[str]
-    learning_objective: str  # What the question is testing for
-    explanation: str
-    tags: List[str]
+    explanation: Optional[str] = None
+    tags: Optional[Set[str]] = None
+    difficulty_level: Optional[str] = None
+    topic: Optional[str] = None
+
+class Quiz(BaseModel):
+    questions: List[Question]
 
 class Lesson(BaseModel):
     question: str
-    comprehensive_answer: str
-    key_concepts: list[str]
-    practical_applications: list[str]
-    knowledge_gaps: list[str]
-    related_topics: list[str]
-    difficulty_level: str  # "easy", "medium", "hard"
-    tags: list[str]
+    lesson: str
+
+
+@dataclass
+class QuizQuestion:
+    """Represents a quiz question for the question bank."""
+    question_text: str
+    correct_answer: str
+    wrong_answers: List[str]
+    explanation: Optional[str] = None
+    tags: Optional[Set[str]] = None
+    difficulty_level: Optional[str] = None
+    topic: Optional[str] = None
+    id: Optional[str] = None
+
+
+class QBankIntegration:
+    """Integration layer for qBank question management and spaced repetition."""
+    
+    def __init__(self, config: QuizMasterConfig):
+        """Initialize qBank integration with configuration."""
+        self.config = config
+        self.qbank_config = config.get_qbank_config()
+        self.manager: Optional['QBankManager'] = None
+        
+        # Initialize qBank components if available
+        if QBANK_AVAILABLE:
+            self._setup_qbank_components()
+        else:
+            logger.warning("qBank not available. Install with: uv add 'qbank @ git+https://github.com/haxx0rman/qBank.git'")
+            self.manager = None
+    
+    def _setup_qbank_components(self) -> None:
+        """Set up qBank components with configuration."""
+        try:
+            # Initialize question bank manager
+            if QuestionBankManager is not None:
+                self.manager = QuestionBankManager(
+                    bank_name=self.qbank_config.get("bank_name", "QuizMaster Bank"),
+                    user_id=self.qbank_config.get("default_user_id", "default_user")
+                )
+                
+                logger.info("qBank components initialized successfully")
+            else:
+                raise ImportError("QuestionBankManager not available")
+            
+        except Exception as e:
+            logger.error(f"Failed to initialize qBank components: {e}")
+            # Set to None so we can gracefully handle missing qBank
+            self.manager = None
+    
+    def is_available(self) -> bool:
+        """Check if qBank is available and properly configured."""
+        return QBANK_AVAILABLE and self.manager is not None
+    
+    def add_multiple_questions(self, quiz_questions: List[QuizQuestion]) -> List[str]:
+        """
+        Add multiple quiz questions to the question bank using bulk_add_questions.
+        
+        Args:
+            quiz_questions: List of QuizQuestion objects
+            
+        Returns:
+            List of question IDs for successfully added questions
+        """
+        if not self.is_available():
+            logger.warning("qBank not available - questions not added to bank")
+            return []
+
+        # Convert QuizQuestion objects to the format expected by bulk_add_questions
+        questions_data = []
+        for quiz_question in quiz_questions:
+            # Create explanations dict if explanation is provided
+            explanations = {}
+            if quiz_question.explanation:
+                explanations[quiz_question.correct_answer] = quiz_question.explanation
+            
+            question_data = {
+                "question": quiz_question.question_text,
+                "correct_answer": quiz_question.correct_answer,
+                "wrong_answers": quiz_question.wrong_answers,
+                "tags": quiz_question.tags or set(),
+                "objective": quiz_question.topic,
+                "explanations": explanations if explanations else None
+            }
+            questions_data.append(question_data)
+
+        try:
+            questions = self.manager.bulk_add_questions(questions_data)  # type: ignore
+            question_ids = [q.id for q in questions]
+            
+            logger.info(f"Added {len(question_ids)} out of {len(quiz_questions)} questions to qBank")
+            return question_ids
+            
+        except Exception as e:
+            logger.error(f"Failed to bulk add questions to qBank: {e}")
+            return []
+
 
 @dataclass
 class EducationalReport:
@@ -77,7 +200,7 @@ class QuestionGenerator:
             timeout=3000,
         )
         model = OpenAIModel(
-            model_name=self.config.llm_model,
+            model_name="gpt-oss:20b", #self.config.llm_model,
             provider=OpenAIProvider(openai_client=client),
         )
         if output_type:
@@ -198,7 +321,7 @@ class QuestionGenerator:
             
         return questions
     
-    async def generate_educational_report(
+    async def generate_lesson(
         self, 
         question: str, 
         knowledge_graph
@@ -231,282 +354,256 @@ class QuestionGenerator:
 
         Focus on creating educational value that helps learners build deep understanding.
         """
+
+        query = (
+            "<instructions>"
+            "You are writing a lesson plan for students and you are teaching a course."
+            "Provide a comprehensive explanation and report to this exam question/answer "
+            "using the research findings below. Explain why things are the way they are "
+            "and try to give grounded understandings of the topics you discuss."
+            "Your goal is to fill the user's knowledge gaps and explain all relevant "
+            "knowledge and related concepts. Be comprehensive, thorough, and accurate."
+            "Include a glossary of terms and concepts used in the lesson with a brief "
+            "definition. The entire lesson should ONLY be in english. All math formulas "
+            "should be in python code blocks (```python ```), no LaTeX. Do not use any "
+            "special characters or formatting. Respond ONLY in english."
+            "Create a detailed educational lesson that:\n"
+            "1. **Answers the question comprehensively** with clear explanations\n"
+            "2. **Identifies key concepts** that learners need to understand\n"
+            "3. **Provides practical applications** showing real-world relevance\n"
+            "4. **Highlights knowledge gaps** that need further exploration\n"
+            "5. **Suggests related topics** for extended learning\n"
+            "6. **Assesses difficulty level** appropriately\n\n"
+            "Focus on creating educational value that helps learners build deep understanding."
+            "</instructions>\n"
+            "Here is the first question:\n"
+        ) + question
         
         # step 1: initial querry
-        report = await knowledge_graph.query(prompt)
+        report = await knowledge_graph.query(query)
+        research = f"**Question:** {question}\n**Answer:**\n{report}\n"
         # step 2: fact check
-        fact_check_prompt = f"Please write the final draft for this report. Ensure all information is accurate, complete, and well-organized: {report}"
-        revised_report = await knowledge_graph.query(fact_check_prompt)
+        query = (
+            "<instructions>"
+            "You are writing a lesson for your students and you "
+            "are teaching a course."
+            "Provide a comprehensive explanation and report to this exam question/answer "
+            "using the research findings below. Explain why things are the way they are "
+            "and the relationships between different concepts."
+            "Your goal is to fill the students' knowledge gaps and explain all relevant "
+            "knowledge and related concepts. Be comprehensive, thorough, and accurate."
+            "Teach the students everything they need to know "
+            "to understand the subject matter. "
+            "Be brief but thorough, and ensure the students understand the concepts "
+            "involved. Include a glossary of terms and concepts used in the lesson "
+            "with a brief definition. The entire lesson should ONLY be in english. "
+            "All math equations should be in simple plain text or python code blocks, "
+            "no LaTeX. Do not use any special characters or formatting."
+            "</instructions>"
+            f"<research-findings>\n{research}\n</research-findings>"
+        )
+        # fact_check_prompt = f"Please write the final draft for this report. Ensure all information is accurate, complete, and well-organized. Do not mention the origional draft: {report}"
+        # revised_report = await knowledge_graph.query(fact_check_prompt)
+        report = await knowledge_graph.query(query)
 
+        lesson = Lesson(
+            question=question,
+            lesson=report
+        )
         # return revised_report
         # step 3: generate final report using the pydantc object for educational report
         # agent = Agent(self.llm_client, output_type=Lesson)
         
 
-        prompt = f"""
-        You are an expert educator creating a comprehensive educational report. Your task is to answer the question thoroughly and provide structured learning guidance.
+        # prompt = f"""
+        # You are an expert educator creating a comprehensive educational report. Your task is to answer the question thoroughly and provide structured learning guidance.
 
-        Question to Answer:
-        {question}
+        # Question to Answer:
+        # {question}
 
-        <research>
-        {revised_report}
-        </research>
+        # <research>
+        # {revised_report}
+        # </research>
 
-        Create a detailed educational report that:
-        1. **Answers the question comprehensively** with clear explanations
-        2. **Identifies key concepts** that learners need to understand
-        3. **Provides practical applications** showing real-world relevance
-        4. **Highlights knowledge gaps** that need further exploration
-        5. **Suggests related topics** for extended learning
-        6. **Assesses difficulty level** appropriately
+        # Create a detailed educational report that:
+        # 1. **Answers the question comprehensively** with clear explanations
+        # 2. **Identifies key concepts** that learners need to understand
+        # 3. **Provides practical applications** showing real-world relevance
+        # 4. **Highlights knowledge gaps** that need further exploration
+        # 5. **Suggests related topics** for extended learning
+        # 6. **Assesses difficulty level** appropriately
 
-        Focus on creating educational value that helps learners build deep understanding.
-        """
+        # Focus on creating educational value that helps learners build deep understanding.
+        # """
 
-        # result = await agent.run(prompt)
-        result = await self.llm_call(prompt, output_type=Lesson)
-        logger.info(f"LLM usage: {result.usage()}")
-        report = result.output
+        # # result = await agent.run(prompt)
+        # result = await self.llm_call(prompt, output_type=Lesson)
+        # logger.info(f"LLM usage: {result.usage()}")
+        # report = result.output
 
-        return report
+        return lesson
 
-    async def generate_quiz_questions(
+    async def generate_quiz(
         self, 
-        combined_reports: str,
-        count: Optional[int] = None
-    ) -> list[Dict[str, Any]]:
+        lesson: Lesson, knowledge_graph, count: Optional[int] = None
+    ) -> Any:
         """
-        Generate quiz questions from combined educational reports.
+        Generate quiz questions from combined educational reports and add them to qbank.
         
         Args:
-            combined_reports: Combined text from all educational reports
+            lesson: The lesson to generate quiz questions from
+            knowledge_graph: Knowledge graph for question generation and explanations
             count: Number of questions to generate (defaults to config)
             
         Returns:
-            List of quiz questions with basic structure
+            The qbank manager object containing the added questions
         """
-
         question_count = count or self.config.quiz_questions_count
         
-        prompt = f"""
-        You are an expert test designer creating high-quality multiple choice questions. Based on the educational content provided, create {question_count} quiz questions that effectively assess learning.
-
-        Educational Content:
-        {combined_reports[:4000]}{'...' if len(combined_reports) > 4000 else ''}
-
-        Create questions that:
-        1. **Test understanding** of fundamental concepts and principles
-        2. **Require application** of knowledge to new situations  
-        3. **Assess critical thinking** rather than just memorization
-        4. **Vary in difficulty** (mix of easy, medium, hard questions)
-        5. **Are clearly written** with unambiguous language
-        6. **Have one definitively correct answer**
-
-        Distribute difficulty levels roughly as:
-        - 30% easy (basic recall and understanding)
-        - 50% medium (application and analysis) 
-        - 20% hard (synthesis and evaluation)
-
-        Return ONLY a JSON array with this exact structure:
-        [
-            {{
-                "question": "Clear, specific question that tests understanding?",
-                "correct_answer": "The one correct answer",
-                "difficulty": "easy|medium|hard",
-                "explanation": "Clear explanation of why this answer is correct and others would be wrong",
-                "topic": "Specific topic or concept being tested",
-                "cognitive_level": "remember|understand|apply|analyze|evaluate|create"
-            }}
-        ]
-
-        Focus on creating questions that genuinely test learning rather than trivial details.
-        """
+        query = (
+            "You are an expert test designer creating high-quality multiple choice questions. Based on the lesson provided, create "
+            f"{question_count} quiz questions that effectively assess learning."
+            "<lesson>"
+            f"{lesson.lesson}"
+            "</lesson>"
+            "Create questions that:"
+            "1. **Test understanding** of fundamental concepts and principles"
+            "2. **Require application** of knowledge to new situations  "
+            "3. **Assess critical thinking** rather than just memorization"
+            "4. **Vary in difficulty** (mix of easy, medium, hard questions)"
+            "5. **Are clearly written** with unambiguous language"
+            "6. **Have one definitively correct answer**"
+            "Focus on creating questions that genuinely test learning rather than trivial details."
+            "\n\nIMPORTANT: Respond ONLY with a valid JSON array. Do not include any other text, explanations, or formatting. The response must be parseable as JSON."
+            "\n\nExample format:"
+            '[{"question": "What is 2+2?", "answer": "4", "distractors": ["3", "5", "6"], "explanation": "Basic arithmetic", "tags": ["math", "arithmetic"], "difficulty_level": "easy", "topic": "Mathematics"}]'
+            "\n\nRequired fields for each question:"
+            "\n- question: The question text"
+            "\n- answer: The correct answer"
+            "\n- distractors: Array of 3-4 incorrect answer options"
+            "\n- explanation: Brief explanation of why the answer is correct"
+            "\n- tags: Array of 2-4 relevant tags/keywords for the question in lowercase with underscord instead of spaces"
+            "\n- difficulty_level: One of 'easy', 'medium', 'hard'"
+            "\n- topic: Main subject/topic area of the question"
+        )
         
-        response = await self._call_llm(prompt)
-            
-    
-    async def _call_llm(self, prompt: str) -> str:
-        """
-        Make a call to the configured LLM.
-        
-        Args:
-            prompt: The prompt to send to the LLM
-            
-        Returns:
-            The LLM response text
-        """
-        if not self.is_available():
-            raise RuntimeError("LLM client is not available")
-        
-        try:
-            if self.config.api_provider == "OPENAI" and self.llm_client:
-                # Use getattr for type-safe access
-                chat_attr = getattr(self.llm_client, 'chat', None)
-                if chat_attr and hasattr(chat_attr, 'completions'):
-                    response = await chat_attr.completions.create(
-                        model=self.config.llm_model,
-                        messages=[
-                            {"role": "system", "content": "You are an expert educational content generator."},
-                            {"role": "user", "content": prompt}
-                        ],
-                        max_tokens=self.config.max_tokens_per_request,
-                        temperature=0.7
-                    )
+        attempts = 0
+        quiz_data = None
+        quiz_draft = ""
+        while attempts < 3:
+            try:
+                quiz_draft = await knowledge_graph.query(query)
+                # Clean the response and ensure it's valid JSON
+                if not quiz_draft or not quiz_draft.strip():
+                    logger.warning(f"Empty response from knowledge graph (attempt {attempts + 1})")
+                    attempts += 1
+                    await asyncio.sleep(1)
+                    continue
                     
-                    # Log token usage
-                    if hasattr(response, 'usage') and response.usage:
-                        total_tokens = getattr(response.usage, 'total_tokens', 0)
-                        prompt_tokens = getattr(response.usage, 'prompt_tokens', 0)
-                        completion_tokens = getattr(response.usage, 'completion_tokens', 0)
-                        logger.info(f"Token usage - Total: {total_tokens}, Prompt: {prompt_tokens}, Completion: {completion_tokens}")
-                    
-                    return response.choices[0].message.content or ""
-                else:
-                    raise RuntimeError("OpenAI client missing chat attribute")
+                # Try to extract JSON from the response
+                quiz_draft = quiz_draft.strip()
                 
-            elif self.config.api_provider == "CLAUDE" and self.llm_client:
-                # Use getattr for type-safe access
-                messages_attr = getattr(self.llm_client, 'messages', None)
-                if messages_attr and hasattr(messages_attr, 'create'):
-                    response = await messages_attr.create(
-                        model=self.config.llm_model,
-                        max_tokens=self.config.max_tokens_per_request,
-                        messages=[
-                            {"role": "user", "content": prompt}
-                        ]
-                    )
-                    
-                    # Log token usage for Claude
-                    if hasattr(response, 'usage') and response.usage:
-                        input_tokens = getattr(response.usage, 'input_tokens', 0)
-                        output_tokens = getattr(response.usage, 'output_tokens', 0)
-                        logger.info(f"Claude token usage - Input: {input_tokens}, Output: {output_tokens}")
-                    
-                    # Handle Claude response - use getattr to avoid type issues
-                    try:
-                        if response.content:
-                            text_content = getattr(response.content[0], 'text', str(response.content[0]))
-                            return str(text_content)
-                        return ""
-                    except (IndexError, AttributeError):
-                        return str(response.content) if response.content else ""
-                else:
-                    raise RuntimeError("Claude client missing messages attribute")
+                # # If response doesn't start with [, try to find JSON array
+                # if not quiz_draft.startswith('['):
+                #     # Look for JSON array in the response
+                #     start_idx = quiz_draft.find('[')
+                #     end_idx = quiz_draft.rfind(']') + 1
+                #     if start_idx != -1 and end_idx > start_idx:
+                #         quiz_draft = quiz_draft[start_idx:end_idx]
+                #     else:
+                #         logger.warning(f"No JSON array found in response (attempt {attempts + 1}): {quiz_draft[:200]}...")
+                #         attempts += 1
+                #         await asyncio.sleep(1)
+                #         continue
                 
-            elif self.config.api_provider == "OLLAMA" and self.llm_client:
-                # Use getattr for type-safe access (OLLAMA is OpenAI-compatible)
-                chat_attr = getattr(self.llm_client, 'chat', None)
-                if chat_attr and hasattr(chat_attr, 'completions'):
-                    response = await chat_attr.completions.create(
-                        model=self.config.llm_model,
-                        messages=[
-                            {"role": "system", "content": "You are an expert educational content generator."},
-                            {"role": "user", "content": prompt}
-                        ],
-                        max_tokens=self.config.max_tokens_per_request,
-                        temperature=0.7
-                    )
-                    
-                    # Log token usage for OLLAMA
-                    if hasattr(response, 'usage') and response.usage:
-                        total_tokens = getattr(response.usage, 'total_tokens', 0)
-                        prompt_tokens = getattr(response.usage, 'prompt_tokens', 0)
-                        completion_tokens = getattr(response.usage, 'completion_tokens', 0)
-                        logger.info(f"OLLAMA token usage - Total: {total_tokens}, Prompt: {prompt_tokens}, Completion: {completion_tokens}")
-                    
-                    return response.choices[0].message.content or ""
-                else:
-                    raise RuntimeError("OLLAMA client missing chat attribute")
-                
-            else:
-                raise NotImplementedError(f"LLM provider {self.config.api_provider} not implemented or client not properly initialized")
-                
-        except Exception as e:
-            logger.error(f"LLM API call failed: {e}")
-            raise
-    
-    async def generate_distractors(self, question: str, correct_answer: str, 
-                                 topic: str, count: int = 3) -> List[str]:
-        """Generate plausible but incorrect answer choices for multiple choice questions."""
-        
-        prompt = f"""Generate {count} plausible but clearly incorrect distractors for this multiple choice question.
+                quiz_data = json.loads(quiz_draft)
+                break
+            except json.JSONDecodeError as e:
+                logger.error(f"JSON parsing error (attempt {attempts + 1}): {e}. Response: {quiz_draft if quiz_draft else 'Empty'}")
+                attempts += 1
+                await asyncio.sleep(1)
+            except Exception as e:
+                logger.error(f"Error generating quiz questions (attempt {attempts + 1}): {e}")
+                attempts += 1
+                await asyncio.sleep(1)
 
-Question: {question}
-Correct Answer: {correct_answer}
-Topic: {topic}
+        if attempts == 3 or quiz_data is None:
+            logger.error("Max attempts reached or failed to generate quiz questions.")
+            # Return empty list if generation failed
+            return []
 
-Requirements for distractors:
-1. Must be plausible enough that someone with partial knowledge might choose them
-2. Must be clearly incorrect to someone with full understanding
-3. Should cover common misconceptions or partial truths
-4. Must be similar in length and complexity to the correct answer
-5. Should not be obviously wrong or silly
-
-Format your response as a JSON array of strings:
-["distractor 1", "distractor 2", "distractor 3"]"""
-
-        try:
-            response = await self._call_llm(prompt)
-            
-            logger.info(f"Generated distractors response")
-            
-            # Parse JSON response
-            import json
-            distractors = json.loads(response.strip())
-            
-            if isinstance(distractors, list) and len(distractors) >= count:
-                logger.info(f"Generated {len(distractors)} distractors")
-                return distractors[:count]
-            else:
-                logger.warning(f"Invalid distractor format or count: {distractors}")
-                return [f"Incorrect option {i+1}" for i in range(count)]
-                
-        except Exception as e:
-            logger.error(f"Failed to generate distractors: {e}")
-            # Fallback distractors
-            return [f"Alternative answer {i+1}" for i in range(count)]
-
-    async def generate_multiple_choice_questions(self, content: str, count: int = 5) -> List[Dict]:
-        """Generate multiple choice questions with distractors from content."""
-        
-        # First generate base quiz questions
-        base_questions = await self.generate_quiz_questions(content, count)
-        
-        # Now add distractors to each question
-        mc_questions = []
-        
-        for question_data in base_questions:
-            question = question_data.get('question', '')
-            correct_answer = question_data.get('correct_answer', '')
-            topic = question_data.get('topic', 'General')
-            
-            if question and correct_answer:
-                # Generate distractors
-                distractors = await self.generate_distractors(
-                    question, correct_answer, topic, count=3
+        # Convert to Question objects
+        quiz_questions = []
+        for q_data in quiz_data:
+            try:
+                question_obj = Question(
+                    question=q_data["question"],
+                    answer=q_data["answer"],
+                    distractors=q_data["distractors"],
+                    explanation=q_data.get("explanation"),
+                    tags=set(q_data.get("tags", [])) if q_data.get("tags") else None,
+                    difficulty_level=q_data.get("difficulty_level"),
+                    topic=q_data.get("topic")
                 )
-                
-                # Create multiple choice format
-                all_choices = [correct_answer] + distractors
-                
-                # Shuffle choices (but track correct answer index)
-                import random
-                shuffled_choices = all_choices.copy()
-                random.shuffle(shuffled_choices)
-                correct_index = shuffled_choices.index(correct_answer)
-                
-                mc_question = {
-                    **question_data,  # Include all original data
-                    'choices': shuffled_choices,
-                    'correct_choice_index': correct_index,
-                    'correct_choice_letter': chr(65 + correct_index),  # A, B, C, D
-                    'question_type': 'multiple_choice'
-                }
-                
-                mc_questions.append(mc_question)
-            else:
-                logger.warning(f"Skipping incomplete question: {question_data}")
+                quiz_questions.append(question_obj)
+            except Exception as e:
+                logger.error(f"Error creating question object: {e}")
+
+        # Now add questions to qbank
+        logger.info(f"Adding {len(quiz_questions)} questions to qbank...")
         
-        logger.info(f"Generated {len(mc_questions)} multiple choice questions")
-        return mc_questions
+        # Initialize qbank integration
+        qbank_integration = QBankIntegration(self.config)
+        
+        # Convert Question objects to QuizQuestion objects with explanations
+        quiz_question_objects = []
+        for q in quiz_questions:
+            # Generate explanation using knowledge graph
+            # explanation = None
+            # if knowledge_graph:
+            #     try:
+            #         explanation_query = f"Provide a brief explanation for why '{q.answer}' is the correct answer to: {q.question}"
+            #         explanation = await knowledge_graph.query(explanation_query)
+            #     except Exception as e:
+            #         logger.warning(f"Failed to generate explanation for question: {e}")
+            
+            # # Generate tags for the question
+            # tags = None
+            # if knowledge_graph:
+            #     try:
+            #         tags_query = f"Generate 3-5 relevant tags for this quiz question: '{q.question}'. Return ONLY a valid JSON array of strings."
+            #         tags_response = await knowledge_graph.query(tags_query)
+            #         tags_list = json.loads(tags_response)
+            #         if isinstance(tags_list, list):
+            #             tags = set(tags_list)
+            #     except Exception as e:
+            #         logger.warning(f"Failed to generate tags for question: {e}")
+            
+            # # Generate topic for the question based on lesson content
+            # topic = None
+            # if knowledge_graph:
+            #     try:
+            #         topic_query = f"Based on this lesson content, what is the main topic or subject area for this question: '{q.question}'? Return a single topic string."
+            #         topic = await knowledge_graph.query(topic_query)
+            #         topic = topic.strip() if topic else None
+            #     except Exception as e:
+            #         logger.warning(f"Failed to generate topic for question: {e}")
+            
+            quiz_question = QuizQuestion(
+                question_text=q.question,
+                correct_answer=q.answer,
+                wrong_answers=q.distractors,
+                explanation=q.explanation,
+                tags=q.tags,
+                difficulty_level=q.difficulty_level or "medium",
+                topic=q.topic,
+                id=None
+            )
+            quiz_question_objects.append(quiz_question)
+        
+        # Add questions to qbank
+        question_ids = qbank_integration.add_multiple_questions(quiz_question_objects)
+        logger.info(f"Successfully added {len(question_ids)} questions to qbank with IDs: {question_ids}")
+
+        return qbank_integration.manager
+    

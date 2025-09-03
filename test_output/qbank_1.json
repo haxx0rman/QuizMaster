@@ -1,0 +1,246 @@
+{
+  "name": "QuizMaster Bank",
+  "created_at": "2025-09-03T19:29:55.818763",
+  "questions": {
+    "0b30e324-4517-4c09-80d5-2659bef5130e": {
+      "id": "0b30e324-4517-4c09-80d5-2659bef5130e",
+      "question_text": "A firm‑commitment underwriter uses a cost‑plus model to set the initial offering price. If the intrinsic value of the company is $50 per share and the underwriting fee is a fixed $3 per share, what is the first price (P0) offered to investors?",
+      "objective": "initial_pricing",
+      "answers": [
+        {
+          "id": "ed87784e-8364-426d-bef6-821b276b9585",
+          "text": "$53",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "4a420518-69b5-4d47-b2c2-6d76e4cd9c28",
+          "text": "$45",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "23324dbb-d6ee-46d5-8404-78cc249d7d65",
+          "text": "$56",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "5977a6b1-6583-4682-b099-6962bc72d559",
+          "text": "$60",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "cost_plus_pricing",
+        "firm_commitment_underwriting"
+      ],
+      "elo_rating": 1184.0030478505562,
+      "times_answered": 1,
+      "times_correct": 1,
+      "created_at": "2025-09-03T19:29:55.818933",
+      "last_studied": "2025-09-03T19:40:41.900300",
+      "next_review": "2025-09-04T22:04:41.900300",
+      "interval_days": 1.1,
+      "ease_factor": 2.6999999999999997,
+      "repetition_count": 1
+    },
+    "7b580096-6a26-4e11-9863-2439976cbf95": {
+      "id": "7b580096-6a26-4e11-9863-2439976cbf95",
+      "question_text": "After an IPO, the bid‑ask spread is 2.5% of the current price and the order book depth is thin. Which of the following best describes the likely effect on a trader’s execution cost?",
+      "objective": "post_listing_liquidity",
+      "answers": [
+        {
+          "id": "1f5e402c-53fd-4609-908b-8a4445eaef07",
+          "text": "The trader will pay a higher spread and may experience significant price movement if the order is large.",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "d0ed7711-0d8a-4885-813c-f6fcff8824d0",
+          "text": "The trader will pay a lower spread because the market is volatile.",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "196d7cf9-2457-406e-8a8b-f60b930eaab2",
+          "text": "The trader will pay the spread but the price will remain stable due to high depth.",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "8ce4398b-7b3b-48d7-b589-8afbb393d21b",
+          "text": "The trader will not pay any spread because the underwriter absorbs it.",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "bid_ask_spread",
+        "liquidity",
+        "order_book_depth"
+      ],
+      "elo_rating": 1183.2314181019374,
+      "times_answered": 1,
+      "times_correct": 1,
+      "created_at": "2025-09-03T19:29:55.818961",
+      "last_studied": "2025-09-03T19:40:37.777028",
+      "next_review": "2025-09-04T22:04:37.777028",
+      "interval_days": 1.1,
+      "ease_factor": 2.6999999999999997,
+      "repetition_count": 1
+    },
+    "546badc0-6e6d-4818-8163-c2acb7a8f07b": {
+      "id": "546badc0-6e6d-4818-8163-c2acb7a8f07b",
+      "question_text": "Which regulation specifically requires a listed issuer to disclose material information promptly and without bias after the IPO?",
+      "objective": "post_listing_regulations",
+      "answers": [
+        {
+          "id": "0f0c60b3-900a-4e68-b881-f8fc1015f281",
+          "text": "SEC Rule 10b‑5 under Regulation Fair Disclosure",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "f0bb1c60-5724-49f3-83ca-8d12d7413f49",
+          "text": "Securities Act Section 13(a)",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "e5683167-49a5-4416-8fea-6670ec732624",
+          "text": "Sarbanes‑Oxley Section 302",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "9e3d6da6-d1c6-4580-adf4-251176754f2f",
+          "text": "FINRA Rule 4510",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "regulatory_disclosure",
+        "fair_disclosure_rules"
+      ],
+      "elo_rating": 1215.9660918698307,
+      "times_answered": 1,
+      "times_correct": 0,
+      "created_at": "2025-09-03T19:29:55.818986",
+      "last_studied": "2025-09-03T19:40:30.627121",
+      "next_review": "2025-09-04T19:40:30.627121",
+      "interval_days": 1.0,
+      "ease_factor": 2.3,
+      "repetition_count": 0
+    },
+    "6b33372e-4767-4abd-a288-3699837abd4e": {
+      "id": "6b33372e-4767-4abd-a288-3699837abd4e",
+      "question_text": "An investor buys 1,000 shares of a newly listed stock at $10 per share. The broker’s initial margin requirement is 50% because the bid‑ask spread is wide and the order book depth is thin. If the stock price drops to $7 after a day, what is the approximate value of the margin account relative to the required initial equity?",
+      "objective": "margin_and_liquidity",
+      "answers": [
+        {
+          "id": "8499b7b0-d0a2-4ca7-bada-0e6d7345b413",
+          "text": "The account value will be 70% of the original equity, likely triggering a margin call.",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "97476bff-8d5e-48e5-9933-40251d7a8856",
+          "text": "The account value will be 90% of the original equity, no margin call.",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "ed66ac82-8c4e-4f90-89a7-97368e15b8cc",
+          "text": "The account value will be 50% of the original equity, no margin call.",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "536b93e7-121d-44b3-a29d-b77e05091e1e",
+          "text": "The account value will be 30% of the original equity, triggering a margin call.",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [
+        "liquidity",
+        "margin_requirement",
+        "risk_management"
+      ],
+      "elo_rating": 1184.0,
+      "times_answered": 1,
+      "times_correct": 1,
+      "created_at": "2025-09-03T19:29:55.819009",
+      "last_studied": "2025-09-03T19:40:18.668916",
+      "next_review": "2025-09-04T19:40:18.668916",
+      "interval_days": 1.0,
+      "ease_factor": 2.65,
+      "repetition_count": 1
+    },
+    "de85e1c8-8bda-4dcf-933d-bfaa790731f4": {
+      "id": "de85e1c8-8bda-4dcf-933d-bfaa790731f4",
+      "question_text": "An investor bought 500 shares of a company for $12 each and sold them after 8 months for $18 each. If the short‑term capital gains tax rate is 25% and the long‑term rate is 15%, what is the total tax owed on the gain?",
+      "objective": null,
+      "answers": [
+        {
+          "id": "c37323f9-d482-4a33-98b7-1af96a8ecd32",
+          "text": "$1,500",
+          "is_correct": true,
+          "explanation": null
+        },
+        {
+          "id": "b216c2ed-d3bd-4e5c-93c8-0b7a82b2b235",
+          "text": "$900",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "f8acb433-83c1-4660-a81b-0486dba1c279",
+          "text": "$2,700",
+          "is_correct": false,
+          "explanation": null
+        },
+        {
+          "id": "6a2f829a-e911-4d4d-89f3-8c621106ea48",
+          "text": "$3,000",
+          "is_correct": false,
+          "explanation": null
+        }
+      ],
+      "tags": [],
+      "elo_rating": 1216.736306793522,
+      "times_answered": 1,
+      "times_correct": 0,
+      "created_at": "2025-09-03T19:29:55.819037",
+      "last_studied": "2025-09-03T19:40:27.447896",
+      "next_review": "2025-09-04T19:40:27.447896",
+      "interval_days": 1.0,
+      "ease_factor": 2.3,
+      "repetition_count": 0
+    }
+  },
+  "study_sessions": [
+    {
+      "session_id": "24c0bb32-e61b-43a9-941a-478fddfef1d1",
+      "questions_studied": [
+        "6b33372e-4767-4abd-a288-3699837abd4e",
+        "de85e1c8-8bda-4dcf-933d-bfaa790731f4",
+        "546badc0-6e6d-4818-8163-c2acb7a8f07b",
+        "7b580096-6a26-4e11-9863-2439976cbf95",
+        "0b30e324-4517-4c09-80d5-2659bef5130e"
+      ],
+      "results": {
+        "6b33372e-4767-4abd-a288-3699837abd4e": "correct",
+        "de85e1c8-8bda-4dcf-933d-bfaa790731f4": "incorrect",
+        "546badc0-6e6d-4818-8163-c2acb7a8f07b": "incorrect",
+        "7b580096-6a26-4e11-9863-2439976cbf95": "correct",
+        "0b30e324-4517-4c09-80d5-2659bef5130e": "correct"
+      },
+      "start_time": "2025-09-03T19:40:09.779593",
+      "end_time": "2025-09-03T19:40:41.900489"
+    }
+  ]
+}

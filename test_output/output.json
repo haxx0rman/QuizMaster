@@ -1,0 +1,43 @@
+{
+  "lessons": [
+    {
+      "question": "Consider a new exchange\u2011listed equity that is first priced via a firm\u2011commitment underwriting using a cost\u2011plus model. How does this initial pricing decision, the subsequent secondary\u2011market liquidity dynamics (bid\u2011ask spread, order\u2011book depth), and the regulatory requirements for fair disclosure collectively shape an individual investor\u2019s risk\u2011reward profile\u2014especially concerning margin requirements and the tax treatment of capital gains\u2014and what gaps in the underwriting\u2013liquidity\u2013regulation chain might lead to inefficient pricing or unwanted tax exposure?",
+      "lesson": "Lesson: How Initial Pricing, Liquidity, Disclosure and Tax Rules Shape an Investor\u2019s Risk\u2011Reward\n\nPurpose  \nThis lesson explains the chain of events that connects the first price set by an underwriter, the way the stock behaves after it starts trading, the rules that force the issuer and the underwriter to share information, and the rules that decide how much a trader has to put down on margin and how much tax they will pay when they sell. It also shows where the chain can break down and lead to mis\u2011pricing or unwanted tax exposure.\n\nLearning goals  \n\n1. Explain how a cost\u2011plus firm\u2011commitment underwriting sets the first price.  \n2. Describe how the bid\u2011ask spread and order\u2011book depth determine trading costs and price stability.  \n3. Summarise the regulatory disclosure requirements that apply after a stock is listed.  \n4. Connect price and liquidity to the amount of money that must be posted on margin.  \n5. Show how the holding period determines the tax rate on a capital gain.  \n6. Identify gaps that can cause a stock to be priced inefficiently or expose a holder to higher tax.\n\nKey concepts  \n\n- Cost\u2011plus pricing  \n- Firm\u2011commitment underwriting  \n- Bid\u2011ask spread  \n- Order\u2011book depth  \n- Fair disclosure rules  \n- Margin requirement  \n- Capital gains tax (short\u2011term vs long\u2011term)  \n\nDetailed explanation  \n\n1. Initial pricing with a cost\u2011plus model  \n   \u2022 The underwriter estimates the intrinsic value of the company (V).  \n   \u2022 The underwriting fee (C) is a fixed dollar amount that the underwriter wants to earn.  \n   \u2022 The offered price (P0) = V + C.  \n   \u2022 Because C is fixed, the price is higher than it would be if the underwriter used a market\u2011based method.  \n   \u2022 Early investors can buy at this higher price and may see a temporary upside if the market later prices the stock closer to V.\n\n2. Liquidity after the listing  \n   \u2022 Immediately after trading begins the market is uncertain about the true value.  \n   \u2022 The bid\u2011ask spread is wide.  The difference between the highest price a buyer is willing to pay (bid) and the lowest price a seller is willing to accept (ask) is large.  \n   \u2022 Order\u2011book depth is thin.  Only a few shares exist at each price level, so a single large order can move the price significantly.  \n   \u2022 Wide spreads and thin depth increase the cost of trading (you pay the spread and the price can move against you).  \n   \u2022 High trading costs make margin trading riskier; margin lenders usually require a larger initial equity or a higher margin maintenance level when liquidity is low.\n\n3. Fair\u2011disclosure regulations  \n   \u2022 At the time of the IPO the issuer must deliver a prospectus that includes audited financials, risk factors and forward\u2011looking statements.  \n   \u2022 After the listing continuous disclosure rules (e.g., SEC Rule 10b\u20115, Regulation Fair Disclosure) require the issuer to release material information promptly.  \n   \u2022 If disclosure is incomplete, misleading or delayed, market participants may misprice the stock.  \n   \u2022 Mispricing can persist until a new piece of information corrects the market view.\n\n4. Margin requirements in relation to price and liquidity  \n   \u2022 The initial margin is the cash or collateral the investor must post to buy on margin.  \n   \u2022 When the bid\u2011ask spread is large and the price is volatile, lenders raise the required initial margin to protect against rapid price falls.  \n   \u2022 If the stock\u2019s price drops quickly after the IPO, the value of the margin account falls, and the lender may issue a margin call.  \n   \u2022 Failure to meet a margin call can force the investor to sell at an unplanned time, often at a lower price.\n\n5. Tax treatment of capital gains  \n   \u2022 A gain is the sale price minus the purchase price.  \n   \u2022 If the holding period is less than 12 months the gain is taxed at the ordinary income rate (short\u2011term).  \n   \u2022 If the holding period is 12 months or more the gain is taxed at the lower capital\u2011gain rate (long\u2011term).  \n   \u2022 Investors may decide to hold longer to take advantage of the lower rate, but liquidity needs or a margin call can force an early sale.  \n   \u2022 Example calculation:  \n\n```\ndef capital_gains_tax(purchase, sale, months, tax_short, tax_long):\n    gain = sale - purchase\n    if months < 12:\n        return gain * tax_short\n    else:\n        return gain * tax_long\n```\n\n6. Gaps that can cause inefficiency or unwanted tax exposure  \n\n   \u2022 The exact underwriting fee (C) is usually confidential; investors cannot know how much the price is inflated.  \n   \u2022 Liquidity metrics such as spread and depth change from minute to minute; static estimates may mislead about real trading costs.  \n   \u2022 Disclosure quality varies; a firm may withhold a risk factor until after the IPO, keeping the market from pricing it in.  \n   \u2022 Margin lenders may not adjust requirements quickly enough when liquidity worsens, leading to forced sales.  \n   \u2022 A forced early sale due to a margin call can lock in a short\u2011term gain that is taxed at a higher rate.  \n   \u2022 In some jurisdictions the tax authority may treat a \u201cwash sale\u201d differently, creating hidden tax exposure.\n\nTake\u2011away  \nThe first price set by a cost\u2011plus underwriter, the subsequent market liquidity, and the disclosure rules all interact to shape how much an investor can expect to gain, how much risk they face on margin, and what tax they will owe. Understanding where the chain can break helps investors and regulators prevent mis\u2011pricing and protect taxpayers.\n\nGlossary  \n\nCost\u2011plus pricing \u2013 Adding a fixed fee to the estimated value of a company to set the price.  \nFirm\u2011commitment underwriting \u2013 The underwriter guarantees the sale of all shares at a fixed price.  \nBid\u2011ask spread \u2013 Difference between the highest price a buyer is willing to pay and the lowest price a seller accepts.  \nOrder\u2011book depth \u2013 Number of shares available at each price level in the market.  \nFair\u2011disclosure rules \u2013 Regulations that require issuers and underwriters to release material information promptly and without bias.  \nMargin requirement \u2013 The cash or collateral that must be posted to buy a security on margin.  \nCapital gains tax \u2013 Tax levied on the profit from selling a security, with different rates for short\u2011term and long\u2011term holdings."
+    }
+  ],
+  "qbanks": [
+    {
+      "type": "QuestionBankManager",
+      "available_methods": [
+        "add_question",
+        "answer_question",
+        "bulk_add_questions",
+        "create_multiple_choice_question",
+        "current_session",
+        "current_user_id",
+        "elo_system",
+        "end_study_session",
+        "export_bank",
+        "get_all_tags",
+        "get_difficult_questions",
+        "get_question",
+        "get_questions_by_tag",
+        "get_review_forecast",
+        "get_user_statistics",
+        "import_bank",
+        "question_bank",
+        "remove_question",
+        "scheduler",
+        "search_questions",
+        "skip_question",
+        "start_study_session",
+        "suggest_study_session_size",
+        "user_tracker"
+      ],
+      "has_stats": true,
+      "question_count": 0,
+      "exported_file": "./test_output/qbank_1.json",
+      "questions": []
+    }
+  ]
+}
